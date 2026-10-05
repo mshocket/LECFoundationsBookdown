@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 2 Region-level calculations | Foundation SKills for LEC (LECX4101) Practical Exercises</title>
+<meta name="author" content="Marta Shocket, Kirsty Bush, Kirsty Ross, and Duncan Whyatt">
+<meta name="description" content="We’ll start by looking at the region-level data.  2.1 Copy the data into Excel  2.1.1 Population density data Open the region-level population density data (the census2021-ts006-rgn.csv file)....">
+<meta name="generator" content="bookdown 0.48 with bs4_book()">
+<meta property="og:title" content="Chapter 2 Region-level calculations | Foundation SKills for LEC (LECX4101) Practical Exercises">
+<meta property="og:type" content="book">
+<meta property="og:description" content="We’ll start by looking at the region-level data.  2.1 Copy the data into Excel  2.1.1 Population density data Open the region-level population density data (the census2021-ts006-rgn.csv file)....">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 2 Region-level calculations | Foundation SKills for LEC (LECX4101) Practical Exercises">
+<meta name="twitter:description" content="We’ll start by looking at the region-level data.  2.1 Copy the data into Excel  2.1.1 Population density data Open the region-level population density data (the census2021-ts006-rgn.csv file)....">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Foundation SKills for LEC (LECX4101) Practical Exercises</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">About</a></li>
+<li class="book-part">Week 1 - Census method of travel to work data in Excel</li>
+<li><a class="" href="introduction-setup.html"><span class="header-section-number">1</span> Introduction &amp; setup</a></li>
+<li><a class="active" href="region-level-calculations.html"><span class="header-section-number">2</span> Region-level calculations</a></li>
+<li><a class="" href="region-level-figures.html"><span class="header-section-number">3</span> Region-level figures</a></li>
+<li><a class="" href="utla-level-calculations-and-figures.html"><span class="header-section-number">4</span> UTLA-level calculations and figures</a></li>
+<li><a class="" href="format-your-graph.html"><span class="header-section-number">5</span> Format your graph</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="region-level-calculations" class="section level1" number="2">
+<h1>
+<span class="header-section-number">2</span> Region-level calculations<a class="anchor" aria-label="anchor" href="#region-level-calculations"><i class="fas fa-link"></i></a>
+</h1>
+<p>We’ll start by looking at the region-level data.</p>
+<div id="copy-the-data-into-excel" class="section level2" number="2.1">
+<h2>
+<span class="header-section-number">2.1</span> Copy the data into Excel<a class="anchor" aria-label="anchor" href="#copy-the-data-into-excel"><i class="fas fa-link"></i></a>
+</h2>
+<div id="population-density-data" class="section level3" number="2.1.1">
+<h3>
+<span class="header-section-number">2.1.1</span> Population density data<a class="anchor" aria-label="anchor" href="#population-density-data"><i class="fas fa-link"></i></a>
+</h3>
+<p>Open the region-level population density data (the <code>census2021-ts006-rgn.csv</code> file).</p>
+<p>Select all of the cells with data and copy them (either using the keyboard shortcut <code>Ctrl + C</code> or the <em>Copy</em> button on the Home bar at the top of your Excel window).</p>
+<p>Select cell A1 in your blank Week1_Practical workbook and paste the data into it (either using the keyboard shortcut <code>Ctrl + V</code> or the <em>Paste</em> button on the Home bar).</p>
+<div class="rmdimportant">
+<p><strong><em>Important!</em></strong> It’s usually a good idea keep a copy of your original data and create a new workbook to analyse it in. That way if you accidentally change or delete something, you’ll be able to go back to the original data.</p>
+</div>
+</div>
+<div id="method-of-travel-to-work-data" class="section level3" number="2.1.2">
+<h3>
+<span class="header-section-number">2.1.2</span> Method of travel to work data<a class="anchor" aria-label="anchor" href="#method-of-travel-to-work-data"><i class="fas fa-link"></i></a>
+</h3>
+<p>Now open the region-level method of travel to work data (the <code>census2021-ts061-rgn.csv</code> file).</p>
+<p>Select the cells in columns D though O that contain data. (Columns A-C are the same in both datasets.)</p>
+<p>Select cell E1 (the first blank cell in the first row) in your blank <code>Week1_Practical</code> workbook and paste the data into it.</p>
+</div>
+<div id="formatting-the-spreadsheet" class="section level3" number="2.1.3">
+<h3>
+<span class="header-section-number">2.1.3</span> Formatting the spreadsheet<a class="anchor" aria-label="anchor" href="#formatting-the-spreadsheet"><i class="fas fa-link"></i></a>
+</h3>
+<p>You may want to format the spreadsheet to make it easier to read. For example, you could:</p>
+<ul>
+<li>Click and drag on the lines between the column labels and expand the columns to make them wider or narrower.</li>
+<li>Click and drag on the line between row 1 and row 2 to make the first row taller.</li>
+<li>Click on the <em>Wrap text</em> button to get the column titles to wrap on multiple lines.</li>
+<li>Make the column titles bold so they stand out more.</li>
+<li>Shorten the column names to make them fit better</li>
+</ul>
+<div class="rmdtip">
+<p><strong><em>Question:</em></strong> What can you tell from looking at the raw data? Do any patterns jump out at you?</p>
+</div>
+</div>
+</div>
+<div id="calculate-percentages" class="section level2" number="2.2">
+<h2>
+<span class="header-section-number">2.2</span> Calculate percentages<a class="anchor" aria-label="anchor" href="#calculate-percentages"><i class="fas fa-link"></i></a>
+</h2>
+<p>Hopefully you noticed that the total number of people working in each region differs quite substantially. This makes it difficult to draw conclusions from the raw numbers of people that travel to work using each method.</p>
+<p>Therefore, you will turn these raw numbers for each travel method into percentages, by dividing them by the total number of workers in the region and multiplying by 100.</p>
+<p><span class="math display">\[\text{%} = \frac{Number}{Total}*100\]</span></p>
+<div id="add-column-names" class="section level3" number="2.2.1">
+<h3>
+<span class="header-section-number">2.2.1</span> Add column names<a class="anchor" aria-label="anchor" href="#add-column-names"><i class="fas fa-link"></i></a>
+</h3>
+<p>Add column names to cells R1-AB1 that say <code>%</code> and then each method of travel for the raw numbers in columns F-P. (We suggest leaving one blank column after the raw numbers so that it’s clear where the percentages begin).</p>
+</div>
+<div id="formulas-in-excel" class="section level3" number="2.2.2">
+<h3>
+<span class="header-section-number">2.2.2</span> Formulas in Excel<a class="anchor" aria-label="anchor" href="#formulas-in-excel"><i class="fas fa-link"></i></a>
+</h3>
+<p>In Excel (and other spreadsheet programs), you can perform a calculation by using the equal sign and a mathematical formula.</p>
+<p>If you are not already comfortable with calculations in spreadsheets:</p>
+<ul>
+<li>Click on a random empty cell.</li>
+<li>Type <code>=2+2</code> and hit enter.</li>
+<li>Delete the contents of the cell once you have seen that the answer appears.</li>
+</ul>
+<p>Your calculations can also use cell references instead of typed numbers.</p>
+<p>If you are not already comfortable with using cell references (e.g. A1) in spreadsheet calculations:</p>
+<ul>
+<li>Click on a random empty cell.</li>
+<li>Type <code>=</code>, click on a random cell with a number, type <code>*100</code>, and hit enter.</li>
+<li>Note that you can see - and edit - the formula in the box just below the home bar at the top of your Excel Window.</li>
+<li>Click on the window, change the <code>*</code> to a <code>+</code>, and hit enter.</li>
+<li>Delete the contents of the cell once you have seen that the answer appears.</li>
+</ul>
+</div>
+<div id="calculate-the-percentage-working-from-home-for-the-north-east" class="section level3" number="2.2.3">
+<h3>
+<span class="header-section-number">2.2.3</span> Calculate the percentage working from home for the North East<a class="anchor" aria-label="anchor" href="#calculate-the-percentage-working-from-home-for-the-north-east"><i class="fas fa-link"></i></a>
+</h3>
+<p>Select the empty cell below your column title for the percentage working from home.</p>
+<p>Type the formula to calculate the percentage working from home using the appropriate cell references to refer to the number working from home and the total workers in the North East region.</p>
+</div>
+<div id="copying-formulas-in-excel" class="section level3" number="2.2.4">
+<h3>
+<span class="header-section-number">2.2.4</span> Copying formulas in Excel<a class="anchor" aria-label="anchor" href="#copying-formulas-in-excel"><i class="fas fa-link"></i></a>
+</h3>
+<p>You can apply formulas to adjacent cells by selecting the cell with the formula you want, clicking on the small square in the bottom right corner, and dragging it to the target cells.</p>
+<div class="rmdimportant">
+<p><strong><em>Important!</em></strong> When you drag a formula to an adjacent cell, all of the cell references will also move by the same number of rows and columns.</p>
+<p>If you want a cell reference in a formula to keep referring to specific row, column, or cell, you can use the <code>$</code> symbol before the row number, the column letter, or both.</p>
+<p>For example:</p>
+<ul>
+<li>
+<code>A$1</code> will keep the row the same.</li>
+<li>
+<code>$A1</code> will keep the column the same.</li>
+<li>
+<code>$A$1</code> will keep both the same.</li>
+</ul>
+</div>
+</div>
+<div id="calculate-the-percentage-working-from-home-for-all-regions" class="section level3" number="2.2.5">
+<h3>
+<span class="header-section-number">2.2.5</span> Calculate the percentage working from home for all regions<a class="anchor" aria-label="anchor" href="#calculate-the-percentage-working-from-home-for-all-regions"><i class="fas fa-link"></i></a>
+</h3>
+<p>To apply the formula down and calculate the percentage working from home for all the regions:</p>
+<ul>
+<li>Select the cell with your formula for the percentage working from home in the North East region.</li>
+<li>Drag the formula down to apply it to the rows for all ten regions.</li>
+<li>Click on the various cells and look at the formula bar to make sure the cell references are changing in the way you expected.</li>
+<li>Double-click on one of the formula cells. You should see the referenced cells highlighted in different colours. Press enter to deselect the cell.</li>
+</ul>
+<p>The cell references should move down with each row as desired.</p>
+</div>
+<div id="calculate-the-percentage-for-all-modes-of-travel-in-all-regions" class="section level3" number="2.2.6">
+<h3>
+<span class="header-section-number">2.2.6</span> Calculate the percentage for all modes of travel in all regions<a class="anchor" aria-label="anchor" href="#calculate-the-percentage-for-all-modes-of-travel-in-all-regions"><i class="fas fa-link"></i></a>
+</h3>
+<p>You will have to do a bit more work before you can apply the formula to all modes of travel.</p>
+<div class="rmdtip">
+<p><strong><em>Question:</em></strong> What do you think will happen if you drag the formulas to the right as they are currently written? Why is that a bad thing in this case?</p>
+<p>If you aren’t sure, try it and see what happens.</p>
+</div>
+<p>In this case, you want the column reference for a specific travel method to move right with our formula. However, you want the column reference for the total number of workers in a region to stay exactly the same!</p>
+<p>Use the information in the green tip box above to figure out where to put the <code>$</code> in all of the formula cell references before you drag the formulas to the right.</p>
+<p>If you get stuck, you can ask a neighbor or raise your hand and ask an instructor.</p>
+<p>Once you have edited your formulas, select all ten cells in the column and drag them to the right.</p>
+<p>You should now have the entire table filled out.</p>
+</div>
+<div id="format-the-cells" class="section level3" number="2.2.7">
+<h3>
+<span class="header-section-number">2.2.7</span> Format the cells<a class="anchor" aria-label="anchor" href="#format-the-cells"><i class="fas fa-link"></i></a>
+</h3>
+<p>The output of our calculations has a lot more decimal places than we need, and it’s making it difficult to read the results.</p>
+<p>Format the cells to make them easier to read:</p>
+<ul>
+<li>Select all of the cells with your calculations.</li>
+<li>In the Home bar at the top of your screen, find the “Number” section and click the “Decrease decimal” button until there is only one decimal place showing.</li>
+</ul>
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="introduction-setup.html"><span class="header-section-number">1</span> Introduction &amp; setup</a></div>
+<div class="next"><a href="region-level-figures.html"><span class="header-section-number">3</span> Region-level figures</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#region-level-calculations"><span class="header-section-number">2</span> Region-level calculations</a></li>
+<li>
+<a class="nav-link" href="#copy-the-data-into-excel"><span class="header-section-number">2.1</span> Copy the data into Excel</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#population-density-data"><span class="header-section-number">2.1.1</span> Population density data</a></li>
+<li><a class="nav-link" href="#method-of-travel-to-work-data"><span class="header-section-number">2.1.2</span> Method of travel to work data</a></li>
+<li><a class="nav-link" href="#formatting-the-spreadsheet"><span class="header-section-number">2.1.3</span> Formatting the spreadsheet</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#calculate-percentages"><span class="header-section-number">2.2</span> Calculate percentages</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#add-column-names"><span class="header-section-number">2.2.1</span> Add column names</a></li>
+<li><a class="nav-link" href="#formulas-in-excel"><span class="header-section-number">2.2.2</span> Formulas in Excel</a></li>
+<li><a class="nav-link" href="#calculate-the-percentage-working-from-home-for-the-north-east"><span class="header-section-number">2.2.3</span> Calculate the percentage working from home for the North East</a></li>
+<li><a class="nav-link" href="#copying-formulas-in-excel"><span class="header-section-number">2.2.4</span> Copying formulas in Excel</a></li>
+<li><a class="nav-link" href="#calculate-the-percentage-working-from-home-for-all-regions"><span class="header-section-number">2.2.5</span> Calculate the percentage working from home for all regions</a></li>
+<li><a class="nav-link" href="#calculate-the-percentage-for-all-modes-of-travel-in-all-regions"><span class="header-section-number">2.2.6</span> Calculate the percentage for all modes of travel in all regions</a></li>
+<li><a class="nav-link" href="#format-the-cells"><span class="header-section-number">2.2.7</span> Format the cells</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/01-week1.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/01-week1.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Foundation SKills for LEC (LECX4101) Practical Exercises</strong>" was written by Marta Shocket, Kirsty Bush, Kirsty Ross, and Duncan Whyatt. It was last built on 2026-10-05.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

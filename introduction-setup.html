@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 1 Introduction &amp; setup | Foundation SKills for LEC (LECX4101) Practical Exercises</title>
+<meta name="author" content="Marta Shocket, Kirsty Bush, Kirsty Ross, and Duncan Whyatt">
+<meta name="description" content="This week you will use Excel to explore data for population density and how people travel work from the 2021 Census in England and Wales.  1.1 Exercise learning objectives After completing the...">
+<meta name="generator" content="bookdown 0.48 with bs4_book()">
+<meta property="og:title" content="Chapter 1 Introduction &amp; setup | Foundation SKills for LEC (LECX4101) Practical Exercises">
+<meta property="og:type" content="book">
+<meta property="og:description" content="This week you will use Excel to explore data for population density and how people travel work from the 2021 Census in England and Wales.  1.1 Exercise learning objectives After completing the...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 1 Introduction &amp; setup | Foundation SKills for LEC (LECX4101) Practical Exercises">
+<meta name="twitter:description" content="This week you will use Excel to explore data for population density and how people travel work from the 2021 Census in England and Wales.  1.1 Exercise learning objectives After completing the...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Foundation SKills for LEC (LECX4101) Practical Exercises</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">About</a></li>
+<li class="book-part">Week 1 - Census method of travel to work data in Excel</li>
+<li><a class="active" href="introduction-setup.html"><span class="header-section-number">1</span> Introduction &amp; setup</a></li>
+<li><a class="" href="region-level-calculations.html"><span class="header-section-number">2</span> Region-level calculations</a></li>
+<li><a class="" href="region-level-figures.html"><span class="header-section-number">3</span> Region-level figures</a></li>
+<li><a class="" href="utla-level-calculations-and-figures.html"><span class="header-section-number">4</span> UTLA-level calculations and figures</a></li>
+<li><a class="" href="format-your-graph.html"><span class="header-section-number">5</span> Format your graph</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="introduction-setup" class="section level1" number="1">
+<h1>
+<span class="header-section-number">1</span> Introduction &amp; setup<a class="anchor" aria-label="anchor" href="#introduction-setup"><i class="fas fa-link"></i></a>
+</h1>
+<p>This week you will use Excel to explore data for population density and how people travel work from the 2021 Census in England and Wales.</p>
+<div id="exercise-learning-objectives" class="section level2" number="1.1">
+<h2>
+<span class="header-section-number">1.1</span> Exercise learning objectives<a class="anchor" aria-label="anchor" href="#exercise-learning-objectives"><i class="fas fa-link"></i></a>
+</h2>
+<p>After completing the week 1 practical exercise, you should be able to:</p>
+<ol style="list-style-type: decimal">
+<li>Access your <code>H:</code> Drive on a Lancaster University Computer lab computer.</li>
+<li>Use formulas to perform calculations on data in Excel.</li>
+<li>Use absolute and relative cell references in formulas in Excel, and describe when each is appropriate.</li>
+<li>Change number formatting in Excel.</li>
+<li>Make scatter plots (with a trendline) and bar charts in Excel.</li>
+<li>Define an outlier, and explain why one might want to exclude outliers from a dataset.</li>
+</ol>
+</div>
+<div id="creating-folders" class="section level2" number="1.2">
+<h2>
+<span class="header-section-number">1.2</span> Creating folders<a class="anchor" aria-label="anchor" href="#creating-folders"><i class="fas fa-link"></i></a>
+</h2>
+<p>Before you get started, you will need to do some basic set up on your computer.</p>
+<p>First you will need to create some folders on your H: drive to organise your work.</p>
+<div class="rmdimportant">
+<p><strong><em>Important!</em></strong> Your <a href="https://portal.lancaster.ac.uk/ask/personal-filestore/">H: drive</a> is a personal filestore to store your files on site at Lancaster University, with a default quota of 10GB.</p>
+<p>Files are accessible via PCs on campus computer labs (via the H: Drive on File Explorer) and from off campus (using the VPN). Files are accessible only to you.</p>
+</div>
+<p>Create a folder on your H: drive called <code>4101_practicals</code>.</p>
+<p>Create a sub-folder within that folder called <code>Data</code>.</p>
+<div class="rmdwarning">
+<p><strong><em>Warning!</em></strong> If you do not follow these directions exactly (including the capitalisation of the word <code>Data</code>, you will run into problems in weeks 2-6 when we are working in R.</p>
+</div>
+</div>
+<div id="download-the-data" class="section level2" number="1.3">
+<h2>
+<span class="header-section-number">1.3</span> Download the data<a class="anchor" aria-label="anchor" href="#download-the-data"><i class="fas fa-link"></i></a>
+</h2>
+<p>Next you will need to the download the data for today’s exercise. There are four files, which can be downloading by clicking on the following links.</p>
+<ul>
+<li><code>census2021-ts006-rgn.csv</code></li>
+<li><code>census2021-ts006-ulta.csv</code></li>
+<li><code>census2021-ts061-rgn.csv</code></li>
+<li><code>census2021-ts061-ulta.csv</code></li>
+</ul>
+<p>You should get a pop-up window asking you where you want to save it. Navigate to your <code>H:/4101_practicals/Data</code> folder and save it there.</p>
+<p>If there is no pop-up window, it will have automatically downloaded to your Downloads folder. If so, move it to your <code>H:/4101_practicals/Data</code> folder.</p>
+</div>
+<div id="create-a-new-excel-file" class="section level2" number="1.4">
+<h2>
+<span class="header-section-number">1.4</span> Create a new Excel file<a class="anchor" aria-label="anchor" href="#create-a-new-excel-file"><i class="fas fa-link"></i></a>
+</h2>
+<p>Open Microsoft Excel and select the option to create a new, blank spreadsheet.</p>
+<p>Save it inside your <code>H:/4101_practicals/Data</code> folder folder as <code>Week1_Practical</code> (or something similar) using the default file format (Excel Workbook: <code>.xlsx</code>).</p>
+</div>
+<div id="about-this-weeks-data" class="section level2" number="1.5">
+<h2>
+<span class="header-section-number">1.5</span> About this week’s data<a class="anchor" aria-label="anchor" href="#about-this-weeks-data"><i class="fas fa-link"></i></a>
+</h2>
+<p>This week you will look at relationships between two types of data collected as part of the 2021 census in England and Wales:</p>
+<ul>
+<li>
+<strong>Population density</strong> (persons per square km) - the ts006 files</li>
+<li>
+<strong>Method of travel to workplace</strong> (number of people) - the ts061 files
+<ul>
+<li>Total workers travelling to work</li>
+<li>Method: Work mainly from home</li>
+<li>Method: Underground, metro, light rail, tram</li>
+<li>Method: Train</li>
+<li>Method: Bus, minibus or coach</li>
+<li>Method: Taxi</li>
+<li>Method: Motorcycle, scooter or moped</li>
+<li>Method: Driving a car or van</li>
+<li>Method: Passenger in a car or van</li>
+<li>Method: Bicycle</li>
+<li>Method: On foot</li>
+<li>Method: Other</li>
+</ul>
+</li>
+</ul>
+<p>We have provided these data at two different spatial scales:</p>
+<ul>
+<li>
+<strong>Region-level</strong> - the rgn files
+<ul>
+<li>8 regions (7 in England + Wales)</li>
+</ul>
+</li>
+<li>
+<strong>Upper Tier Local Authorities (UTLA)-level</strong> - the utla files
+<ul>
+<li>174 UTLAs (152 in England, 22 in Wales)</li>
+</ul>
+</li>
+</ul>
+<div class="rmdtip">
+<p><strong><em>Question:</em></strong> What methods of travel to work do you think will more common in high-density areas? In low-density areas? Why?</p>
+</div>
+<p>Write down your predictions before you look at the data.</p>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="index.html">About</a></div>
+<div class="next"><a href="region-level-calculations.html"><span class="header-section-number">2</span> Region-level calculations</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#introduction-setup"><span class="header-section-number">1</span> Introduction &amp; setup</a></li>
+<li><a class="nav-link" href="#exercise-learning-objectives"><span class="header-section-number">1.1</span> Exercise learning objectives</a></li>
+<li><a class="nav-link" href="#creating-folders"><span class="header-section-number">1.2</span> Creating folders</a></li>
+<li><a class="nav-link" href="#download-the-data"><span class="header-section-number">1.3</span> Download the data</a></li>
+<li><a class="nav-link" href="#create-a-new-excel-file"><span class="header-section-number">1.4</span> Create a new Excel file</a></li>
+<li><a class="nav-link" href="#about-this-weeks-data"><span class="header-section-number">1.5</span> About this week’s data</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/01-week1.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/01-week1.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Foundation SKills for LEC (LECX4101) Practical Exercises</strong>" was written by Marta Shocket, Kirsty Bush, Kirsty Ross, and Duncan Whyatt. It was last built on 2026-10-05.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

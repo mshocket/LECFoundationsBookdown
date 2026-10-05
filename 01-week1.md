@@ -1,0 +1,396 @@
+# (PART) Week 1 - Census method of travel to work data in Excel {-}
+
+# Introduction & setup
+
+This week you will use Excel to explore data for population density and how people travel work from the 2021 Census in England and Wales.
+
+## Exercise learning objectives
+
+After completing the week 1 practical exercise, you should be able to:
+
+1. Access your `H:` Drive on a Lancaster University Computer lab computer.
+2. Use formulas to perform calculations on data in Excel.
+3. Use absolute and relative cell references in formulas in Excel, and describe when each is appropriate.
+4. Change number formatting in Excel. 
+5. Make scatter plots (with a trendline) and bar charts in Excel.
+6. Define an outlier, and explain why one might want to exclude outliers from a dataset.
+
+
+## Creating folders
+
+Before you get started, you will need to do some basic set up on your computer.
+
+First you will need to create some folders on your H: drive to organise your work.
+
+::: {.rmdimportant}
+***Important!*** Your [H: drive](https://portal.lancaster.ac.uk/ask/personal-filestore/) is a personal filestore to store your files on site at Lancaster University, with a default quota of 10GB.
+
+Files are accessible via PCs on campus computer labs (via the H: Drive on File Explorer) and from off campus (using the VPN). Files are accessible only to you.
+:::
+
+Create a folder on your H: drive called `4101_practicals`.
+
+Create a sub-folder within that folder called `Data`.
+
+::: {.rmdwarning}
+***Warning!*** If you do not follow these directions exactly (including the capitalisation of the word `Data`, you will run into problems in weeks 2-6 when we are working in R.
+:::
+
+## Download the data
+
+Next you will need to the download the data for today's exercise. There are four files, which can be downloading by clicking on the following links.
+
+- `census2021-ts006-rgn.csv`
+- `census2021-ts006-ulta.csv`
+- `census2021-ts061-rgn.csv`
+- `census2021-ts061-ulta.csv`
+
+You should get a pop-up window asking you where you want to save it. Navigate to your `H:/4101_practicals/Data` folder and save it there.
+
+If there is no pop-up window, it will have automatically downloaded to your Downloads folder. If so, move it to your `H:/4101_practicals/Data` folder.
+
+## Create a new Excel file
+
+Open Microsoft Excel and select the option to create a new, blank spreadsheet.
+
+Save it inside your `H:/4101_practicals/Data` folder folder as `Week1_Practical` (or something similar) using the default file format (Excel Workbook: `.xlsx`).
+
+## About this week's data
+
+This week you will look at relationships between two types of data collected as part of the 2021 census in England and Wales:
+
+- **Population density** (persons per square km) - the ts006 files
+- **Method of travel to workplace** (number of people) - the ts061 files
+  - Total workers travelling to work
+  - Method: Work mainly from home
+  - Method: Underground, metro, light rail, tram 
+  - Method: Train
+  - Method: Bus, minibus or coach 
+  - Method: Taxi
+  - Method: Motorcycle, scooter or moped
+  - Method: Driving a car or van
+  - Method: Passenger in a car or van
+  - Method: Bicycle
+  - Method: On foot
+  - Method: Other
+
+We have provided these data at two different spatial scales:
+
+- **Region-level** - the rgn files
+    - 8 regions (7 in England + Wales)
+- **Upper Tier Local Authorities (UTLA)-level** - the utla files
+    - 174 UTLAs (152 in England, 22 in Wales)
+
+::: {.rmdtip}
+***Question:*** What methods of travel to work do you think will more common in high-density areas? In low-density areas? Why?
+:::
+
+Write down your predictions before you look at the data.
+
+# Region-level calculations
+
+We'll start by looking at the region-level data.
+
+## Copy the data into Excel
+
+### Population density data
+
+Open the region-level population density data (the `census2021-ts006-rgn.csv` file).
+
+Select all of the cells with data and copy them (either using the keyboard shortcut `Ctrl + C` or the _Copy_ button on the Home bar at the top of your Excel window).
+
+Select cell A1 in your blank Week1_Practical workbook and paste the data into it (either using the keyboard shortcut `Ctrl + V` or the _Paste_ button on the Home bar). 
+
+::: {.rmdimportant}
+***Important!*** It's usually a good idea keep a copy of your original data and create a new workbook to analyse it in. That way if you accidentally change or delete something, you'll be able to go back to the original data.
+:::
+
+### Method of travel to work data
+
+Now open the region-level method of travel to work data (the `census2021-ts061-rgn.csv` file).
+
+Select the cells in columns D though O that contain data. (Columns A-C are the same in both datasets.)
+
+Select cell E1 (the first blank cell in the first row) in your blank `Week1_Practical` workbook and paste the data into it. 
+
+### Formatting the spreadsheet
+
+You may want to format the spreadsheet to make it easier to read. For example, you could:
+
+- Click and drag on the lines between the column labels and expand the columns to make them wider or narrower.
+- Click and drag on the line between row 1 and row 2 to make the first row taller.
+- Click on the _Wrap text_ button to get the column titles to wrap on multiple lines.
+- Make the column titles bold so they stand out more. 
+- Shorten the column names to make them fit better
+
+::: {.rmdtip}
+***Question:*** What can you tell from looking at the raw data? Do any patterns jump out at you? 
+:::
+
+## Calculate percentages
+
+Hopefully you noticed that the total number of people working in each region differs quite substantially. This makes it difficult to draw conclusions from the raw numbers of people that travel to work using each method.
+
+Therefore, you will turn these raw numbers for each travel method into percentages, by dividing them by the total number of workers in the region and multiplying by 100.
+
+$$\text{%} = \frac{Number}{Total}*100$$
+
+### Add column names
+
+Add column names to cells R1-AB1 that say `%` and then each method of travel for the raw numbers in columns F-P. (We suggest leaving one blank column after the raw numbers so that it's clear where the percentages begin).
+
+### Formulas in Excel
+
+In Excel (and other spreadsheet programs), you can perform a calculation by using the equal sign and a mathematical formula.
+
+If you are not already comfortable with calculations in spreadsheets:
+
+- Click on a random empty cell.
+- Type `=2+2` and hit enter.
+- Delete the contents of the cell once you have seen that the answer appears.
+
+Your calculations can also use cell references instead of typed numbers.
+
+If you are not already comfortable with using cell references (e.g. A1) in spreadsheet calculations:
+
+- Click on a random empty cell.
+- Type `=`, click on a random cell with a number, type `*100`, and hit enter.
+- Note that you can see - and edit - the formula in the box just below the home bar at the top of your Excel Window.
+- Click on the window, change the `*` to a `+`, and hit enter.
+- Delete the contents of the cell once you have seen that the answer appears.
+
+### Calculate the percentage working from home for the North East
+
+Select the empty cell below your column title for the percentage working from home.
+
+Type the formula to calculate the percentage working from home using the appropriate cell references to refer to the number working from home and the total workers in the North East region.
+
+### Copying formulas in Excel
+
+You can apply formulas to adjacent cells by selecting the cell with the formula you want, clicking on the small square in the bottom right corner, and dragging it to the target cells.
+
+::: {.rmdimportant}
+***Important!*** When you drag a formula to an adjacent cell, all of the cell references will also move by the same number of rows and columns.
+
+If you want a cell reference in a formula to keep referring to specific row, column, or cell, you can use the `$` symbol before the row number, the column letter, or both.
+
+For example:
+
+- `A$1` will keep the row the same.
+- `$A1` will keep the column the same.
+- `$A$1` will keep both the same.
+:::
+
+### Calculate the percentage working from home for all regions
+
+To apply the formula down and calculate the percentage working from home for all the regions: 
+
+- Select the cell with your formula for the percentage working from home in the North East region.
+- Drag the formula down to apply it to the rows for all ten regions.
+- Click on the various cells and look at the formula bar to make sure the cell references are changing in the way you expected.
+- Double-click on one of the formula cells. You should see the referenced cells highlighted in different colours. Press enter to deselect the cell.
+
+The cell references should move down with each row as desired.
+
+### Calculate the percentage for all modes of travel in all regions
+
+You will have to do a bit more work before you can apply the formula to all modes of travel.
+
+::: {.rmdtip}
+***Question:*** What do you think will happen if you drag the formulas to the right as they are currently written? Why is that a bad thing in this case?
+
+If you aren't sure, try it and see what happens.
+:::
+
+In this case, you want the column reference for a specific travel method to move right with our formula. However, you want the column reference for the total number of workers in a region to stay exactly the same!
+
+Use the information in the green tip box above to figure out where to put the `$` in all of the formula cell references before you drag the formulas to the right.
+
+If you get stuck, you can ask a neighbor or raise your hand and ask an instructor.
+
+Once you have edited your formulas, select all ten cells in the column and drag them to the right.
+
+You should now have the entire table filled out.
+
+### Format the cells
+
+The output of our calculations has a lot more decimal places than we need, and it's making it difficult to read the results.
+
+Format the cells to make them easier to read:
+
+- Select all of the cells with your calculations.
+- In the Home bar at the top of your screen, find the "Number" section and click the "Decrease decimal" button until there is only one decimal place showing.
+
+# Region-level figures
+
+Now that you have the data for each method of travel calculated as percentages for each region, you can use them to make graphs.
+
+Specifically, we want you to make graphs that will help you answer the following questions:
+
+::: {.rmdtip}
+***Research Questions:*** 
+
+1. Do any of the methods of travel to work vary with population density?
+2. What is the most common method of travel to work for North West England? 
+:::
+
+Spend a few minutes thinking about what kind of graph would help you answer each question. Trying sketching out the graphs with pencil and paper. 
+
+::: {.rmdtip}
+***Question:*** 
+What variables would you put on the axes for each kind of graph?
+:::
+
+## Graphs for Question 1
+
+### Basic graph
+
+For question 1, make a scatter plot with population density on the x-axis and the percentage of people using various methods of travel on the y-axis.
+
+To insert a graph in Excel:
+
+- Click on `Insert` at the top of the window.
+- Select the type of graph you want to make in the `Charts` section.
+
+For a scatter plot:
+
+- Click on the icon with little dots
+- Select the option without dots and no connecting lines.
+
+To select your data:
+
+- Click on the blank graph and Excel will automatically switch to the `Chart Design` bar at the top of the window.
+- Click on the `Select Data` button. A `Select Data Source` window will pop up.
+- Click the `Add` button and a `Edit data series` window will pop up.
+- Leave the series name blank.
+- Click on the `Series X values` blank and then select all the cells with data in the population density column.
+- Click on the `Series Y value` blank, delete the text `{1}` and then select all the cells with data in the percentage working from home column.
+- Click `Okay` and then `Okay` again, for both pop ups. 
+
+::: {.rmdwarning}
+***Attention!*** Excel will automatically fill in the `Series Y value` with the value `{1}`. If you don't delete this before selecting your data, you will get an error.
+:::
+
+### Add a trendline
+
+A trendline can help you see relationships in the data on a scatter graph.
+
+To add a trendline in Excel:
+
+- Click on the graph and Excel will automatically switch to the `Chart Design` bar at the top of the window.
+- Click on the `Add Chart Element` button on the far left of the bar.
+- Select `Trendline` and then `Linear`
+
+### Explore the Data
+
+While you have the graph selected, you should be able to see highlighting that indicates which columns are being plotted.
+
+Explore the relationship between population density and all the different methods of travel to work, by hovering over the highlighted column and dragging the selection box to different columns.
+
+If you prefer, you can also select, copy, and paste the graph to make a new graph before you select a different column.
+
+
+::: {.rmdtip}
+***Question:*** What do you notice about the relationships in the graphs for each method of travel? How are they same? How are they different?
+:::
+
+It looks like London has a very different population density than the other regions for all the methods of travel, and often has a different percentage of people using a method of travel that is having a really large impact on the trendline. For some methods of travel the precentage is much higher and for others it's much lower. 
+
+This is what's called an **Outlier**.
+
+::: {.rmdimportant}
+***Important!*** An **outlier** is a data point that is substantially different to the other observations.
+
+Outliers can be due to errors in the measurement process or to real differences in subjects that you are studying.
+
+You may want to remove outliers from a dataset for either reason - if you think the observation is a mistake, or if you think the observation is not relevant to the rest of the dataset and is making it hard to analyse the other points or having an undue influence on your analysis.
+:::
+
+In this case, it's likely that people in London do actually have different patterns of travelling for work due to differences in transit infrastructure that stem from London having a much higher population density. However, this "London effect" may be quite distinct from any patterns that occur in non-London locations.
+
+Thus, it may be helpful to look at the relationships with the London outlier removed from the dataset. 
+
+
+### Remove the London data
+
+It would be useful to see what the graphs look like with the London outlier removed - but you don't want to lose the work that you've already done.
+
+The easiest way to do this is to duplicate the worksheet:
+
+- Right click on the `Sheet 1` tab at the bottom left corner of the window. 
+- Select `Rename` and rename the tab `Region data`.
+- Right click on the tab again.
+- Select `Move or copy`.
+- Click the box that says `Create a copy` at the bottom of the pop-up window.
+- Click `Okay`.
+- Right click on the duplicated tab - `Region data (2)`
+- Select `Rename` and rename the tab `Region data - no London`
+
+Click on the row number for the row containing the London data. It will highlight the entire row. 
+
+On the home bar at the top of the screen, select `Delete` and then `Delete entire rows`.
+
+Now explore the relationship between population density and all the different methods of travel to work again in this new data set with the London outlier removed.
+
+::: {.rmdtip}
+***Question:*** Does removing London allow you to draw different conclusions about which travel methods vary with population density?
+
+Specifically,
+
+- Do the relationships tend to get stronger or weaker?
+- Do any of the relationships reverse direction entirely (i.e. switch from positive to negative)?
+:::
+
+## Graph for Question 2
+
+For question 2, make a bar plot with the various methods of travel on the x-axis and the percentage of people using that method on the y-axis.
+
+You can use either worksheet - with or without London - because they both have the data for North West England.
+
+Insert a graph using the same process as before, but this time:
+
+- Click on the top-left icon with bars for a column or bar chart.
+- Select the first option under 2D column.
+
+Select your data using the same process as before, but this time:
+
+- The y-values go in the box `Series values`.
+- Add the x-axis labels by clicking the `Edit` button under `Horiztonal (Category) Axis Labels` and selecting the cells with your column names.
+
+If you want to change the x-axis labels on your chart, you can change the values in those cells.
+
+::: {.rmdtip}
+***Question:*** Which methods of travel to work were most common? Why?
+
+What was happening in 2021? Do you think the data would look different today?
+:::
+
+# UTLA-level calculations and figures
+
+If there is sufficient time remaining, repeat the analysis for Question 1 again, this time with the UTLA-level data.
+
+::: {.rmdtip}
+***Questions:***
+
+Are the relationships between method of travel and population density stronger or weaker at the UTLA level? Why do you think that is the case?
+
+Do the London UTLAs still seem like outliers? Do you think you should remove them from this analysis too? Why or why not?
+:::
+
+# Format your graph
+
+The default formatting for Excel graphs is not very pretty or easy to read.
+
+For your final task today, choose one of your graphs from today's practical to make more aesthetically pleasing. 
+
+Things you will want to consider:
+
+- Adding axis labels - with units
+- Making the text larger
+- Changing the aspect ratio
+- Changing the colour
+
+You will be able access most of the settings one of two ways:
+
+1. Through the `Chart Design` bar at the top of the window.
+2. Through the `Format Chart Area` pane that will appear if you double click on the graph. 

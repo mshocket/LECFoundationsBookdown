@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 3 Region-level figures | Foundation SKills for LEC (LECX4101) Practical Exercises</title>
+<meta name="author" content="Marta Shocket, Kirsty Bush, Kirsty Ross, and Duncan Whyatt">
+<meta name="description" content="Now that you have the data for each method of travel calculated as percentages for each region, you can use them to make graphs. Specifically, we want you to make graphs that will help you answer...">
+<meta name="generator" content="bookdown 0.48 with bs4_book()">
+<meta property="og:title" content="Chapter 3 Region-level figures | Foundation SKills for LEC (LECX4101) Practical Exercises">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Now that you have the data for each method of travel calculated as percentages for each region, you can use them to make graphs. Specifically, we want you to make graphs that will help you answer...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 3 Region-level figures | Foundation SKills for LEC (LECX4101) Practical Exercises">
+<meta name="twitter:description" content="Now that you have the data for each method of travel calculated as percentages for each region, you can use them to make graphs. Specifically, we want you to make graphs that will help you answer...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Foundation SKills for LEC (LECX4101) Practical Exercises</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">About</a></li>
+<li class="book-part">Week 1 - Census method of travel to work data in Excel</li>
+<li><a class="" href="introduction-setup.html"><span class="header-section-number">1</span> Introduction &amp; setup</a></li>
+<li><a class="" href="region-level-calculations.html"><span class="header-section-number">2</span> Region-level calculations</a></li>
+<li><a class="active" href="region-level-figures.html"><span class="header-section-number">3</span> Region-level figures</a></li>
+<li><a class="" href="utla-level-calculations-and-figures.html"><span class="header-section-number">4</span> UTLA-level calculations and figures</a></li>
+<li><a class="" href="format-your-graph.html"><span class="header-section-number">5</span> Format your graph</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="region-level-figures" class="section level1" number="3">
+<h1>
+<span class="header-section-number">3</span> Region-level figures<a class="anchor" aria-label="anchor" href="#region-level-figures"><i class="fas fa-link"></i></a>
+</h1>
+<p>Now that you have the data for each method of travel calculated as percentages for each region, you can use them to make graphs.</p>
+<p>Specifically, we want you to make graphs that will help you answer the following questions:</p>
+<div class="rmdtip">
+<p><strong><em>Research Questions:</em></strong></p>
+<ol style="list-style-type: decimal">
+<li>Do any of the methods of travel to work vary with population density?</li>
+<li>What is the most common method of travel to work for North West England?</li>
+</ol>
+</div>
+<p>Spend a few minutes thinking about what kind of graph would help you answer each question. Trying sketching out the graphs with pencil and paper.</p>
+<div class="rmdtip">
+<p><strong><em>Question:</em></strong>
+What variables would you put on the axes for each kind of graph?</p>
+</div>
+<div id="graphs-for-question-1" class="section level2" number="3.1">
+<h2>
+<span class="header-section-number">3.1</span> Graphs for Question 1<a class="anchor" aria-label="anchor" href="#graphs-for-question-1"><i class="fas fa-link"></i></a>
+</h2>
+<div id="basic-graph" class="section level3" number="3.1.1">
+<h3>
+<span class="header-section-number">3.1.1</span> Basic graph<a class="anchor" aria-label="anchor" href="#basic-graph"><i class="fas fa-link"></i></a>
+</h3>
+<p>For question 1, make a scatter plot with population density on the x-axis and the percentage of people using various methods of travel on the y-axis.</p>
+<p>To insert a graph in Excel:</p>
+<ul>
+<li>Click on <code>Insert</code> at the top of the window.</li>
+<li>Select the type of graph you want to make in the <code>Charts</code> section.</li>
+</ul>
+<p>For a scatter plot:</p>
+<ul>
+<li>Click on the icon with little dots</li>
+<li>Select the option without dots and no connecting lines.</li>
+</ul>
+<p>To select your data:</p>
+<ul>
+<li>Click on the blank graph and Excel will automatically switch to the <code>Chart Design</code> bar at the top of the window.</li>
+<li>Click on the <code>Select Data</code> button. A <code>Select Data Source</code> window will pop up.</li>
+<li>Click the <code>Add</code> button and a <code>Edit data series</code> window will pop up.</li>
+<li>Leave the series name blank.</li>
+<li>Click on the <code>Series X values</code> blank and then select all the cells with data in the population density column.</li>
+<li>Click on the <code>Series Y value</code> blank, delete the text <code>{1}</code> and then select all the cells with data in the percentage working from home column.</li>
+<li>Click <code>Okay</code> and then <code>Okay</code> again, for both pop ups.</li>
+</ul>
+<div class="rmdwarning">
+<p><strong><em>Attention!</em></strong> Excel will automatically fill in the <code>Series Y value</code> with the value <code>{1}</code>. If you don’t delete this before selecting your data, you will get an error.</p>
+</div>
+</div>
+<div id="add-a-trendline" class="section level3" number="3.1.2">
+<h3>
+<span class="header-section-number">3.1.2</span> Add a trendline<a class="anchor" aria-label="anchor" href="#add-a-trendline"><i class="fas fa-link"></i></a>
+</h3>
+<p>A trendline can help you see relationships in the data on a scatter graph.</p>
+<p>To add a trendline in Excel:</p>
+<ul>
+<li>Click on the graph and Excel will automatically switch to the <code>Chart Design</code> bar at the top of the window.</li>
+<li>Click on the <code>Add Chart Element</code> button on the far left of the bar.</li>
+<li>Select <code>Trendline</code> and then <code>Linear</code>
+</li>
+</ul>
+</div>
+<div id="explore-the-data" class="section level3" number="3.1.3">
+<h3>
+<span class="header-section-number">3.1.3</span> Explore the Data<a class="anchor" aria-label="anchor" href="#explore-the-data"><i class="fas fa-link"></i></a>
+</h3>
+<p>While you have the graph selected, you should be able to see highlighting that indicates which columns are being plotted.</p>
+<p>Explore the relationship between population density and all the different methods of travel to work, by hovering over the highlighted column and dragging the selection box to different columns.</p>
+<p>If you prefer, you can also select, copy, and paste the graph to make a new graph before you select a different column.</p>
+<div class="rmdtip">
+<p><strong><em>Question:</em></strong> What do you notice about the relationships in the graphs for each method of travel? How are they same? How are they different?</p>
+</div>
+<p>It looks like London has a very different population density than the other regions for all the methods of travel, and often has a different percentage of people using a method of travel that is having a really large impact on the trendline. For some methods of travel the precentage is much higher and for others it’s much lower.</p>
+<p>This is what’s called an <strong>Outlier</strong>.</p>
+<div class="rmdimportant">
+<p><strong><em>Important!</em></strong> An <strong>outlier</strong> is a data point that is substantially different to the other observations.</p>
+<p>Outliers can be due to errors in the measurement process or to real differences in subjects that you are studying.</p>
+<p>You may want to remove outliers from a dataset for either reason - if you think the observation is a mistake, or if you think the observation is not relevant to the rest of the dataset and is making it hard to analyse the other points or having an undue influence on your analysis.</p>
+</div>
+<p>In this case, it’s likely that people in London do actually have different patterns of travelling for work due to differences in transit infrastructure that stem from London having a much higher population density. However, this “London effect” may be quite distinct from any patterns that occur in non-London locations.</p>
+<p>Thus, it may be helpful to look at the relationships with the London outlier removed from the dataset.</p>
+</div>
+<div id="remove-the-london-data" class="section level3" number="3.1.4">
+<h3>
+<span class="header-section-number">3.1.4</span> Remove the London data<a class="anchor" aria-label="anchor" href="#remove-the-london-data"><i class="fas fa-link"></i></a>
+</h3>
+<p>It would be useful to see what the graphs look like with the London outlier removed - but you don’t want to lose the work that you’ve already done.</p>
+<p>The easiest way to do this is to duplicate the worksheet:</p>
+<ul>
+<li>Right click on the <code>Sheet 1</code> tab at the bottom left corner of the window.</li>
+<li>Select <code>Rename</code> and rename the tab <code>Region data</code>.</li>
+<li>Right click on the tab again.</li>
+<li>Select <code>Move or copy</code>.</li>
+<li>Click the box that says <code>Create a copy</code> at the bottom of the pop-up window.</li>
+<li>Click <code>Okay</code>.</li>
+<li>Right click on the duplicated tab - <code>Region data (2)</code>
+</li>
+<li>Select <code>Rename</code> and rename the tab <code>Region data - no London</code>
+</li>
+</ul>
+<p>Click on the row number for the row containing the London data. It will highlight the entire row.</p>
+<p>On the home bar at the top of the screen, select <code>Delete</code> and then <code>Delete entire rows</code>.</p>
+<p>Now explore the relationship between population density and all the different methods of travel to work again in this new data set with the London outlier removed.</p>
+<div class="rmdtip">
+<p><strong><em>Question:</em></strong> Does removing London allow you to draw different conclusions about which travel methods vary with population density?</p>
+<p>Specifically,</p>
+<ul>
+<li>Do the relationships tend to get stronger or weaker?</li>
+<li>Do any of the relationships reverse direction entirely (i.e. switch from positive to negative)?</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="graph-for-question-2" class="section level2" number="3.2">
+<h2>
+<span class="header-section-number">3.2</span> Graph for Question 2<a class="anchor" aria-label="anchor" href="#graph-for-question-2"><i class="fas fa-link"></i></a>
+</h2>
+<p>For question 2, make a bar plot with the various methods of travel on the x-axis and the percentage of people using that method on the y-axis.</p>
+<p>You can use either worksheet - with or without London - because they both have the data for North West England.</p>
+<p>Insert a graph using the same process as before, but this time:</p>
+<ul>
+<li>Click on the top-left icon with bars for a column or bar chart.</li>
+<li>Select the first option under 2D column.</li>
+</ul>
+<p>Select your data using the same process as before, but this time:</p>
+<ul>
+<li>The y-values go in the box <code>Series values</code>.</li>
+<li>Add the x-axis labels by clicking the <code>Edit</code> button under <code>Horiztonal (Category) Axis Labels</code> and selecting the cells with your column names.</li>
+</ul>
+<p>If you want to change the x-axis labels on your chart, you can change the values in those cells.</p>
+<div class="rmdtip">
+<p><strong><em>Question:</em></strong> Which methods of travel to work were most common? Why?</p>
+<p>What was happening in 2021? Do you think the data would look different today?</p>
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="region-level-calculations.html"><span class="header-section-number">2</span> Region-level calculations</a></div>
+<div class="next"><a href="utla-level-calculations-and-figures.html"><span class="header-section-number">4</span> UTLA-level calculations and figures</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#region-level-figures"><span class="header-section-number">3</span> Region-level figures</a></li>
+<li>
+<a class="nav-link" href="#graphs-for-question-1"><span class="header-section-number">3.1</span> Graphs for Question 1</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#basic-graph"><span class="header-section-number">3.1.1</span> Basic graph</a></li>
+<li><a class="nav-link" href="#add-a-trendline"><span class="header-section-number">3.1.2</span> Add a trendline</a></li>
+<li><a class="nav-link" href="#explore-the-data"><span class="header-section-number">3.1.3</span> Explore the Data</a></li>
+<li><a class="nav-link" href="#remove-the-london-data"><span class="header-section-number">3.1.4</span> Remove the London data</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#graph-for-question-2"><span class="header-section-number">3.2</span> Graph for Question 2</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/01-week1.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/01-week1.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Foundation SKills for LEC (LECX4101) Practical Exercises</strong>" was written by Marta Shocket, Kirsty Bush, Kirsty Ross, and Duncan Whyatt. It was last built on 2026-10-05.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
