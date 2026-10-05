@@ -1,5 +1,5 @@
 --- 
-title: "Foundation SKills for LEC (LECX4101) Practical Exercises"
+title: "Foundation Skills for LEC Practical Exercises"
 author: "Marta Shocket, Kirsty Bush, Kirsty Ross, and Duncan Whyatt"
 date: "2026-10-05"
 site: bookdown::bookdown_site

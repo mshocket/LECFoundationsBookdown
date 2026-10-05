@@ -1,4 +1,4 @@
-# (PART) Week 1 - Census method of travel to work data in Excel {-}
+# (PART) Week 1 - Census data for method of travel to work in Excel {-}
 
 # Introduction & setup
 
@@ -38,16 +38,16 @@ Create a sub-folder within that folder called `Data`.
 
 ## Download the data
 
-Next you will need to the download the data for today's exercise. There are four files, which can be downloading by clicking on the following links.
+Next you will need to the download the data for today's exercise. There are four files, which can be downloading by right-clicking on the following links and selecting `Save As` or `Save Link As`.
 
-- `census2021-ts006-rgn.csv`
-- `census2021-ts006-ulta.csv`
-- `census2021-ts061-rgn.csv`
-- `census2021-ts061-ulta.csv`
+- [census2021-ts006-rgn.csv](https://raw.githubusercontent.com/mshocket/LECFoundationsBookdown/refs/heads/master/data/census2021-ts006-rgn.csv)
+- [census2021-ts006-utla.csv](https://raw.githubusercontent.com/mshocket/LECFoundationsBookdown/refs/heads/master/data/census2021-ts006-utla.csv)
+- [census2021-ts061-rgn.csv](https://raw.githubusercontent.com/mshocket/LECFoundationsBookdown/refs/heads/master/data/census2021-ts061-rgn.csv)
+- [census2021-ts061-utla.csv](https://raw.githubusercontent.com/mshocket/LECFoundationsBookdown/refs/heads/master/data/census2021-ts061-utla.csv)
 
 You should get a pop-up window asking you where you want to save it. Navigate to your `H:/4101_practicals/Data` folder and save it there.
 
-If there is no pop-up window, it will have automatically downloaded to your Downloads folder. If so, move it to your `H:/4101_practicals/Data` folder.
+If the page just turns into some plain text, you probably just clicked rather than right-clicked. Just press the back button and try again.
 
 ## Create a new Excel file
 
@@ -82,7 +82,7 @@ We have provided these data at two different spatial scales:
     - 174 UTLAs (152 in England, 22 in Wales)
 
 ::: {.rmdtip}
-***Question:*** What methods of travel to work do you think will more common in high-density areas? In low-density areas? Why?
+***Questions:*** What methods of travel to work do you think will more common in high-density areas? In low-density areas? Why?
 :::
 
 Write down your predictions before you look at the data.
@@ -124,7 +124,7 @@ You may want to format the spreadsheet to make it easier to read. For example, y
 - Shorten the column names to make them fit better
 
 ::: {.rmdtip}
-***Question:*** What can you tell from looking at the raw data? Do any patterns jump out at you? 
+***Questions:*** What can you tell from looking at the raw data? Do any patterns jump out at you? 
 :::
 
 ## Calculate percentages
@@ -197,7 +197,7 @@ The cell references should move down with each row as desired.
 You will have to do a bit more work before you can apply the formula to all modes of travel.
 
 ::: {.rmdtip}
-***Question:*** What do you think will happen if you drag the formulas to the right as they are currently written? Why is that a bad thing in this case?
+***Questions:*** What do you think will happen if you drag the formulas to the right as they are currently written? Why is that a bad thing in this case?
 
 If you aren't sure, try it and see what happens.
 :::
@@ -207,6 +207,10 @@ In this case, you want the column reference for a specific travel method to move
 Use the information in the green tip box above to figure out where to put the `$` in all of the formula cell references before you drag the formulas to the right.
 
 If you get stuck, you can ask a neighbor or raise your hand and ask an instructor.
+
+::: {.rmdimportant}
+***Tip:*** You can modify the formula just for cell R2 and drag this new formula back down over the ten regions, then out across all travel methods.
+:::
 
 Once you have edited your formulas, select all ten cells in the column and drag them to the right.
 
@@ -263,8 +267,8 @@ To select your data:
 - Click on the `Select Data` button. A `Select Data Source` window will pop up.
 - Click the `Add` button and a `Edit data series` window will pop up.
 - Leave the series name blank.
-- Click on the `Series X values` blank and then select all the cells with data in the population density column.
-- Click on the `Series Y value` blank, delete the text `{1}` and then select all the cells with data in the percentage working from home column.
+- Click on the `Series X values` box and then select all the cells with data in the population density column.
+- Click on the `Series Y value` box, delete the text `{1}` and then select all the cells with data in the percentage working from home column.
 - Click `Okay` and then `Okay` again, for both pop ups. 
 
 ::: {.rmdwarning}
@@ -291,12 +295,18 @@ If you prefer, you can also select, copy, and paste the graph to make a new grap
 
 
 ::: {.rmdtip}
-***Question:*** What do you notice about the relationships in the graphs for each method of travel? How are they same? How are they different?
+***Questions:***
+
+Which method of travel has the strongest relationship with population density? The weakest relationship?
+
+What else do you notice about the graphs?
 :::
 
-It looks like London has a very different population density than the other regions for all the methods of travel, and often has a different percentage of people using a method of travel that is having a really large impact on the trendline. For some methods of travel the precentage is much higher and for others it's much lower. 
+It looks like London has a very different population density than the other regions for all the methods of travel, and it often has a different percentage of people using a method of travel that is having a really large impact on the trendline.
 
-This is what's called an **Outlier**.
+For some methods of travel the percentage in London is much higher than in the other regions and for other methods it's much lower. 
+
+This is what's called an **outlier**.
 
 ::: {.rmdimportant}
 ***Important!*** An **outlier** is a data point that is substantially different to the other observations.
@@ -306,14 +316,14 @@ Outliers can be due to errors in the measurement process or to real differences 
 You may want to remove outliers from a dataset for either reason - if you think the observation is a mistake, or if you think the observation is not relevant to the rest of the dataset and is making it hard to analyse the other points or having an undue influence on your analysis.
 :::
 
-In this case, it's likely that people in London do actually have different patterns of travelling for work due to differences in transit infrastructure that stem from London having a much higher population density. However, this "London effect" may be quite distinct from any patterns that occur in non-London locations.
+In this case, it's likely that people in London do actually have different patterns of travelling for work due to differences in transit infrastructure that stem from London having a much higher population density. However, this "London effect" may be quite distinct from the patterns that occur in non-London locations.
 
 Thus, it may be helpful to look at the relationships with the London outlier removed from the dataset. 
 
 
 ### Remove the London data
 
-It would be useful to see what the graphs look like with the London outlier removed - but you don't want to lose the work that you've already done.
+It would be useful to see what the graphs look like without the London outlier - but you don't want to lose the work that you've already done.
 
 The easiest way to do this is to duplicate the worksheet:
 
@@ -333,7 +343,7 @@ On the home bar at the top of the screen, select `Delete` and then `Delete entir
 Now explore the relationship between population density and all the different methods of travel to work again in this new data set with the London outlier removed.
 
 ::: {.rmdtip}
-***Question:*** Does removing London allow you to draw different conclusions about which travel methods vary with population density?
+***Questions:*** Does removing London allow you to draw different conclusions about which travel methods vary with population density?
 
 Specifically,
 
@@ -355,12 +365,14 @@ Insert a graph using the same process as before, but this time:
 Select your data using the same process as before, but this time:
 
 - The y-values go in the box `Series values`.
-- Add the x-axis labels by clicking the `Edit` button under `Horiztonal (Category) Axis Labels` and selecting the cells with your column names.
+- Add the x-axis labels by clicking the `Edit` button under `Horizontal (Category) Axis Labels` and selecting the cells with your column names.
 
 If you want to change the x-axis labels on your chart, you can change the values in those cells.
 
 ::: {.rmdtip}
-***Question:*** Which methods of travel to work were most common? Why?
+***Questions:***
+
+Which methods of travel to work were most common? Why?
 
 What was happening in 2021? Do you think the data would look different today?
 :::
@@ -369,10 +381,12 @@ What was happening in 2021? Do you think the data would look different today?
 
 If there is sufficient time remaining, repeat the analysis for Question 1 again, this time with the UTLA-level data.
 
+Now all the regions will be broken up into much smaller upper-tier local authorities. 
+
 ::: {.rmdtip}
 ***Questions:***
 
-Are the relationships between method of travel and population density stronger or weaker at the UTLA level? Why do you think that is the case?
+Are the relationships between method of travel and population density stronger or weaker at the UTLA-level compared to the region-level? Why do you think that is the case?
 
 Do the London UTLAs still seem like outliers? Do you think you should remove them from this analysis too? Why or why not?
 :::
@@ -389,6 +403,7 @@ Things you will want to consider:
 - Making the text larger
 - Changing the aspect ratio
 - Changing the colour
+- Removing or adding grid lines
 
 You will be able access most of the settings one of two ways:
 
