@@ -6,3 +6,5 @@
 .quarto
 _book/
 _bookdown_files/
+LECFoundationsBookdown.rds
+examples/
