@@ -18,7 +18,7 @@ pre code {
 .chapter-nav .prev, .chapter-nav .next {
   padding: 0.5rem;
   border: 0px solid #fff;
-  background: rgba(0, 128, 128, 0.05);;
+  background: #eee;
   border-radius: 1rem;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,0);
 }
@@ -28,7 +28,7 @@ pre code {
 }
 
 .rmdnote {
-  background: color-mix(in srgb, var(--primary) 10%, transparent);
+  background: color-mix(in srgb, #096B72 10%, transparent);
 }
 .rmdimportant {
   background: color-mix(in srgb, var(--success) 10%, transparent);
@@ -44,7 +44,7 @@ pre code {
 }
 
 .rmdnote b, .rmdnote strong {
-  color: var(--primary);
+  color: #096B72;
 }
 
 .rmdimportant b, .rmdimportant strong {
