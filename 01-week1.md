@@ -133,7 +133,7 @@ Hopefully you noticed that the total number of people working in each region dif
 
 Therefore, you will turn these raw numbers for each travel method into percentages, by dividing them by the total number of workers in the region and multiplying by 100.
 
-$$\text{%} = \frac{Number}{Total}*100$$
+$$\mathrm{Percentage} = \frac{Number}{Total}\times100$$
 
 ### Add column names
 
