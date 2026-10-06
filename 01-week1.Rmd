@@ -2,62 +2,63 @@
 
 # Introduction & setup
 
-This week you will use Excel to explore data for population density and how people travel work from the 2021 Census in England and Wales.
+This week you will use Excel to explore data for population density and how people travel to work from the 2021 census in England and Wales.
 
-## Exercise learning objectives
+## Week 1 learning objectives
 
-After completing the week 1 practical exercise, you should be able to:
+After completing this practical exercise, you should be able to:
 
-1. Access your `H:` Drive on a Lancaster University Computer lab computer.
-2. Use formulas to perform calculations on data in Excel.
+1. Access your `H:` Drive on a Lancaster University computer.
+2. Use formulas and functions to perform calculations on data in Excel.
 3. Use absolute and relative cell references in formulas in Excel, and describe when each is appropriate.
 4. Change number formatting in Excel. 
 5. Make scatter plots (with a trendline) and bar charts in Excel.
-6. Define an outlier, and explain why one might want to exclude outliers from a dataset.
-
+6. Define an outlier, and explain two reasons for why one might want to exclude outliers from an analysis.
 
 ## Creating folders
 
-Before you get started, you will need to do some basic set up on your computer.
+Before you get started, you will need to do some set up.
 
-First you will need to create some folders on your H: drive to organise your work.
+First you will need to create two folders on your `H:` drive to organise your work.
 
 ::: {.rmdimportant}
 ***Important!*** Your [H: drive](https://portal.lancaster.ac.uk/ask/personal-filestore/) is a personal filestore to store your files on site at Lancaster University, with a default quota of 10GB.
 
-Files are accessible via PCs on campus computer labs (via the H: Drive on File Explorer) and from off campus (using the VPN). Files are accessible only to you.
+Files are accessible via PCs in campus computer labs (via the `H:` Drive in the File Explorer sidebar) and from off campus (using the VPN).
+
+These files are accessible only to you.
 :::
 
-Create a folder on your H: drive called `4101_practicals`.
+Create a folder on your `H:` drive called `4101_practicals`.
 
 Create a sub-folder within that folder called `Data`.
 
 ::: {.rmdwarning}
-***Warning!*** If you do not follow these directions exactly (including the capitalisation of the word `Data`, you will run into problems in weeks 2-6 when we are working in R.
+***Warning!*** If you do not follow these directions exactly - including the capitalisation of the word `Data` - you will run into problems next week when we begin working in R.
 :::
 
 ## Download the data
 
-Next you will need to the download the data for today's exercise. There are four files, which can be downloading by right-clicking on the following links and selecting `Save As` or `Save Link As`.
+Next you will need to the download the data for today's exercise.
+
+There are four files, listed below. Download all four of them from the LECX4101 Moodle page (Week 1 practical section).
 
 - [census2021-ts006-rgn.csv](https://raw.githubusercontent.com/mshocket/LECFoundationsBookdown/refs/heads/master/data/census2021-ts006-rgn.csv)
 - [census2021-ts006-utla.csv](https://raw.githubusercontent.com/mshocket/LECFoundationsBookdown/refs/heads/master/data/census2021-ts006-utla.csv)
 - [census2021-ts061-rgn.csv](https://raw.githubusercontent.com/mshocket/LECFoundationsBookdown/refs/heads/master/data/census2021-ts061-rgn.csv)
 - [census2021-ts061-utla.csv](https://raw.githubusercontent.com/mshocket/LECFoundationsBookdown/refs/heads/master/data/census2021-ts061-utla.csv)
 
-You should get a pop-up window asking you where you want to save it. Navigate to your `H:/4101_practicals/Data` folder and save it there.
-
-If the page just turns into some plain text, you probably just clicked rather than right-clicked. Just press the back button and try again.
+Move the files from your `Downloads` folder to your `H:\4101_practicals\Data` folder.
 
 ## Create a new Excel file
 
 Open Microsoft Excel and select the option to create a new, blank spreadsheet.
 
-Save it inside your `H:/4101_practicals/Data` folder folder as `Week1_Practical` (or something similar) using the default file format (Excel Workbook: `.xlsx`).
+Save it inside your `H:\4101_practicals\Data` folder as `Week1_Practical` (or something similar) using the default file format (Excel Workbook: `.xlsx`).
 
 ## About this week's data
 
-This week you will look at relationships between two types of data collected as part of the 2021 census in England and Wales:
+This week you will look at patterns in two types of data collected as part of the 2021 census in England and Wales:
 
 - **Population density** (persons per square km) - the ts006 files
 - **Method of travel to workplace** (number of people) - the ts061 files
@@ -82,7 +83,13 @@ We have provided these data at two different spatial scales:
     - 174 UTLAs (152 in England, 22 in Wales)
 
 ::: {.rmdtip}
-***Questions:*** What methods of travel to work do you think will more common in high-density areas? In low-density areas? Why?
+***Questions:***
+
+What methods of travel to work do you think will be:
+
+- More common in high-density areas?
+- More common in low-density areas?
+- Equally common in both?
 :::
 
 Write down your predictions before you look at the data.
@@ -95,11 +102,11 @@ We'll start by looking at the region-level data.
 
 ### Population density data
 
-Open the region-level population density data (the `census2021-ts006-rgn.csv` file).
+Open the region-level population density data (`census2021-ts006-rgn.csv`) in Excel.
 
 Select all of the cells with data and copy them (either using the keyboard shortcut `Ctrl + C` or the _Copy_ button on the Home bar at the top of your Excel window).
 
-Select cell A1 in your blank Week1_Practical workbook and paste the data into it (either using the keyboard shortcut `Ctrl + V` or the _Paste_ button on the Home bar). 
+Select cell A1 in your blank `Week1_Practical` workbook and paste the data into it (either using the keyboard shortcut `Ctrl + V` or the _Paste_ button on the Home bar). 
 
 ::: {.rmdimportant}
 ***Important!*** It's usually a good idea keep a copy of your original data and create a new workbook to analyse it in. That way if you accidentally change or delete something, you'll be able to go back to the original data.
@@ -107,15 +114,17 @@ Select cell A1 in your blank Week1_Practical workbook and paste the data into it
 
 ### Method of travel to work data
 
-Now open the region-level method of travel to work data (the `census2021-ts061-rgn.csv` file).
+Now open the region-level method of travel to work data (`census2021-ts061-rgn.csv`).
 
-Select the cells in columns D though O that contain data. (Columns A-C are the same in both datasets.)
+Select and copy the cells in columns D though O that contain data. (Columns A-C contain the same data in both files.)
 
 Select cell E1 (the first blank cell in the first row) in your blank `Week1_Practical` workbook and paste the data into it. 
 
 ### Formatting the spreadsheet
 
-You may want to format the spreadsheet to make it easier to read. For example, you could:
+You may want to format the spreadsheet to make it easier to read and work with.
+
+For example, you could:
 
 - Click and drag on the lines between the column labels and expand the columns to make them wider or narrower.
 - Click and drag on the line between row 1 and row 2 to make the first row taller.
@@ -137,13 +146,13 @@ $$\mathrm{Percentage} = \frac{Number}{Total}\times100$$
 
 ### Add column names
 
-Add column names to cells R1-AB1 that say `%` and then each method of travel for the raw numbers in columns F-P. (We suggest leaving one blank column after the raw numbers so that it's clear where the percentages begin).
+Add column names to cells R1-AB1 that say `%` and each method of travel for the raw numbers in columns F-P, in the same order. (This leaves a blank column after the raw numbers so it's clear where the raw numbers end and the percentages begin).
 
 ### Formulas in Excel
 
-In Excel (and other spreadsheet programs), you can perform a calculation by using the equal sign and a mathematical formula.
+In Excel (and most other spreadsheet programs), you can perform calculations by using the equal sign and a mathematical formula.
 
-If you are not already comfortable with calculations in spreadsheets:
+If you are not already comfortable with calculations in spreadsheets, try the following:
 
 - Click on a random empty cell.
 - Type `=2+2` and hit enter.
@@ -151,23 +160,23 @@ If you are not already comfortable with calculations in spreadsheets:
 
 Your calculations can also use cell references instead of typed numbers.
 
-If you are not already comfortable with using cell references (e.g. A1) in spreadsheet calculations:
+If you are not already comfortable with using cell references (e.g. `A1`) in spreadsheet calculations, try to following:
 
 - Click on a random empty cell.
 - Type `=`, click on a random cell with a number, type `*100`, and hit enter.
-- Note that you can see - and edit - the formula in the box just below the home bar at the top of your Excel Window.
-- Click on the window, change the `*` to a `+`, and hit enter.
+- Note that you can see and edit your formula in the *formula bar* - the big box located just below the home bar at the top of your Excel Window.
+- Click on the formula bar, change the `*` to a `+`, and hit enter.
 - Delete the contents of the cell once you have seen that the answer appears.
 
 ### Calculate the percentage working from home for the North East
 
-Select the empty cell below your column title for the percentage working from home.
+Select the empty cell below your column title for the percentage working from home (`R2`).
 
 Type the formula to calculate the percentage working from home using the appropriate cell references to refer to the number working from home and the total workers in the North East region.
 
 ### Copying formulas in Excel
 
-You can apply formulas to adjacent cells by selecting the cell with the formula you want, clicking on the small square in the bottom right corner, and dragging it to the target cells.
+You can apply formulas to adjacent cells by selecting the cell with the formula, clicking on the small square in the bottom right corner, and dragging it to the adjacent cells. This works in any direction.
 
 ::: {.rmdimportant}
 ***Important!*** When you drag a formula to an adjacent cell, all of the cell references will also move by the same number of rows and columns.
@@ -187,10 +196,17 @@ To apply the formula down and calculate the percentage working from home for all
 
 - Select the cell with your formula for the percentage working from home in the North East region.
 - Drag the formula down to apply it to the rows for all ten regions.
-- Click on the various cells and look at the formula bar to make sure the cell references are changing in the way you expected.
-- Double-click on one of the formula cells. You should see the referenced cells highlighted in different colours. Press enter to deselect the cell.
+- Click on the various cells and look at the formula bar to make sure the cell references are changing in the way you want to get the correct calculation.
 
-The cell references should move down with each row as desired.
+::: {.rmdimportant}
+***Tip:*** If you double-click on a cell with a formula containing cell references, the referenced cells will be highlighted in different colours that correspond to the colours in the formula bar.
+
+This can be very helpful to make sure the formula is doing what you think it is!
+
+When you are done, press enter to reapply the formula and deselect the cell. If you try to click away without doing this, you will inadvertently add a new cell reference and change the formula. 
+:::
+
+Try using the tip above on one of your cells to show yourself that it works.
 
 ### Calculate the percentage for all modes of travel in all regions
 
@@ -199,46 +215,82 @@ You will have to do a bit more work before you can apply the formula to all mode
 ::: {.rmdtip}
 ***Questions:*** What do you think will happen if you drag the formulas to the right as they are currently written? Why is that a bad thing in this case?
 
-If you aren't sure, try it and see what happens.
+If you aren't sure, try it and see what happens to your cell references.
 :::
 
-In this case, you want the column reference for a specific travel method to move right with our formula. However, you want the column reference for the total number of workers in a region to stay exactly the same!
+In this case, you want the column reference for a specific travel method to move right with the formula. However, you want the column reference for the total number of workers in a region to stay exactly the same!
 
 Use the information in the green tip box above to figure out where to put the `$` in all of the formula cell references before you drag the formulas to the right.
 
-If you get stuck, you can ask a neighbor or raise your hand and ask an instructor.
+If you get stuck, you can ask a nearby classmate or raise your hand to ask an instructor.
 
 ::: {.rmdimportant}
-***Tip:*** You can modify the formula just for cell R2 and drag this new formula back down over the ten regions, then out across all travel methods.
+***Tip:*** You can modify the formula just for cell `R2` and drag this new formula back down over the ten regions, then out across all travel methods.
 :::
 
-Once you have edited your formulas, select all ten cells in the column and drag them to the right.
+Once you have edited your formula(s), drag them to fill out all travel methods for all counties.
 
 You should now have the entire table filled out.
 
-### Format the cells
+## Calculate averages
 
-The output of our calculations has a lot more decimal places than we need, and it's making it difficult to read the results.
+Now, use functions to calculate the averages for all regions.
+
+### Functions in Excel
+
+Excel has many built-in functions to help you perform common calculations as part of formulas.
+
+Functions consist of a keyword followed by brackets that contain the cell references of the data that the function that will use. The keywords are usually fairly intuitive (see table below).
+
+To provide cell references to a function, you can either type them out or click and drag to select the cells that you want. If you want to select non-adjacent cells, you can hold down the `Crtl` key while clicking on them.
+
+Some commonly used functions include:
+
+|Calculation|Function in Excel|
+|----|--|
+|Average|`AVERAGE( )`|
+|Sum|`SUM( )`|
+|Minimum|`MIN( )`|
+|Maximum|`MAX( )`|
+|Number of cells that contain numbers|`COUNT( )`|
+|Generate a random number between 0 and 1|`RAND( )`|
+
+### Calculate averages
+
+To calculate the average values for precentage working from home across all regions:
+
+- Select the cell beneath your percentage calculations for working from home (`R12`).
+- Type `=AVERAGE(` - you can double-click on the suggested option when it pops up instead of typing the full function name.
+- Select the appropriate cells (`R2:R11`) - note how Excel writes out a range of cells with a colon in the formula bar.
+- Add the closing bracket and hit enter.
+
+Drag the formula to the right to calculate the averages for all methods of travel.
+
+You will probably want to add a label to the left of your averages (in the blank column) and bold the results so they stand out from the precentages for each region.
+
+## Format the cell display
+
+The output of the percentage and average calculations has a lot more decimal places than you need, and it makes it difficult to read the results.
 
 Format the cells to make them easier to read:
 
-- Select all of the cells with your calculations.
-- In the Home bar at the top of your screen, find the "Number" section and click the "Decrease decimal" button until there is only one decimal place showing.
+- Select all of the cells with your percentage calculations.
+- In the Home bar at the top of your screen, find the *Number* section and click the *Decrease decimal* button until there is only one decimal place showing.
 
 # Region-level figures
 
-Now that you have the data for each method of travel calculated as percentages for each region, you can use them to make graphs.
+Now that you have the data for each method of travel calculated as percentages for each region, and the averages across all regions, you can use them to make graphs.
 
-Specifically, we want you to make graphs that will help you answer the following questions:
+Specifically, you will make graphs to help you answer or illustrate the following questions:
 
 ::: {.rmdtip}
 ***Research Questions:*** 
 
 1. Do any of the methods of travel to work vary with population density?
-2. What is the most common method of travel to work for North West England? 
+2. On average, what is the most common method of travel to work?
 :::
 
-Spend a few minutes thinking about what kind of graph would help you answer each question. Trying sketching out the graphs with pencil and paper. 
+Spend a few minutes thinking about what kind of graph would help you answer or illustrate the answer to each question. Trying sketching out the graphs with pencil and paper. 
 
 ::: {.rmdtip}
 ***Question:*** 
@@ -340,6 +392,10 @@ Click on the row number for the row containing the London data. It will highligh
 
 On the home bar at the top of the screen, select `Delete` and then `Delete entire rows`.
 
+::: {.rmdimportant}
+***Important!*** When you delete a row or column, Excel will automatically adjust the cell references for any formulas that include those cells.
+:::
+
 Now explore the relationship between population density and all the different methods of travel to work again in this new data set with the London outlier removed.
 
 ::: {.rmdtip}
@@ -355,7 +411,11 @@ Specifically,
 
 For question 2, make a bar plot with the various methods of travel on the x-axis and the percentage of people using that method on the y-axis.
 
-You can use either worksheet - with or without London - because they both have the data for North West England.
+::: {.rmdtip}
+***Question:*** You could make your bar plot using the average values from either worksheet - with or without the London data.
+
+Which do you think is most appropriate? Why?
+:::
 
 Insert a graph using the same process as before, but this time:
 
@@ -374,7 +434,7 @@ If you want to change the x-axis labels on your chart, you can change the values
 
 Which methods of travel to work were most common? Why?
 
-What was happening in 2021? Do you think the data would look different today?
+What was happening in 2021? Do you think the data would look different today? In the previous census in 2011? Why?
 :::
 
 # UTLA-level calculations and figures
