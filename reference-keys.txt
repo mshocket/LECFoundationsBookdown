@@ -1,5 +1,5 @@
 introduction-setup
-exercise-learning-objectives
+week-1-learning-objectives
 creating-folders
 download-the-data
 create-a-new-excel-file
@@ -16,7 +16,10 @@ calculate-the-percentage-working-from-home-for-the-north-east
 copying-formulas-in-excel
 calculate-the-percentage-working-from-home-for-all-regions
 calculate-the-percentage-for-all-modes-of-travel-in-all-regions
-format-the-cells
+calculate-averages
+functions-in-excel
+calculate-averages-1
+format-the-cell-display
 region-level-figures
 graphs-for-question-1
 basic-graph
