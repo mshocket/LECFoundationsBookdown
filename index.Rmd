@@ -53,22 +53,22 @@ Periodically the practical instructions will be interrupted by a blue question b
 
 This will help you get the most of the practical exercises and is the best way to prepare for your coursework.
 
-::: {.rmdtip}
+::: {.rmdquestion}
 ***Question:*** What pattern do you expect to see in this data? What might be causing this pattern?
 :::
 
 Other times you will see an amber or red box with a warning to either pay attention to or avoid something.
 
 ::: {.rmdwarning}
-***Attention!*** Be careful about how you do this thing.
+***Warning!*** Be careful about how you do this thing.
 :::
 
-::: {.rmdcaution}
-***Warning!*** Do NOT do this terrible thing.
+::: {.rmddanger}
+***Danger!*** Do NOT do this terrible thing.
 :::
 
 Finally, sometimes you will see green boxes with helpful tips or other important information.
 
-::: {.rmdimportant}
-***Important!*** Here is a helpful tip. 
+::: {.rmdtip}
+***Tip!*** Here is a helpful tip or some useful information. 
 :::
