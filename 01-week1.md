@@ -21,7 +21,7 @@ Before you get started, you will need to do some set up.
 
 First you will need to create two folders on your `H:` drive to organise your work.
 
-::: {.rmdimportant}
+::: {.rmdtip}
 ***Important!*** Your [H: drive](https://portal.lancaster.ac.uk/ask/personal-filestore/) is a personal filestore to store your files on site at Lancaster University, with a default quota of 10GB.
 
 Files are accessible via PCs in campus computer labs (via the `H:` Drive in the File Explorer sidebar) and from off campus (using the VPN).
@@ -82,7 +82,7 @@ We have provided these data at two different spatial scales:
 - **Upper Tier Local Authorities (UTLA)-level** - the utla files
     - 174 UTLAs (152 in England, 22 in Wales)
 
-::: {.rmdtip}
+::: {.rmdquestion}
 ***Questions:***
 
 What methods of travel to work do you think will be:
@@ -108,7 +108,7 @@ Select all of the cells with data and copy them (either using the keyboard short
 
 Select cell A1 in your blank `Week1_Practical` workbook and paste the data into it (either using the keyboard shortcut `Ctrl + V` or the _Paste_ button on the Home bar). 
 
-::: {.rmdimportant}
+::: {.rmdtip}
 ***Important!*** It's usually a good idea keep a copy of your original data and create a new workbook to analyse it in. That way if you accidentally change or delete something, you'll be able to go back to the original data.
 :::
 
@@ -132,7 +132,7 @@ For example, you could:
 - Make the column titles bold so they stand out more. 
 - Shorten the column names to make them fit better
 
-::: {.rmdtip}
+::: {.rmdquestion}
 ***Questions:*** What can you tell from looking at the raw data? Do any patterns jump out at you? 
 :::
 
@@ -178,7 +178,7 @@ Type the formula to calculate the percentage working from home using the appropr
 
 You can apply formulas to adjacent cells by selecting the cell with the formula, clicking on the small square in the bottom right corner, and dragging it to the adjacent cells. This works in any direction.
 
-::: {.rmdimportant}
+::: {.rmdtip}
 ***Important!*** When you drag a formula to an adjacent cell, all of the cell references will also move by the same number of rows and columns.
 
 If you want a cell reference in a formula to keep referring to specific row, column, or cell, you can use the `$` symbol before the row number, the column letter, or both.
@@ -198,7 +198,7 @@ To apply the formula down and calculate the percentage working from home for all
 - Drag the formula down to apply it to the rows for all ten regions.
 - Click on the various cells and look at the formula bar to make sure the cell references are changing in the way you want to get the correct calculation.
 
-::: {.rmdimportant}
+::: {.rmdtip}
 ***Tip:*** If you double-click on a cell with a formula containing cell references, the referenced cells will be highlighted in different colours that correspond to the colours in the formula bar.
 
 This can be very helpful to make sure the formula is doing what you think it is!
@@ -212,7 +212,7 @@ Try using the tip above on one of your cells to show yourself that it works.
 
 You will have to do a bit more work before you can apply the formula to all modes of travel.
 
-::: {.rmdtip}
+::: {.rmdquestion}
 ***Questions:*** What do you think will happen if you drag the formulas to the right as they are currently written? Why is that a bad thing in this case?
 
 If you aren't sure, try it and see what happens to your cell references.
@@ -224,7 +224,7 @@ Use the information in the green tip box above to figure out where to put the `$
 
 If you get stuck, you can ask a nearby classmate or raise your hand to ask an instructor.
 
-::: {.rmdimportant}
+::: {.rmdtip}
 ***Tip:*** You can modify the formula just for cell `R2` and drag this new formula back down over the ten regions, then out across all travel methods.
 :::
 
@@ -283,7 +283,7 @@ Now that you have the data for each method of travel calculated as percentages f
 
 Specifically, you will make graphs to help you answer or illustrate the following questions:
 
-::: {.rmdtip}
+::: {.rmdquestion}
 ***Research Questions:*** 
 
 1. Do any of the methods of travel to work vary with population density?
@@ -292,7 +292,7 @@ Specifically, you will make graphs to help you answer or illustrate the followin
 
 Spend a few minutes thinking about what kind of graph would help you answer or illustrate the answer to each question. Trying sketching out the graphs with pencil and paper. 
 
-::: {.rmdtip}
+::: {.rmdquestion}
 ***Question:*** 
 What variables would you put on the axes for each kind of graph?
 :::
@@ -324,7 +324,7 @@ To select your data:
 - Click `Okay` and then `Okay` again, for both pop ups. 
 
 ::: {.rmdwarning}
-***Attention!*** Excel will automatically fill in the `Series Y value` with the value `{1}`. If you don't delete this before selecting your data, you will get an error.
+***Warning!*** Excel will automatically fill in the `Series Y value` with the value `{1}`. If you don't delete this before selecting your data, you will get an error.
 :::
 
 ### Add a trendline
@@ -346,7 +346,7 @@ Explore the relationship between population density and all the different method
 If you prefer, you can also select, copy, and paste the graph to make a new graph before you select a different column.
 
 
-::: {.rmdtip}
+::: {.rmdquestion}
 ***Questions:***
 
 Which method of travel has the strongest relationship with population density? The weakest relationship?
@@ -360,7 +360,7 @@ For some methods of travel the percentage in London is much higher than in the o
 
 This is what's called an **outlier**.
 
-::: {.rmdimportant}
+::: {.rmdtip}
 ***Important!*** An **outlier** is a data point that is substantially different to the other observations.
 
 Outliers can be due to errors in the measurement process or to real differences in subjects that you are studying.
@@ -392,13 +392,13 @@ Click on the row number for the row containing the London data. It will highligh
 
 On the home bar at the top of the screen, select `Delete` and then `Delete entire rows`.
 
-::: {.rmdimportant}
+::: {.rmdtip}
 ***Important!*** When you delete a row or column, Excel will automatically adjust the cell references for any formulas that include those cells.
 :::
 
 Now explore the relationship between population density and all the different methods of travel to work again in this new data set with the London outlier removed.
 
-::: {.rmdtip}
+::: {.rmdquestion}
 ***Questions:*** Does removing London allow you to draw different conclusions about which travel methods vary with population density?
 
 Specifically,
@@ -411,7 +411,7 @@ Specifically,
 
 For question 2, make a bar plot with the various methods of travel on the x-axis and the percentage of people using that method on the y-axis.
 
-::: {.rmdtip}
+::: {.rmdquestion}
 ***Question:*** You could make your bar plot using the average values from either worksheet - with or without the London data.
 
 Which do you think is most appropriate? Why?
@@ -429,7 +429,7 @@ Select your data using the same process as before, but this time:
 
 If you want to change the x-axis labels on your chart, you can change the values in those cells.
 
-::: {.rmdtip}
+::: {.rmdquestion}
 ***Questions:***
 
 Which methods of travel to work were most common? Why?
@@ -443,7 +443,7 @@ If there is sufficient time remaining, repeat the analysis for Question 1 again,
 
 Now all the regions will be broken up into much smaller upper-tier local authorities. 
 
-::: {.rmdtip}
+::: {.rmdquestion}
 ***Questions:***
 
 Are the relationships between method of travel and population density stronger or weaker at the UTLA-level compared to the region-level? Why do you think that is the case?
