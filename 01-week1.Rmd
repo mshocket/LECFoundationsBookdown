@@ -311,7 +311,7 @@ To insert a graph in Excel:
 For a scatter plot:
 
 - Click on the icon with little dots
-- Select the option without dots and no connecting lines.
+- Select the option with dots and no connecting lines.
 
 To select your data:
 
