@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 9 Plotting a line graph with ggplot | Foundation Skills for LEC Practical Exercises</title>
+<meta name="author" content="Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt">
+<meta name="description" content="Now we will create a line plot for crop yield over time using the ggplot() function. This plot will help you start to answer the following related questions: Research Questions: How has yield of...">
+<meta name="generator" content="bookdown 0.48 with bs4_book()">
+<meta property="og:title" content="Chapter 9 Plotting a line graph with ggplot | Foundation Skills for LEC Practical Exercises">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Now we will create a line plot for crop yield over time using the ggplot() function. This plot will help you start to answer the following related questions: Research Questions: How has yield of...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 9 Plotting a line graph with ggplot | Foundation Skills for LEC Practical Exercises">
+<meta name="twitter:description" content="Now we will create a line plot for crop yield over time using the ggplot() function. This plot will help you start to answer the following related questions: Research Questions: How has yield of...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.12.0/transition.js"></script><script src="libs/bs3compat-0.12.0/tabs.js"></script><script src="libs/bs3compat-0.12.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Foundation Skills for LEC Practical Exercises</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">About</a></li>
+<li class="book-part">Week 1 - Census data for method of travel to work in Excel</li>
+<li><a class="" href="introduction-setup.html"><span class="header-section-number">1</span> Introduction &amp; setup</a></li>
+<li><a class="" href="region-level-calculations.html"><span class="header-section-number">2</span> Region-level calculations</a></li>
+<li><a class="" href="region-level-figures.html"><span class="header-section-number">3</span> Region-level figures</a></li>
+<li><a class="" href="utla-level-calculations-and-figures.html"><span class="header-section-number">4</span> UTLA-level calculations and figures</a></li>
+<li><a class="" href="format-your-graph.html"><span class="header-section-number">5</span> Format your graph</a></li>
+<li class="book-part">Week 2</li>
+<li><a class="" href="introduction.html"><span class="header-section-number">6</span> Introduction</a></li>
+<li><a class="" href="working-with-r-and-rstudio.html"><span class="header-section-number">7</span> Working with R and RStudio</a></li>
+<li><a class="" href="working-with-data.html"><span class="header-section-number">8</span> Working with data</a></li>
+<li><a class="active" href="plotting-a-line-graph-with-ggplot.html"><span class="header-section-number">9</span> Plotting a line graph with ggplot</a></li>
+<li><a class="" href="tidyup.html"><span class="header-section-number">10</span> Tidying up</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="plotting-a-line-graph-with-ggplot" class="section level1" number="9">
+<h1>
+<span class="header-section-number">9</span> Plotting a line graph with ggplot<a class="anchor" aria-label="anchor" href="#plotting-a-line-graph-with-ggplot"><i class="fas fa-link"></i></a>
+</h1>
+<p>Now we will create a line plot for crop yield over time using the <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code> function.</p>
+<p>This plot will help you start to answer the following related questions:</p>
+<div class="rmdquestion">
+<p><strong>Research Questions:</strong></p>
+<ul>
+<li>How has yield of the three cereal crops in the UK changed over time?</li>
+<li>Is there evidence to support that climate change has affected yield of the three cereal crops in the UK over the past ~10 years?</li>
+</ul>
+</div>
+<p>Before you start making a graph, the first step is to think about what variable you want to put on each axis.</p>
+<div class="rmdquestion">
+<p><strong>Q:</strong> In this case, what variables do you want to put on the x-axis and y-axis?</p>
+</div>
+<div id="a-basic-ggplot-plot" class="section level2" number="9.1">
+<h2>
+<span class="header-section-number">9.1</span> A basic <code>ggplot</code> plot<a class="anchor" aria-label="anchor" href="#a-basic-ggplot-plot"><i class="fas fa-link"></i></a>
+</h2>
+<p>The <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code> function itself only has two required arguments:</p>
+<ol style="list-style-type: decimal">
+<li>the name of your data frame (in this case, <code>data = cropdata_long</code> or just <code>cropdata_long</code> - they both work the same way)</li>
+<li>an <em>aesthetic</em> that defines what your x and y variables are</li>
+</ol>
+<p>The aesthetic is formatted like: <code>aes(x = x_var_name, y = y_var_name)</code>. So if we want to look at crop yields over time, with time on the x-axis and crop yield on the y-axis, we would use: <code>aes(x = year, y = yield)</code>.</p>
+<p>However, the <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code> function alone is not enough to make a graph.</p>
+<p>We must also add the different parts of the figure as layers, with a <code>+</code> between each layer.</p>
+<p>Layers of data are added with <code>geom_x()</code> functions, where the <code>x</code> changes depending on the type of graph you want to make.</p>
+<div class="rmdtip">
+<p><strong>Tip:</strong> For a line plot, use <code><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line()</a></code> to plot the data as a line of connected x-y coordinates.</p>
+</div>
+<p>Make a line space, type the minimum code to make a line plot using the crop yield data, and run it.</p>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">cropdata_long</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, y <span class="op">=</span> <span class="va">yield</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="02-week2_files/figure-html/unnamed-chunk-16-1.png" alt="" width="672"></div>
+<p>This graph is not very useful because we aren’t distinguishing between the three different crops. This means that R is drawing lines between coordinates in ways that don’t make sense.</p>
+</div>
+<div id="different-lines-for-each-crop" class="section level2" number="9.2">
+<h2>
+<span class="header-section-number">9.2</span> Different lines for each crop<a class="anchor" aria-label="anchor" href="#different-lines-for-each-crop"><i class="fas fa-link"></i></a>
+</h2>
+<p>The graph would make more sense and be much more useful if we plotted each crop as a different line in a different colour.</p>
+<p>If you want to change the colour of a data layer based on a third variable, you need to add it to the aesthetic argument as shown below. <code>ggplot</code> will automatically add a legend (you made need to scroll to the right to see it in the workbook).</p>
+<p>Modify your existing code to match the example below.</p>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">cropdata_long</span>,</span>
+<span>       <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, y <span class="op">=</span> <span class="va">yield</span>, colour <span class="op">=</span> <span class="va">crop</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="02-week2_files/figure-html/unnamed-chunk-17-1.png" alt="" width="672"></div>
+<p>Now we can see the lines for each crop, but because they have such different yields, it’s very difficult to see any meaningful information about the crops that aren’t sugar beets or potatoes.</p>
+</div>
+<div id="editing-axis-labels-and-changing-the-theme-and-line-thickness" class="section level2" number="9.3">
+<h2>
+<span class="header-section-number">9.3</span> Editing axis labels, and changing the theme and line thickness<a class="anchor" aria-label="anchor" href="#editing-axis-labels-and-changing-the-theme-and-line-thickness"><i class="fas fa-link"></i></a>
+</h2>
+<p>In the next step, we’ll make a few modifications to make the plot more attractive.</p>
+<p>First, we’ll use the <code><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs()</a></code> function to format the axis labels properly - with units! (Right now it is just printing the column names.)</p>
+<p>Second, we’ll change the theme to something a bit more minimalist and attractive (add the <code>+theme_classic()</code> function).</p>
+<p>Finally, we’ll change make the lines a little bit thicker (add a <code>linewidth = 1</code> argument to the <code><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line()</a></code> function).</p>
+<div class="rmdtip">
+<p><strong>Tip:</strong> Remember that each layer in a <code>ggplot</code> graph is separated by a <code>+</code></p>
+</div>
+<p>Modify your existing code again to match the example below.</p>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">cropdata_long</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, y <span class="op">=</span> <span class="va">yield</span>, colour <span class="op">=</span> <span class="va">crop</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span>linewidth <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Year"</span>, y <span class="op">=</span> <span class="st">"Yield (tonnes per hectare)"</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="02-week2_files/figure-html/unnamed-chunk-18-1.png" alt="" width="672"></div>
+</div>
+<div id="saving-an-r-plot" class="section level2" number="9.4">
+<h2>
+<span class="header-section-number">9.4</span> Saving an R plot<a class="anchor" aria-label="anchor" href="#saving-an-r-plot"><i class="fas fa-link"></i></a>
+</h2>
+<p>Now that you have an attractive plot, you need to save it so you can add it to our coursework.</p>
+<p>The easiest way to do that is to:</p>
+<ul>
+<li>Save the plot as an object</li>
+<li>Use the pipe operator (<code>|&gt;</code>) to provide the data, instead of giving the argument inside of <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code>
+</li>
+<li>Use the <code><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave()</a></code> function to save the plot.</li>
+</ul>
+<div class="rmdwarning">
+<p><strong>Warning:</strong> If you save the plot as an object, it will not longer print automatically.</p>
+<p>Instead, you will need to use the <code><a href="https://rdrr.io/r/base/print.html">print()</a></code> function to get the plot to print, as shown below.</p>
+</div>
+<p>The <code><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave()</a></code> function needs two arguments:</p>
+<ol style="list-style-type: decimal">
+<li>The name of the file you want to create.</li>
+<li>The name of the saved plot object.</li>
+</ol>
+<p>However, it’s often helpful to provide some other optional arguments: specifically, the width and height of the file you want to create.</p>
+<p>Modify your existing code again to match the example below.</p>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fig_crops</span> <span class="op">&lt;-</span> <span class="va">cropdata_long</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, y <span class="op">=</span> <span class="va">yield</span>, colour <span class="op">=</span> <span class="va">crop</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span>linewidth <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Year"</span>, y <span class="op">=</span> <span class="st">"Yield (tonnes per hectare)"</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">fig_crops</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span><span class="st">"Fig_crops_CW1.png"</span>, <span class="va">fig_crops</span>, width <span class="op">=</span> <span class="fl">8</span>, height <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="02-week2_files/figure-html/unnamed-chunk-19-1.png" alt="" width="672"></div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="working-with-data.html"><span class="header-section-number">8</span> Working with data</a></div>
+<div class="next"><a href="tidyup.html"><span class="header-section-number">10</span> Tidying up</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#plotting-a-line-graph-with-ggplot"><span class="header-section-number">9</span> Plotting a line graph with ggplot</a></li>
+<li><a class="nav-link" href="#a-basic-ggplot-plot"><span class="header-section-number">9.1</span> A basic ggplot plot</a></li>
+<li><a class="nav-link" href="#different-lines-for-each-crop"><span class="header-section-number">9.2</span> Different lines for each crop</a></li>
+<li><a class="nav-link" href="#editing-axis-labels-and-changing-the-theme-and-line-thickness"><span class="header-section-number">9.3</span> Editing axis labels, and changing the theme and line thickness</a></li>
+<li><a class="nav-link" href="#saving-an-r-plot"><span class="header-section-number">9.4</span> Saving an R plot</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/02-week2.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/02-week2.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Foundation Skills for LEC Practical Exercises</strong>" was written by Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt. It was last built on 2026-10-12.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
