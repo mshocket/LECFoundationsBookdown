@@ -553,15 +553,15 @@ Table: (\#tab:unnamed-chunk-12)A hypothetical field study on mammal observations
 
 |site   | foxes| badgers| mice|
 |:------|-----:|-------:|----:|
-|Site 1 |     6|       1|   32|
-|Site 2 |     2|       1|   40|
-|Site 3 |     6|       1|   31|
-|Site 4 |     8|       2|   13|
-|Site 5 |     9|       1|   17|
-|Site 6 |     4|       3|   18|
-|Site 7 |     2|       2|   27|
-|Site 8 |     6|       1|   33|
-|Site 9 |     7|       1|   30|
+|Site 1 |     7|       2|   15|
+|Site 2 |     3|       1|   40|
+|Site 3 |     3|       1|   34|
+|Site 4 |     7|       1|   28|
+|Site 5 |     8|       1|   20|
+|Site 6 |     1|       1|   46|
+|Site 7 |     1|       2|   30|
+|Site 8 |     3|       1|   40|
+|Site 9 |     0|       2|   42|
 
 
 
@@ -577,33 +577,33 @@ Table: (\#tab:unnamed-chunk-13)A hypothetical field study on mammal observations
 
 |site   |animal  | count|
 |:------|:-------|-----:|
-|Site 1 |foxes   |     6|
-|Site 1 |badgers |     1|
-|Site 1 |mice    |    32|
-|Site 2 |foxes   |     2|
+|Site 1 |foxes   |     7|
+|Site 1 |badgers |     2|
+|Site 1 |mice    |    15|
+|Site 2 |foxes   |     3|
 |Site 2 |badgers |     1|
 |Site 2 |mice    |    40|
-|Site 3 |foxes   |     6|
+|Site 3 |foxes   |     3|
 |Site 3 |badgers |     1|
-|Site 3 |mice    |    31|
-|Site 4 |foxes   |     8|
-|Site 4 |badgers |     2|
-|Site 4 |mice    |    13|
-|Site 5 |foxes   |     9|
+|Site 3 |mice    |    34|
+|Site 4 |foxes   |     7|
+|Site 4 |badgers |     1|
+|Site 4 |mice    |    28|
+|Site 5 |foxes   |     8|
 |Site 5 |badgers |     1|
-|Site 5 |mice    |    17|
-|Site 6 |foxes   |     4|
-|Site 6 |badgers |     3|
-|Site 6 |mice    |    18|
-|Site 7 |foxes   |     2|
+|Site 5 |mice    |    20|
+|Site 6 |foxes   |     1|
+|Site 6 |badgers |     1|
+|Site 6 |mice    |    46|
+|Site 7 |foxes   |     1|
 |Site 7 |badgers |     2|
-|Site 7 |mice    |    27|
-|Site 8 |foxes   |     6|
+|Site 7 |mice    |    30|
+|Site 8 |foxes   |     3|
 |Site 8 |badgers |     1|
-|Site 8 |mice    |    33|
-|Site 9 |foxes   |     7|
-|Site 9 |badgers |     1|
-|Site 9 |mice    |    30|
+|Site 8 |mice    |    40|
+|Site 9 |foxes   |     0|
+|Site 9 |badgers |     2|
+|Site 9 |mice    |    42|
 
 
 
@@ -804,6 +804,21 @@ ggsave("Fig_crops_CW1.png", fig_crops, width = 8, height = 4)
 ```
 
 <img src="02-week2_files/figure-html/unnamed-chunk-19-1.png" alt="" width="672" />
+
+## Download the R plot
+
+Now the plot is saved on the R server. 
+
+But to use it in your coursework, you'll need to download it to your `H:/` drive so that you can insert it into your Word document for the coursework report.
+
+To download your plot image file:
+
+- Check to box next to the plot in your Files pane
+- Click on the gear icon to open the settings menu
+- Select Export
+- Click Download
+
+You will probably also want to move the file from your Downloads folder to your Documents folder.
 
 
 # Tidying up {#tidyup}
