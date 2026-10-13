@@ -764,6 +764,21 @@ fig_crops <- cropdata_long |>
 print(fig_crops)
 ```
 
+## Download the R plot
+
+Now the plot is saved on the R server. 
+
+But to use it in your coursework, you'll need to download it to your `H:/` drive so that you can insert it into your Word document for the coursework report.
+
+To download your plot image file:
+
+- Check to box next to the plot in your Files pane
+- Click on the gear icon to open the settings menu
+- Select Export
+- Click Download
+
+You will probably also want to move the file from your Downloads folder to your Documents folder.
+
 
 # Tidying up {#tidyup}
 
