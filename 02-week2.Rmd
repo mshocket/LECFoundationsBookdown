@@ -1,6 +1,6 @@
 # (PART) Week 2 {-}
 
-# Introduction
+# Introduction {#intro_wk2}
 
 ## What are R and RStudio?
 
@@ -458,7 +458,7 @@ The data are part of a larger dataset published annually by the Defra (Departmen
 
 Upload the `.csv` file to the R server via the `Files` pane in the bottom-right quadrant.
 
-The upload button is the middle and has a golden circle with a white arrow pointing up.
+The upload button is in the middle and has a golden circle with a white arrow pointing up.
 
 ## Reading in data
 
@@ -780,9 +780,9 @@ To download your plot image file:
 You will probably also want to move the file from your Downloads folder to your Documents folder.
 
 
-# Tidying up {#tidyup}
+# Tidying up {#tidyup_wk2}
 
-Before you move onto the next bit, let's tidy up and save the R script. 
+As the last set of tasks for today, you should tidy up and save your R script. 
 
 First, you'll want to add a comment header to the very top of your document describing what the script is, who wrote it, and when they they wrote it. Mine usually look something like this:
 
@@ -805,8 +805,8 @@ Here's what my final script looks like, with extra comments and formatting to ma
 
 ```r
 ##### Marta Shocket
-##### LEC 243 - Week 3 Practical
-##### 21 Oct 2025
+##### LECX4101 - Week 1 Practical
+##### 14 Oct 2026
 
 
 library(dplyr)
