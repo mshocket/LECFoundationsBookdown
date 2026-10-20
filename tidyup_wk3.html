@@ -79,12 +79,12 @@
 <li>Make sure that your code is sufficiently commented, so that someone else (or you later on!) can understand what you did.</li>
 <li>Delete any spare lines of code that you don’t need anymore (e.g. for testing something that didn’t work right away).</li>
 </ul>
-<div id="creating-an-r-dictionary" class="section level2" number="15.1">
+<div id="creating-your-own-r-cheatsheet" class="section level2" number="15.1">
 <h2>
-<span class="header-section-number">15.1</span> Creating an R dictionary<a class="anchor" aria-label="anchor" href="#creating-an-r-dictionary"><i class="fas fa-link"></i></a>
+<span class="header-section-number">15.1</span> Creating your own R cheatsheet<a class="anchor" aria-label="anchor" href="#creating-your-own-r-cheatsheet"><i class="fas fa-link"></i></a>
 </h2>
 <p>I <strong>strongly</strong> recommend creating a set of notes where you keep track of all the bits and bobs of R that you’ve learned.</p>
-<p>The easiest way to do this is as a markdown (i.e. text) file - this will allow you to edit it and view it in RStudio, and make it more effective coding tool.</p>
+<p>The easiest way to do this is as a <a href="https://www.markdownguide.org/basic-syntax/">markdown</a> (i.e. text) file - this will allow you to edit it and view it in RStudio, and make it more effective coding tool.</p>
 <p>You can create a markdown file by going to: File &gt; New File &gt; Markdown (at the top of the 6th section down).</p>
 <p>Here is a list of all the key functions that we’ve learned over the past two weeks, grouped by type and then in alphabetical order.</p>
 <p>You can copy and paste this list into your markdown file, and then add your own annotations / descriptions that will help you remember how they work.</p>
@@ -93,19 +93,19 @@
 <span class="header-section-number">15.1.1</span> General / data analysis<a class="anchor" aria-label="anchor" href="#general-data-analysis"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
-<li>filter()</li>
-<li>group_by()</li>
-<li>head()</li>
-<li>library()</li>
-<li>median()</li>
-<li>pivot_longer()</li>
-<li>print()</li>
-<li>rbind()</li>
-<li>read.csv()</li>
-<li>str()</li>
-<li>summarise()</li>
-<li>tail()</li>
-<li>View()</li>
+<li><code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code></li>
+<li><code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code></li>
+<li><code><a href="https://rdrr.io/r/utils/head.html">head()</a></code></li>
+<li><code><a href="https://rdrr.io/r/base/library.html">library()</a></code></li>
+<li><code><a href="https://rdrr.io/r/stats/median.html">median()</a></code></li>
+<li><code><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer()</a></code></li>
+<li><code><a href="https://rdrr.io/r/base/print.html">print()</a></code></li>
+<li><code><a href="https://rdrr.io/r/base/cbind.html">rbind()</a></code></li>
+<li><code><a href="https://rdrr.io/r/utils/read.table.html">read.csv()</a></code></li>
+<li><code><a href="https://rdrr.io/r/utils/str.html">str()</a></code></li>
+<li><code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise()</a></code></li>
+<li><code><a href="https://rdrr.io/r/utils/head.html">tail()</a></code></li>
+<li><code><a href="https://rdrr.io/r/utils/View.html">View()</a></code></li>
 </ul>
 </div>
 <div id="ggplot-functions" class="section level3" number="15.1.2">
@@ -113,15 +113,15 @@
 <span class="header-section-number">15.1.2</span> ggplot functions<a class="anchor" aria-label="anchor" href="#ggplot-functions"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
-<li>aes()</li>
-<li>ggplot()</li>
-<li>ggsave()</li>
-<li>geom_boxplot()</li>
-<li>geom_col()</li>
-<li>geom_line()</li>
-<li>labs()</li>
-<li>theme()</li>
-<li>theme_bw()</li>
+<li><code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code></li>
+<li><code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code></li>
+<li><code><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave()</a></code></li>
+<li><code><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot()</a></code></li>
+<li><code><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col()</a></code></li>
+<li><code><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line()</a></code></li>
+<li><code><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs()</a></code></li>
+<li><code><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme()</a></code></li>
+<li><code><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw()</a></code></li>
 </ul>
 </div>
 </div>
@@ -130,7 +130,7 @@
 <span class="header-section-number">15.2</span> Other plotting functions<a class="anchor" aria-label="anchor" href="#other-plotting-functions"><i class="fas fa-link"></i></a>
 </h2>
 <ul>
-<li>hist()</li>
+<li><code><a href="https://rdrr.io/r/graphics/hist.html">hist()</a></code></li>
 </ul>
 </div>
 </div>
@@ -142,7 +142,7 @@
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#tidyup_wk3"><span class="header-section-number">15</span> Tidying up</a></li>
 <li>
-<a class="nav-link" href="#creating-an-r-dictionary"><span class="header-section-number">15.1</span> Creating an R dictionary</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#creating-your-own-r-cheatsheet"><span class="header-section-number">15.1</span> Creating your own R cheatsheet</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#general-data-analysis"><span class="header-section-number">15.1.1</span> General / data analysis</a></li>
 <li><a class="nav-link" href="#ggplot-functions"><span class="header-section-number">15.1.2</span> ggplot functions</a></li>
 </ul>

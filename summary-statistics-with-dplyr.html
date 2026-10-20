@@ -75,22 +75,21 @@
 </h1>
 <p>There is a function in the <code>dplyr</code> package called <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise()</a></code> that is very useful for calculating summary statistics, particularly on multiple groupings of data (also called “subsets”).</p>
 <p><code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise()</a></code> will perform any calculation that you tell it to on your dataset. Today, we’ll use it to calculate the median - using the <code><a href="https://rdrr.io/r/stats/median.html">median()</a></code> function. However, it can also calculate means, standard errors, or any mathematical formula that you can express as code in R.</p>
-<ul>
-<li>We are using medians instead of means because all of the data are very skewed to one direction! Means are only appropriate when the data look something like the symmetrical, hump-shape shown below (called a Normal distribution).</li>
-</ul>
+<p><strong>NOTE:</strong> We are using medians instead of means because all of the data are very skewed to one direction! Means are only appropriate when the data look something like the symmetrical, hump-shape shown below (called a Normal distribution).</p>
 <div style="text-align: center;">
 <div class="float">
 <img src="images/Normaldist.jpeg" style="width:100.0%" alt=" "><div class="figcaption"> </div>
 </div>
 </div>
-<p>To tell R to subset the data by location (i.e. Lancaster vs. non-Lancaster), we’ll include another function first: <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code>. This will tell <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise()</a></code> to do the calculates separately for each location.</p>
+<p>To tell R to subset the data by location (i.e. Lancaster vs. non-Lancaster), we’ll include another function first: <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code>. This will tell <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise()</a></code> to do the calculations separately for each location.</p>
 <p>When we calculate summary statistics with <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise()</a></code>, we’ll want to save the output as a new data frame and pipe in the data frame with all of the original observations.</p>
 <p>Afterwards, we can either examine the output by clicking on it in our Environment pane, or by printing it to the console with the <code><a href="https://rdrr.io/r/base/print.html">print()</a></code> function as shown here.</p>
 <p>Type the following code in your script and run it.</p>
 <div class="rmdtip">
 <p><strong><em>Important!</em></strong></p>
-<p>Note in the code block below that you are using the pipe operator (|&gt;) to continually pass versions of a data frame down from the top through different functions in a vertical stack.</p>
-<p>This is a common way that tidyverse R code (i.e. code from the <code>dplyr</code>, <code>tidyr</code>, and `<code>ggplot2</code> packages) is written.</p>
+<p>Note in the code block below that you are using the pipe operator <code>|&gt;</code> to pass versions of a data frame down from the top through different functions in a vertical stack.</p>
+<p>Technically speaking, the pipe passes the output of the previous function into the <em>first argument</em> of the next. So <code>c(1,2,3) |&gt; exp() |&gt; mean()</code> is the same as <code>mean(exp(c(1,2,3)))</code>!</p>
+<p>It is very common to write tidyverse R code (i.e. code from the <code>dplyr</code>, <code>tidyr</code>, and `<code>ggplot2</code> packages) using pipes.</p>
 </div>
 <div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Calculate the medians by location</span></span>
@@ -113,9 +112,10 @@
 <p>The results above show <code>NA</code> instead of the median values we expected.</p>
 <p><code>NA</code> stands for “Not available” and means that there are missing values in our data.</p>
 <p>Luckily there is an argument - <code>na.rm = TRUE</code> - that you can add to the <code><a href="https://rdrr.io/r/stats/median.html">median()</a></code> function to make it ignore any missing values.</p>
+<p><strong>NOTE:</strong> This argument is not available for all functions, so the ideal situation is that your data should have no <code>NA</code>s to begin with!</p>
 <p>Add the argument now and re-run the code.</p>
 <div class="rmdwarning">
-<p><strong><em>Warning!</em></strong> Remember that you need to add include a comma between every argument that you give a function!</p>
+<p><strong><em>Warning!</em></strong> Remember that you need to add include a comma between every argument that you give to a function!</p>
 </div>
 </div>
 <div id="adding-the-other-variables" class="section level2" number="13.2">
@@ -136,14 +136,39 @@
 <li>outside the previous <code><a href="https://rdrr.io/r/stats/median.html">median()</a></code> function</li>
 </ul>
 </div>
-<p>By the end, you should have an <code>EDM_summary</code> data frame that looks something like this (but yours will display all four variables instead of cutting off because it’s too wide for the webpage):</p>
-<pre><code>#&gt; # A tibble: 2 × 5
-#&gt;   location      median_counted_spills median_LTA_spill_count
-#&gt;   &lt;chr&gt;                         &lt;dbl&gt;                  &lt;dbl&gt;
-#&gt; 1 Lancaster                       9.5                   19.6
-#&gt; 2 Non-Lancaster                  21                     29  
-#&gt; # ℹ 2 more variables: median_spills_dur_hrs &lt;dbl&gt;,
-#&gt; #   median_perc_time_operational &lt;dbl&gt;</code></pre>
+<p>By the end, you should have an <code>EDM_summary</code> data frame that looks something like this:</p>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="12%">
+<col width="20%">
+<col width="20%">
+<col width="20%">
+<col width="26%">
+</colgroup>
+<thead><tr class="header">
+<th align="left">location</th>
+<th align="right">median_counted_spills</th>
+<th align="right">median_LTA_spill_count</th>
+<th align="right">median_spills_dur_hrs</th>
+<th align="right">median_perc_time_operational</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">Lancaster</td>
+<td align="right">9.5</td>
+<td align="right">19.63</td>
+<td align="right">14.235</td>
+<td align="right">100.00</td>
+</tr>
+<tr class="even">
+<td align="left">Non-Lancaster</td>
+<td align="right">21.0</td>
+<td align="right">29.00</td>
+<td align="right">38.585</td>
+<td align="right">99.29</td>
+</tr>
+</tbody>
+</table></div>
 </div>
 <div id="answering-the-research-questions" class="section level2" number="13.3">
 <h2>
@@ -153,8 +178,8 @@
 <div class="rmdquestion">
 <p><strong><em>Research Questions:</em></strong></p>
 <ol style="list-style-type: decimal">
-<li><p>How does the frequency and duration of sewage spills in the Lune river in Lancaster compare to the rest of the United Utilities area?</p></li>
-<li><p>How does the frequency and duration of sewage spills in the Lune river in Lancaster in 2024 compare to its long-term average (2020-2024)?</p></li>
+<li><p>How do the frequency and duration of sewage spills in the Lune river in Lancaster compare to the rest of the United Utilities area?</p></li>
+<li><p>How do the frequency and duration of sewage spills in the Lune river in Lancaster in 2024 compare to its long-term average (2020-2024)?</p></li>
 </ol>
 </div>
 </div>

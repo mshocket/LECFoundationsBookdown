@@ -76,9 +76,7 @@
 <p>We’ve answered our research questions with the table, but it would be nice to be able to make some plots to illustrate the numbers visually.</p>
 <p>Last week you used the <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code> function to make a line graph of the yield of three cereal crops over time.</p>
 <p>This week we’ll make two types of graphs - boxplots and column plots.</p>
-<ul>
-<li>Both types of graph will compare the Lancaster sites to the non-Lancaster sites.</li>
-</ul>
+<p>Both types of graph will compare the Lancaster sites to the non-Lancaster sites.</p>
 <p>Let’s start with the counted spills variable.</p>
 <div id="a-ggplot-template" class="section level2" number="14.1">
 <h2>
@@ -86,7 +84,7 @@
 </h2>
 <p>Here is a template that you can use as a basic template to make graphs with <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code>.</p>
 <p>This is the same format of code that you used last week, except for the additional <code><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme()</a></code> function at the end to change the font size of the axis titles and tick mark text.</p>
-<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">my_fig</span> <span class="op">&lt;-</span> <span class="va">mydf</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">my_x_var</span>, y <span class="op">=</span> <span class="va">my_y_var</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_mygraphtype</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
@@ -101,7 +99,7 @@
 <li>the name of the data frame</li>
 <li>the name of the x and y variables in the <code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code>
 </li>
-<li>the geom_mygraphtype() function</li>
+<li>the <code>geom_mygraphtype()</code> function</li>
 </ul>
 <p>You will also want to change the axis labels so that they match the data (and probably want to change the name of the figure object too).</p>
 <p>The two <code>geom</code> functions that you will need for today’s graphs are:</p>
@@ -114,10 +112,10 @@
 <p><strong><em>Important!</em></strong></p>
 <p>The two different types of graph need different types of data:</p>
 <ul>
-<li>The <strong>boxplot</strong> will need the original data set that contains the values for all of the sites.</li>
-<li>The <strong>column plot</strong> will need medians from the summarised data.</li>
+<li>The <strong>boxplot</strong> will need the <strong>original</strong> data set that contains the values for all of the sites.</li>
+<li>The <strong>column plot</strong> will need medians from the <strong>summarised</strong> data.</li>
 </ul>
-<p>This means that that your data frame and your x and y variables will be different for each type of graph.</p>
+<p>This means that that your data frame and your <code>x</code> and <code>y</code> variables will be different for each type of graph.</p>
 <p>You can always check the column names of your data frames by using <code><a href="https://rdrr.io/r/utils/head.html">head()</a></code> or <code><a href="https://rdrr.io/r/utils/str.html">str()</a></code> in the console, or by using the Environment pane.</p>
 </div>
 </div>
@@ -139,7 +137,7 @@
 <li>spill duration</li>
 <li>percent of time operational</li>
 </ul>
-<p>You will need to change the y variable and y-axis label.</p>
+<p>You will need to change the <code>y</code> variable and y-axis label.</p>
 </div>
 </div>
   <div class="chapter-nav">

@@ -333,6 +333,10 @@ Type and run the code below to combine the two data frames.
 data_EDM_all <- rbind(data_EDM_LA, data_EDM_rest)
 ```
 
+::: {.rmdquestion}
+***Question:*** There is an equivalent of `rbind()` called `cbind()`. Can you guess what it does?
+:::
+
 
 # Summary statistics with dplyr
 
@@ -343,7 +347,7 @@ There is a function in the `dplyr` package called `summarise()` that is very use
 
 `summarise()` will perform any calculation that you tell it to on your dataset. Today, we'll use it to calculate the median - using the `median()` function. However, it can also calculate means, standard errors, or any mathematical formula that you can express as code in R.
 
-- We are using medians instead of means because all of the data are very skewed to one direction! Means are only appropriate when the data look something like the symmetrical, hump-shape shown below (called a Normal distribution).
+**NOTE:** We are using medians instead of means because all of the data are very skewed to one direction! Means are only appropriate when the data look something like the symmetrical, hump-shape shown below (called a Normal distribution).
 
 <div style="text-align: center;">
 
@@ -352,7 +356,7 @@ There is a function in the `dplyr` package called `summarise()` that is very use
 </div>
 
 
-To tell R to subset the data by location (i.e. Lancaster vs. non-Lancaster), we'll include another function first: `group_by()`. This will tell `summarise()` to do the calculates separately for each location. 
+To tell R to subset the data by location (i.e. Lancaster vs. non-Lancaster), we'll include another function first: `group_by()`. This will tell `summarise()` to do the calculations separately for each location. 
 
 When we calculate summary statistics with `summarise()`, we'll want to save the output as a new data frame and pipe in the data frame with all of the original observations.
 
@@ -363,9 +367,11 @@ Type the following code in your script and run it.
 ::: {.rmdtip}
 ***Important!***
 
-Note in the code block below that you are using the pipe operator (|>) to continually pass versions of a data frame down from the top through different functions in a vertical stack.
+Note in the code block below that you are using the pipe operator `|>` to pass versions of a data frame down from the top through different functions in a vertical stack.
 
-This is a common way that tidyverse R code (i.e. code from the `dplyr`, `tidyr`, and ``ggplot2` packages) is written. 
+Technically speaking, the pipe passes the output of the previous function into the *first argument* of the next. So `c(1,2,3) |> exp() |> mean()` is the same as `mean(exp(c(1,2,3)))`!
+
+It is very common to write tidyverse R code (i.e. code from the `dplyr`, `tidyr`, and ``ggplot2` packages) using pipes.
 :::
 
 
@@ -395,10 +401,12 @@ The results above show `NA` instead of the median values we expected.
 
 Luckily there is an argument - `na.rm = TRUE` - that you can add to the `median()` function to make it ignore any missing values.
 
+**NOTE:** This argument is not available for all functions, so the ideal situation is that your data should have no `NA`s to begin with!
+
 Add the argument now and re-run the code.
 
 ::: {.rmdwarning}
-***Warning!*** Remember that you need to add include a comma between every argument that you give a function!
+***Warning!*** Remember that you need to add include a comma between every argument that you give to a function!
 :::
 
 ## Adding the other variables
@@ -418,18 +426,16 @@ Make sure you add the new median arguments inside the right set of brackets! The
 - outside the previous `median()` function 
 :::
 
-By the end, you should have an `EDM_summary` data frame that looks something like this (but yours will display all four variables instead of cutting off because it's too wide for the webpage):
+By the end, you should have an `EDM_summary` data frame that looks something like this:
 
 
-```
-#> # A tibble: 2 × 5
-#>   location      median_counted_spills median_LTA_spill_count
-#>   <chr>                         <dbl>                  <dbl>
-#> 1 Lancaster                       9.5                   19.6
-#> 2 Non-Lancaster                  21                     29  
-#> # ℹ 2 more variables: median_spills_dur_hrs <dbl>,
-#> #   median_perc_time_operational <dbl>
-```
+
+|location      | median_counted_spills| median_LTA_spill_count| median_spills_dur_hrs| median_perc_time_operational|
+|:-------------|---------------------:|----------------------:|---------------------:|----------------------------:|
+|Lancaster     |                   9.5|                  19.63|                14.235|                       100.00|
+|Non-Lancaster |                  21.0|                  29.00|                38.585|                        99.29|
+
+
 ## Answering the research questions
 
 Now that you have your summarised data output, you should be able to answer our research questions from the beginning.
@@ -437,9 +443,9 @@ Now that you have your summarised data output, you should be able to answer our 
 ::: {.rmdquestion}
 ***Research Questions:***
 
-1. How does the frequency and duration of sewage spills in the Lune river in Lancaster compare to the rest of the United Utilities area?
+1. How do the frequency and duration of sewage spills in the Lune river in Lancaster compare to the rest of the United Utilities area?
 
-2. How does the frequency and duration of sewage spills in the Lune river in Lancaster in 2024 compare to its long-term average (2020-2024)? 
+2. How do the frequency and duration of sewage spills in the Lune river in Lancaster in 2024 compare to its long-term average (2020-2024)? 
 :::
 
 
@@ -453,7 +459,7 @@ Last week you used the `ggplot()` function to make a line graph of the yield of 
 
 This week we'll make two types of graphs - boxplots and column plots.
 
-- Both types of graph will compare the Lancaster sites to the non-Lancaster sites.
+Both types of graph will compare the Lancaster sites to the non-Lancaster sites.
 
 Let's start with the counted spills variable.
 
@@ -481,7 +487,7 @@ In order to adapt this code template, you will _need_ to change, at minimum:
 
 - the name of the data frame
 - the name of the x and y variables in the `aes()`
-- the geom_mygraphtype() function
+- the `geom_mygraphtype()` function
 
 You will also want to change the axis labels so that they match the data (and probably want to change the name of the figure object too).
 
@@ -497,10 +503,10 @@ Start with the boxplot first. Then once you get it working, move on to the colum
 
 The two different types of graph need different types of data:
 
-- The **boxplot** will need the original data set that contains the values for all of the sites. 
-- The **column plot** will need medians from the summarised data.
+- The **boxplot** will need the **original** data set that contains the values for all of the sites. 
+- The **column plot** will need medians from the **summarised** data.
 
-This means that that your data frame and your x and y variables will be different for each type of graph.
+This means that that your data frame and your `x` and `y` variables will be different for each type of graph.
 
 You can always check the column names of your data frames by using `head()` or `str()` in the console, or by using the Environment pane.
 :::
@@ -523,8 +529,7 @@ Depending on the time remaining, you should try to make boxplots and column plot
 - spill duration
 - percent of time operational
 
-You will need to change the y variable and y-axis label. 
-
+You will need to change the `y` variable and y-axis label. 
 
 
 # Tidying up {#tidyup_wk3}
@@ -536,50 +541,50 @@ As always, you will want to:
 - Make sure that your code is sufficiently commented, so that someone else (or you later on!) can understand what you did.
 - Delete any spare lines of code that you don't need anymore (e.g. for testing something that didn't work right away).
 
-## Creating an R dictionary
+## Creating your own R cheatsheet
 
 I **strongly** recommend creating a set of notes where you keep track of all the bits and bobs of R that you've learned.
 
-The easiest way to do this is as a markdown (i.e. text) file - this will allow you to edit it and view it in RStudio, and make it more effective coding tool. 
+The easiest way to do this is as a [markdown](https://www.markdownguide.org/basic-syntax/) (i.e. text) file - this will allow you to edit it and view it in RStudio, and make it more effective coding tool.
 
 You can create a markdown file by going to: File > New File > Markdown (at the top of the 6th section down).
 
 Here is a list of all the key functions that we've learned over the past two weeks, grouped by type and then in alphabetical order.
 
-You can copy and paste this list into your markdown file, and then add your own annotations / descriptions that will help you remember how they work. 
+You can copy and paste this list into your markdown file, and then add your own annotations / descriptions that will help you remember how they work.
 
 
 ### General / data analysis
 
-- filter()
-- group_by()
-- head()
-- library()
-- median()
-- pivot_longer()
-- print()
-- rbind()
-- read.csv()
-- str()
-- summarise()
-- tail()
-- View()
+- `filter()`
+- `group_by()`
+- `head()`
+- `library()`
+- `median()`
+- `pivot_longer()`
+- `print()`
+- `rbind()`
+- `read.csv()`
+- `str()`
+- `summarise()`
+- `tail()`
+- `View()`
 
 ### ggplot functions
 
-- aes()
-- ggplot()
-- ggsave()
-- geom_boxplot()
-- geom_col()
-- geom_line()
-- labs()
-- theme()
-- theme_bw()
+- `aes()`
+- `ggplot()`
+- `ggsave()`
+- `geom_boxplot()`
+- `geom_col()`
+- `geom_line()`
+- `labs()`
+- `theme()`
+- `theme_bw()`
 
 ## Other plotting functions
 
-- hist()
+- `hist()`
 
 
 

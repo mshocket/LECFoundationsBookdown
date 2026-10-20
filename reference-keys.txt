@@ -95,7 +95,7 @@ a-ggplot-template
 adding-colours
 graphs-for-additional-variables
 tidyup_wk3
-creating-an-r-dictionary
+creating-your-own-r-cheatsheet
 general-data-analysis
 ggplot-functions
 other-plotting-functions
