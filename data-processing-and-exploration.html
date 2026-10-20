@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 12 Data processing and exploration | Foundation Skills for LEC Practical Exercises</title>
+<meta name="author" content="Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt">
+<meta name="description" content="12.1 Converting units Hopefully, you noticed that the total duration of spills for each site is calculated in seconds. It would be much more intuitive to be able to analyse that variable in hours....">
+<meta name="generator" content="bookdown 0.48 with bs4_book()">
+<meta property="og:title" content="Chapter 12 Data processing and exploration | Foundation Skills for LEC Practical Exercises">
+<meta property="og:type" content="book">
+<meta property="og:description" content="12.1 Converting units Hopefully, you noticed that the total duration of spills for each site is calculated in seconds. It would be much more intuitive to be able to analyse that variable in hours....">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 12 Data processing and exploration | Foundation Skills for LEC Practical Exercises">
+<meta name="twitter:description" content="12.1 Converting units Hopefully, you noticed that the total duration of spills for each site is calculated in seconds. It would be much more intuitive to be able to analyse that variable in hours....">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.12.0/transition.js"></script><script src="libs/bs3compat-0.12.0/tabs.js"></script><script src="libs/bs3compat-0.12.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Foundation Skills for LEC Practical Exercises</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">About</a></li>
+<li class="book-part">Week 1 - Census data for method of travel to work in Excel</li>
+<li><a class="" href="introduction-setup.html"><span class="header-section-number">1</span> Introduction &amp; setup</a></li>
+<li><a class="" href="region-level-calculations.html"><span class="header-section-number">2</span> Region-level calculations</a></li>
+<li><a class="" href="region-level-figures.html"><span class="header-section-number">3</span> Region-level figures</a></li>
+<li><a class="" href="utla-level-calculations-and-figures.html"><span class="header-section-number">4</span> UTLA-level calculations and figures</a></li>
+<li><a class="" href="format-your-graph.html"><span class="header-section-number">5</span> Format your graph</a></li>
+<li class="book-part">Week 2</li>
+<li><a class="" href="intro_wk2.html"><span class="header-section-number">6</span> Introduction</a></li>
+<li><a class="" href="working-with-r-and-rstudio.html"><span class="header-section-number">7</span> Working with R and RStudio</a></li>
+<li><a class="" href="working-with-data.html"><span class="header-section-number">8</span> Working with data</a></li>
+<li><a class="" href="plotting-a-line-graph-with-ggplot.html"><span class="header-section-number">9</span> Plotting a line graph with ggplot</a></li>
+<li><a class="" href="tidyup_wk2.html"><span class="header-section-number">10</span> Tidying up</a></li>
+<li class="book-part">Week 3</li>
+<li><a class="" href="intro_wk3.html"><span class="header-section-number">11</span> Introduction</a></li>
+<li><a class="active" href="data-processing-and-exploration.html"><span class="header-section-number">12</span> Data processing and exploration</a></li>
+<li><a class="" href="summary-statistics-with-dplyr.html"><span class="header-section-number">13</span> Summary statistics with dplyr</a></li>
+<li><a class="" href="making-graphs.html"><span class="header-section-number">14</span> Making graphs</a></li>
+<li><a class="" href="tidyup_wk3.html"><span class="header-section-number">15</span> Tidying up</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="data-processing-and-exploration" class="section level1" number="12">
+<h1>
+<span class="header-section-number">12</span> Data processing and exploration<a class="anchor" aria-label="anchor" href="#data-processing-and-exploration"><i class="fas fa-link"></i></a>
+</h1>
+<div id="converting-units" class="section level2" number="12.1">
+<h2>
+<span class="header-section-number">12.1</span> Converting units<a class="anchor" aria-label="anchor" href="#converting-units"><i class="fas fa-link"></i></a>
+</h2>
+<p>Hopefully, you noticed that the total duration of spills for each site is calculated in seconds. It would be much more intuitive to be able to analyse that variable in hours.</p>
+<p>You can create a new column with data from a calculation using existing columns.</p>
+<ul>
+<li>You simply need to use the <code>&lt;-</code> operator to create the new column, like you would with any new variable (e.g. <code>a &lt;- 3</code>).</li>
+<li>Any maths calculation that R can do on a single number, it can also do on a vector or data frame column (in fact, a data frame column <em>is</em> just a plain old vector in a funny hat).</li>
+</ul>
+<div class="rmdtip">
+<p><strong><em>Tip!</em></strong> Remember that you can refer to columns in a data frame using the <code>$</code>, and use the autocomplete menu to select from existing columns.</p>
+</div>
+<p>There are 3600 seconds in one hour. Therefore, to convert the total spill duration from seconds to hours, you will need to divide the data in the old column by 3600.</p>
+<p>Use the code below as a template.</p>
+<p><strong>NOTE:</strong> you will need to substitute <code>mydf</code> and the column names with the names of your data frame and column names.</p>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Convert spill duration units from secs to fractional hours</span></span>
+<span><span class="va">mydf</span><span class="op">$</span><span class="va">new_column_hours</span> <span class="op">&lt;-</span> <span class="va">mydf</span><span class="op">$</span><span class="va">old_column_secs</span> <span class="op">/</span> <span class="fl">3600</span></span></code></pre></div>
+</div>
+<div id="visualising-data-with-histograms" class="section level2" number="12.2">
+<h2>
+<span class="header-section-number">12.2</span> Visualising data with histograms<a class="anchor" aria-label="anchor" href="#visualising-data-with-histograms"><i class="fas fa-link"></i></a>
+</h2>
+<p>For a single variable, histograms plot the values of that variable on the x-axis and the the frequency that each value is observed on the y-axis. The values are grouped into “bins”, e.g.</p>
+<ul>
+<li>0 ≤ x ≤ 5</li>
+<li>5 &lt; x ≤ 10</li>
+<li>10 &lt; x ≤ 15</li>
+<li>etc.</li>
+</ul>
+<p>Histograms are a great way to visualise data to help you understand the most common values and the spread of a variable.</p>
+<p>You can make nice, fancy looking histograms with the <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code> function. However, here we will use the base R <code><a href="https://rdrr.io/r/graphics/hist.html">hist()</a></code> function because we just want to see the data - not put it in a report.</p>
+<p>The code below makes a histogram of the <code>Counted_Spills</code> column.</p>
+<p>Type it into your script, then add three more lines of code to make histograms for the following additional variables:</p>
+<ul>
+<li>long-term spill average</li>
+<li>spill duration</li>
+<li>percent of time operational</li>
+</ul>
+<p>Run all four lines to examine the data.</p>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html">hist</a></span><span class="op">(</span><span class="va">data_EDM</span><span class="op">$</span><span class="va">Counted_Spills</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="03-week3_files/figure-html/unnamed-chunk-2-1.png" alt="" width="672"></div>
+<div class="rmdtip">
+<p><strong><em>Tips:</em></strong></p>
+<ol style="list-style-type: decimal">
+<li><p>You can navigate back and forth through different plots that you’ve made in the <code>Plots</code> pane using the back and forward errors in the top left corner.</p></li>
+<li><p>R will automatically add the name of the data frame and column as the histogram title, so you can see which data each plot belongs to.</p></li>
+</ol>
+</div>
+<p>Use the histograms to answer the following questions.</p>
+<div class="rmdquestion">
+<p><strong><em>Questions:</em></strong></p>
+<ol style="list-style-type: decimal">
+<li><p>For each of the four variables, what is the most commonly observed value (or bin of values)?</p></li>
+<li><p>For each of the four variables, what is the largest observed value (or bin of values)?</p></li>
+<li><p>Do all the variables have the same general shape? Which variables have the longest tails? (i.e. values that stretch out the most to the right or left away from the most common values?)</p></li>
+<li><p>How does the number of spills in 2024 compare to the long-term average?</p></li>
+</ol>
+</div>
+</div>
+<div id="logical-comparisons-in-r" class="section level2" number="12.3">
+<h2>
+<span class="header-section-number">12.3</span> Logical comparisons in R<a class="anchor" aria-label="anchor" href="#logical-comparisons-in-r"><i class="fas fa-link"></i></a>
+</h2>
+<p>Most programming languages (including R) use a standard set of operators to compare values.</p>
+<p>These comparisons or tests will output something called a “boolean” value that is either <code>TRUE</code> or <code>FALSE</code>.</p>
+<ul>
+<li>
+<code>x == y</code> tests if x and y are equal</li>
+<li>
+<code>x != y</code> tests if x and y are <strong>not</strong> equal</li>
+<li>
+<code>x &lt; y</code> tests if x is less than y</li>
+<li>
+<code>x &gt; y</code> tests if x is greater than y</li>
+<li>
+<code>x &lt;= y</code> tests if x is less than or equal to y</li>
+<li>
+<code>x &gt;= y</code> tests if x is greater than or equal to y</li>
+</ul>
+<p>Type out the following code below and run it line by line while looking at the output in your console.</p>
+<p>Make sure that you understand how each line is working.</p>
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">1</span> <span class="op">==</span> <span class="fl">2</span></span>
+<span><span class="fl">1</span> <span class="op">!=</span> <span class="fl">2</span></span>
+<span><span class="fl">1</span> <span class="op">&lt;</span> <span class="fl">2</span></span>
+<span></span>
+<span><span class="co"># Create a vector</span></span>
+<span><span class="va">test_vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">5</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">test_vec</span> <span class="op">==</span> <span class="fl">3</span></span>
+<span><span class="va">test_vec</span> <span class="op">!=</span> <span class="fl">3</span></span>
+<span><span class="va">test_vec</span> <span class="op">&lt;</span> <span class="fl">3</span></span>
+<span><span class="va">test_vec</span> <span class="op">&gt;</span> <span class="fl">3</span></span>
+<span><span class="va">test_vec</span> <span class="op">&lt;=</span> <span class="fl">3</span></span>
+<span><span class="va">test_vec</span> <span class="op">&gt;=</span> <span class="fl">3</span></span></code></pre></div>
+<p>R also has another operator that can be used to determine if a specific value is found within a vector: <code>%in%</code>.</p>
+<p>In the next section, we’ll show you how the <code>%in%</code> operator can be really useful.</p>
+<p>For now, type and run the code below to show yourself how it works.</p>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">3</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">test_vec</span></span>
+<span><span class="fl">6</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">test_vec</span></span></code></pre></div>
+</div>
+<div id="filtering-data" class="section level2" number="12.4">
+<h2>
+<span class="header-section-number">12.4</span> Filtering data<a class="anchor" aria-label="anchor" href="#filtering-data"><i class="fas fa-link"></i></a>
+</h2>
+<p>I used one of the sewage monitoring websites (linked in the {#intro_wk3}) to find the unique site IDs for the 9 United Utilities discharge sites that are located within central Lancaster and discharge in the Lune River:</p>
+<ul>
+<li>UUP00360</li>
+<li>UUP01608</li>
+<li>UUP01494</li>
+<li>UUP01211</li>
+<li>UUP00603</li>
+<li>UUP00604</li>
+<li>UUP00387</li>
+<li>UUP02160</li>
+<li>UUP01686</li>
+</ul>
+<p>If you want to be able to easily extract the rows of data from these cites, the first step is to create a vector with these site IDs.</p>
+<p>Type and run the code below to create this vector.</p>
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Create vector of unique IDs for discharge sites in central Lancaster</span></span>
+<span><span class="va">EDM_vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"UUP00360"</span>, <span class="st">"UUP01608"</span>, <span class="st">"UUP01494"</span>, <span class="st">"UUP01211"</span>, <span class="st">"UUP00603"</span>, <span class="st">"UUP00604"</span>, <span class="st">"UUP00387"</span>, <span class="st">"UUP02160"</span>, <span class="st">"UUP01686"</span><span class="op">)</span></span></code></pre></div>
+<div class="rmdtip">
+<p><strong><em>Tip!</em></strong> Remember that each element in a vector must be separate by a comma!</p>
+</div>
+<div class="rmdquestion">
+<p><strong><em>Question:</em></strong> Why are each of the site IDs given in quotation marks?</p>
+</div>
+<p>Now that we have our vector of site IDs, we can use the <code>%in%</code> operator to filter for only the rows that match one of the elements in the vector.</p>
+<p>We will use the <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> function, as shown below. This code:</p>
+<ul>
+<li>creates a new data frame called <code>data_EDM_LA</code>…</li>
+<li>using our original dataset (which I called <code>data_EDM</code>), which is piped into…</li>
+<li>the <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> function, which is given the arguments to select rows with <code>unique_ID</code> values that match an element in our vector <code>EDM_vec</code>
+</li>
+</ul>
+<p>Type and run the code below. Make sure you understand what it is doing before you move on.</p>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Filter list by site unique ID - only central Lancaster sites</span></span>
+<span><span class="va">data_EDM_LA</span> <span class="op">&lt;-</span> <span class="va">data_EDM</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">Unique_ID</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">EDM_vec</span><span class="op">)</span></span></code></pre></div>
+<div class="rmdtip">
+<p><strong><em>Tip!</em></strong> Although we are using <code>%in%</code> for the <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> function here, you can also use any of the logical comparison operators (e.g. <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, etc.) to filter your data.</p>
+</div>
+<p>For our comparison, we will also want to make a list that has all of the rows <strong>except</strong> those located in central Lancaster.</p>
+<p>We can use very similar code - except this time we will add a <code>!()</code> nested within our <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> function. This will negate the selection (i.e. make all <code>FALSE</code> values into <code>TRUE</code> and vice versa), which will make it select all the rows that <em>do not</em> match any of the values in the vector, rather than those that <em>do</em> match one of the values.</p>
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Filter list by site unique ID - excluding central Lancaster sites</span></span>
+<span><span class="va">data_EDM_rest</span> <span class="op">&lt;-</span> <span class="va">data_EDM</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="op">(</span><span class="va">Unique_ID</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">EDM_vec</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div id="adding-a-location-column" class="section level2" number="12.5">
+<h2>
+<span class="header-section-number">12.5</span> Adding a location column<a class="anchor" aria-label="anchor" href="#adding-a-location-column"><i class="fas fa-link"></i></a>
+</h2>
+<p>For the graphing that we want to do later, we will want to be able to tell R to use site location (i.e. central Lancaster or not) as a data grouping variable.</p>
+<p>Therefore, it will be very helpful if we can add a location column to our two separate datasets and then add them back together into one data frame.</p>
+<div class="rmdtip">
+<p><strong><em>Tip!</em></strong> If you want to add a new column where every row has the same value (or change the values in an existing column to all have the same value), you can provide that value once and R will duplicate it for every row.</p>
+</div>
+<p>The code below will create a new column called <code>location</code> with the value <code>"Lancaster"</code> or <code>"Non-Lancaster"</code>.</p>
+<p><strong>NOTE:</strong> You will need to change the data frame <code>mydf</code> to the correct names of your data frames for the Lancaster and non-Lancaster data, as appropriate.</p>
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">mydf</span><span class="op">$</span><span class="va">location</span> <span class="op">&lt;-</span> <span class="st">"Lancaster"</span></span>
+<span><span class="va">mydf</span><span class="op">$</span><span class="va">location</span> <span class="op">&lt;-</span> <span class="st">"Non-Lancaster"</span></span></code></pre></div>
+</div>
+<div id="combining-data-frames" class="section level2" number="12.6">
+<h2>
+<span class="header-section-number">12.6</span> Combining data frames<a class="anchor" aria-label="anchor" href="#combining-data-frames"><i class="fas fa-link"></i></a>
+</h2>
+<p>You can combine data frames using the <code><a href="https://rdrr.io/r/base/cbind.html">rbind()</a></code> function (it stands for “row bind”).</p>
+<div class="rmdwarning">
+<p><strong><em>Warning!</em></strong> The <code><a href="https://rdrr.io/r/base/cbind.html">rbind()</a></code> function will only work if both of your data frames have the same number of columns - otherwise you will get an error.</p>
+</div>
+<p>Type and run the code below to combine the two data frames.</p>
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">data_EDM_all</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span><span class="op">(</span><span class="va">data_EDM_LA</span>, <span class="va">data_EDM_rest</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="intro_wk3.html"><span class="header-section-number">11</span> Introduction</a></div>
+<div class="next"><a href="summary-statistics-with-dplyr.html"><span class="header-section-number">13</span> Summary statistics with dplyr</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#data-processing-and-exploration"><span class="header-section-number">12</span> Data processing and exploration</a></li>
+<li><a class="nav-link" href="#converting-units"><span class="header-section-number">12.1</span> Converting units</a></li>
+<li><a class="nav-link" href="#visualising-data-with-histograms"><span class="header-section-number">12.2</span> Visualising data with histograms</a></li>
+<li><a class="nav-link" href="#logical-comparisons-in-r"><span class="header-section-number">12.3</span> Logical comparisons in R</a></li>
+<li><a class="nav-link" href="#filtering-data"><span class="header-section-number">12.4</span> Filtering data</a></li>
+<li><a class="nav-link" href="#adding-a-location-column"><span class="header-section-number">12.5</span> Adding a location column</a></li>
+<li><a class="nav-link" href="#combining-data-frames"><span class="header-section-number">12.6</span> Combining data frames</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/03-week3.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/03-week3.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Foundation Skills for LEC Practical Exercises</strong>" was written by Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt. It was last built on 2026-10-20.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

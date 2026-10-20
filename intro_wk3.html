@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 11 Introduction | Foundation Skills for LEC Practical Exercises</title>
+<meta name="author" content="Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt">
+<meta name="description" content="11.1 Prepare a new script Starting today, the first thing you’ll do at the beginning of each R practical is: Open a new R script. Save it under a sensible name (e.g. for today, something like...">
+<meta name="generator" content="bookdown 0.48 with bs4_book()">
+<meta property="og:title" content="Chapter 11 Introduction | Foundation Skills for LEC Practical Exercises">
+<meta property="og:type" content="book">
+<meta property="og:description" content="11.1 Prepare a new script Starting today, the first thing you’ll do at the beginning of each R practical is: Open a new R script. Save it under a sensible name (e.g. for today, something like...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 11 Introduction | Foundation Skills for LEC Practical Exercises">
+<meta name="twitter:description" content="11.1 Prepare a new script Starting today, the first thing you’ll do at the beginning of each R practical is: Open a new R script. Save it under a sensible name (e.g. for today, something like...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.12.0/transition.js"></script><script src="libs/bs3compat-0.12.0/tabs.js"></script><script src="libs/bs3compat-0.12.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Foundation Skills for LEC Practical Exercises</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">About</a></li>
+<li class="book-part">Week 1 - Census data for method of travel to work in Excel</li>
+<li><a class="" href="introduction-setup.html"><span class="header-section-number">1</span> Introduction &amp; setup</a></li>
+<li><a class="" href="region-level-calculations.html"><span class="header-section-number">2</span> Region-level calculations</a></li>
+<li><a class="" href="region-level-figures.html"><span class="header-section-number">3</span> Region-level figures</a></li>
+<li><a class="" href="utla-level-calculations-and-figures.html"><span class="header-section-number">4</span> UTLA-level calculations and figures</a></li>
+<li><a class="" href="format-your-graph.html"><span class="header-section-number">5</span> Format your graph</a></li>
+<li class="book-part">Week 2</li>
+<li><a class="" href="intro_wk2.html"><span class="header-section-number">6</span> Introduction</a></li>
+<li><a class="" href="working-with-r-and-rstudio.html"><span class="header-section-number">7</span> Working with R and RStudio</a></li>
+<li><a class="" href="working-with-data.html"><span class="header-section-number">8</span> Working with data</a></li>
+<li><a class="" href="plotting-a-line-graph-with-ggplot.html"><span class="header-section-number">9</span> Plotting a line graph with ggplot</a></li>
+<li><a class="" href="tidyup_wk2.html"><span class="header-section-number">10</span> Tidying up</a></li>
+<li class="book-part">Week 3</li>
+<li><a class="active" href="intro_wk3.html"><span class="header-section-number">11</span> Introduction</a></li>
+<li><a class="" href="data-processing-and-exploration.html"><span class="header-section-number">12</span> Data processing and exploration</a></li>
+<li><a class="" href="summary-statistics-with-dplyr.html"><span class="header-section-number">13</span> Summary statistics with dplyr</a></li>
+<li><a class="" href="making-graphs.html"><span class="header-section-number">14</span> Making graphs</a></li>
+<li><a class="" href="tidyup_wk3.html"><span class="header-section-number">15</span> Tidying up</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="intro_wk3" class="section level1" number="11">
+<h1>
+<span class="header-section-number">11</span> Introduction<a class="anchor" aria-label="anchor" href="#intro_wk3"><i class="fas fa-link"></i></a>
+</h1>
+<div id="prepare-a-new-script" class="section level2" number="11.1">
+<h2>
+<span class="header-section-number">11.1</span> Prepare a new script<a class="anchor" aria-label="anchor" href="#prepare-a-new-script"><i class="fas fa-link"></i></a>
+</h2>
+<p>Starting today, the first thing you’ll do at the beginning of each R practical is:</p>
+<ol style="list-style-type: decimal">
+<li>Open a new R script.</li>
+<li>Save it under a sensible name (e.g. for today, something like <code>Week3Practical_Water</code>)</li>
+<li>Add in a header to explain what the script is</li>
+<li>Add in the code to load our three main packages/libraries</li>
+<li>Run the code the load the libraries</li>
+</ol>
+<p>For points 3 and 4, the easiest thing is to open your script from last week, copy and paste the relevant content, and then change the information that needs to be updated (e.g. the date and the practical number/theme in the header).</p>
+<div class="rmdcaution">
+<p><strong><em>Caution!</em></strong></p>
+<p>As you work, make sure that you are adding in:</p>
+<ul>
+<li>Spaces between your variables, operators, functions, and arguments
+<ul>
+<li>
+<strong>Good:</strong> <code>data &lt;- read.csv("file.csv")</code>
+</li>
+<li>
+<strong>Bad:</strong> <code>data&lt;-read.csv("file.csv")</code>)</li>
+</ul>
+</li>
+<li>Extra line spaces between separate sections of related code.</li>
+</ul>
+<p>This will make your code much easier to read and debug.</p>
+<p>Starting today, <strong>we will not help you with your code until it is properly spaced</strong>.</p>
+</div>
+<div class="rmdtip">
+<p><strong><em>Tip!</em></strong></p>
+<p>Speaking of spaces, it’s a good idea to avoid putting spaces in file names.</p>
+<p>Try to get in the habit of using underscores or hyphens instead - like we do in the data files and example scripts.</p>
+</div>
+</div>
+<div id="the-water-data" class="section level2" number="11.2">
+<h2>
+<span class="header-section-number">11.2</span> The water data<a class="anchor" aria-label="anchor" href="#the-water-data"><i class="fas fa-link"></i></a>
+</h2>
+<p>Today’s dataset is <a href="https://www.data.gov.uk/dataset/19f6064d-7356-466f-844e-d20ea10ae9fd/event-duration-monitoring-storm-overflows-annual-returns">Event Duration Monitoring - Storm Overflows - Annual Returns</a> from United Utilities in 2024.</p>
+<p><strong>“Event Duration Monitor” (EDM) data</strong> are records of when untreated sewage is being discharged into waterways. Starting in 2018-2020, the UK government began requiring all water utilities in England to <a href="https://www.gov.uk/government/publications/water-companies-environmental-permits-for-storm-overflows-and-emergency-overflows/water-companies-environmental-permits-for-storm-overflows-and-emergency-overflows#event-duration-monitoring-edm">collect these data in real time every 2 minutes</a>. The government allows for some amount of untreated sewage discharge during periods of high rainfall. However “dry spills” (i.e. discharge that occur when it is not raining) are considered “unsatisfactory”.</p>
+<p>You can find live-updating maps of EDM data on websites hosted by <a href="https://theriverstrust.org/sewage-map">The Rivers Trust</a>, <a href="https://www.sas.org.uk/sewage-map/">Surfers Against Sewage</a>, and <a href="https://www.sewagemap.co.uk/">a researcher at UCL named Dr Alex Lipp</a>. (Feel free to use these links and take a few minutes to check out the current sewage status of the Lune river in Lancaster or your own hometown.)</p>
+<p>Annual summaries of EDM data must be submitted to the <a href="https://www.gov.uk/government/organisations/environment-agency">Environment Agency</a>, the government agency in charge of protecting and enhancing the environment in England.</p>
+<div id="download-and-upload-the-data" class="section level3" number="11.2.1">
+<h3>
+<span class="header-section-number">11.2.1</span> Download and upload the data<a class="anchor" aria-label="anchor" href="#download-and-upload-the-data"><i class="fas fa-link"></i></a>
+</h3>
+<p>Download today’s dataset (<code>"UU_EDM_2024_Storm_Overflow_4101.csv"</code>) from the week 3 Moodle page.</p>
+<p>Upload the file to the R server and move it into your data folder.</p>
+</div>
+<div id="read-in-the-data" class="section level3" number="11.2.2">
+<h3>
+<span class="header-section-number">11.2.2</span> Read in the data<a class="anchor" aria-label="anchor" href="#read-in-the-data"><i class="fas fa-link"></i></a>
+</h3>
+<p>Find the code to load data from a .csv file in your script from last week. (Hint: it uses the <code><a href="https://rdrr.io/r/utils/read.table.html">read.csv()</a></code> function.)</p>
+<p>Copy and paste it into this week’s script.</p>
+<p>You will need to change two things before you run the code:</p>
+<ol style="list-style-type: decimal">
+<li>The name of the data frame you are using to store the data (I suggest something like <code>data_EDM</code>).</li>
+<li>The name of the csv file.</li>
+</ol>
+<p>Once you run the code, you should see the data frame in your Environment tab. Notice how many observations (= rows) it has!</p>
+<p>Use the <code><a href="https://rdrr.io/r/utils/str.html">str()</a></code> function to examine the data frame.</p>
+<p><strong>NOTE:</strong> you will need to substitute <code>mydf</code> with whatever you named your data frame.</p>
+<pre><code>str(mydf)</code></pre>
+<div class="rmdquestion">
+<p><strong><em>Questions:</em></strong></p>
+<p>Make sure that you can answer the following:</p>
+<ul>
+<li>What are all of the variables?</li>
+<li>What do they mean?</li>
+<li>What are their units?</li>
+</ul>
+</div>
+<p>If you are curious about what counts as a “spill”, you can read more about the <a href="https://www.gov.uk/government/publications/water-companies-environmental-permits-for-storm-overflows-and-emergency-overflows/water-companies-environmental-permits-for-storm-overflows-and-emergency-overflows#counting-spills">12/24 counting method here</a>.</p>
+<div class="rmdtip">
+<p><strong><em>Tip!</em></strong></p>
+<p>We could have done week 2’s analysis in Excel without too much difficulty (although the figures would not have looked as nice).</p>
+<p>However, this week’s dataset would be difficult to analyse in Excel because of its large size.</p>
+<p>This is one example of why R and other coding-based analyses are so useful.</p>
+</div>
+</div>
+</div>
+<div id="todays-research-questions" class="section level2" number="11.3">
+<h2>
+<span class="header-section-number">11.3</span> Today’s research questions<a class="anchor" aria-label="anchor" href="#todays-research-questions"><i class="fas fa-link"></i></a>
+</h2>
+<p>We will explore the EDM dataset and use it to try to answer the following research questions:</p>
+<div class="rmdquestion">
+<p><strong><em>Research Questions:</em></strong></p>
+<ol style="list-style-type: decimal">
+<li><p>How does the frequency and duration of sewage spills in the Lune river in Lancaster compare to the rest of the United Utilities area?</p></li>
+<li><p>How does the frequency and duration of sewage spills in the Lune river in Lancaster in 2024 compare to its long-term average (2020-2024)?</p></li>
+</ol>
+</div>
+<p>We will also compare column plots and boxplots and see which type of graph is most helpful for visualising the water data.</p>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="tidyup_wk2.html"><span class="header-section-number">10</span> Tidying up</a></div>
+<div class="next"><a href="data-processing-and-exploration.html"><span class="header-section-number">12</span> Data processing and exploration</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#intro_wk3"><span class="header-section-number">11</span> Introduction</a></li>
+<li><a class="nav-link" href="#prepare-a-new-script"><span class="header-section-number">11.1</span> Prepare a new script</a></li>
+<li>
+<a class="nav-link" href="#the-water-data"><span class="header-section-number">11.2</span> The water data</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#download-and-upload-the-data"><span class="header-section-number">11.2.1</span> Download and upload the data</a></li>
+<li><a class="nav-link" href="#read-in-the-data"><span class="header-section-number">11.2.2</span> Read in the data</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#todays-research-questions"><span class="header-section-number">11.3</span> Today’s research questions</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/03-week3.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/03-week3.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Foundation Skills for LEC Practical Exercises</strong>" was written by Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt. It was last built on 2026-10-20.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

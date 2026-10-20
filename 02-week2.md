@@ -1,6 +1,6 @@
 # (PART) Week 2 {-}
 
-# Introduction
+# Introduction {#intro_wk2}
 
 ## What are R and RStudio?
 
@@ -467,7 +467,7 @@ The data are part of a larger dataset published annually by the Defra (Departmen
 
 Upload the `.csv` file to the R server via the `Files` pane in the bottom-right quadrant.
 
-The upload button is the middle and has a golden circle with a white arrow pointing up.
+The upload button is in the middle and has a golden circle with a white arrow pointing up.
 
 ## Reading in data
 
@@ -553,15 +553,15 @@ Table: (\#tab:unnamed-chunk-12)A hypothetical field study on mammal observations
 
 |site   | foxes| badgers| mice|
 |:------|-----:|-------:|----:|
-|Site 1 |     7|       2|   15|
-|Site 2 |     3|       1|   40|
-|Site 3 |     3|       1|   34|
-|Site 4 |     7|       1|   28|
-|Site 5 |     8|       1|   20|
-|Site 6 |     1|       1|   46|
-|Site 7 |     1|       2|   30|
-|Site 8 |     3|       1|   40|
-|Site 9 |     0|       2|   42|
+|Site 1 |     5|       1|   33|
+|Site 2 |     4|       2|   23|
+|Site 3 |     6|       1|   33|
+|Site 4 |     3|       2|   29|
+|Site 5 |     5|       2|   21|
+|Site 6 |     0|       3|   30|
+|Site 7 |     1|       1|   43|
+|Site 8 |     9|       0|   25|
+|Site 9 |     1|       1|   42|
 
 
 
@@ -577,32 +577,32 @@ Table: (\#tab:unnamed-chunk-13)A hypothetical field study on mammal observations
 
 |site   |animal  | count|
 |:------|:-------|-----:|
-|Site 1 |foxes   |     7|
-|Site 1 |badgers |     2|
-|Site 1 |mice    |    15|
-|Site 2 |foxes   |     3|
-|Site 2 |badgers |     1|
-|Site 2 |mice    |    40|
-|Site 3 |foxes   |     3|
+|Site 1 |foxes   |     5|
+|Site 1 |badgers |     1|
+|Site 1 |mice    |    33|
+|Site 2 |foxes   |     4|
+|Site 2 |badgers |     2|
+|Site 2 |mice    |    23|
+|Site 3 |foxes   |     6|
 |Site 3 |badgers |     1|
-|Site 3 |mice    |    34|
-|Site 4 |foxes   |     7|
-|Site 4 |badgers |     1|
-|Site 4 |mice    |    28|
-|Site 5 |foxes   |     8|
-|Site 5 |badgers |     1|
-|Site 5 |mice    |    20|
-|Site 6 |foxes   |     1|
-|Site 6 |badgers |     1|
-|Site 6 |mice    |    46|
+|Site 3 |mice    |    33|
+|Site 4 |foxes   |     3|
+|Site 4 |badgers |     2|
+|Site 4 |mice    |    29|
+|Site 5 |foxes   |     5|
+|Site 5 |badgers |     2|
+|Site 5 |mice    |    21|
+|Site 6 |foxes   |     0|
+|Site 6 |badgers |     3|
+|Site 6 |mice    |    30|
 |Site 7 |foxes   |     1|
-|Site 7 |badgers |     2|
-|Site 7 |mice    |    30|
-|Site 8 |foxes   |     3|
-|Site 8 |badgers |     1|
-|Site 8 |mice    |    40|
-|Site 9 |foxes   |     0|
-|Site 9 |badgers |     2|
+|Site 7 |badgers |     1|
+|Site 7 |mice    |    43|
+|Site 8 |foxes   |     9|
+|Site 8 |badgers |     0|
+|Site 8 |mice    |    25|
+|Site 9 |foxes   |     1|
+|Site 9 |badgers |     1|
 |Site 9 |mice    |    42|
 
 
@@ -821,9 +821,9 @@ To download your plot image file:
 You will probably also want to move the file from your Downloads folder to your Documents folder.
 
 
-# Tidying up {#tidyup}
+# Tidying up {#tidyup_wk2}
 
-Before you move onto the next bit, let's tidy up and save the R script. 
+As the last set of tasks for today, you should tidy up and save your R script. 
 
 First, you'll want to add a comment header to the very top of your document describing what the script is, who wrote it, and when they they wrote it. Mine usually look something like this:
 
@@ -846,8 +846,8 @@ Here's what my final script looks like, with extra comments and formatting to ma
 
 ```r
 ##### Marta Shocket
-##### LEC 243 - Week 3 Practical
-##### 21 Oct 2025
+##### LECX4101 - Week 1 Practical
+##### 14 Oct 2026
 
 
 library(dplyr)

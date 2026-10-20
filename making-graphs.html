@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 14 Making graphs | Foundation Skills for LEC Practical Exercises</title>
+<meta name="author" content="Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt">
+<meta name="description" content="We’ve answered our research questions with the table, but it would be nice to be able to make some plots to illustrate the numbers visually. Last week you used the ggplot() function to make a line...">
+<meta name="generator" content="bookdown 0.48 with bs4_book()">
+<meta property="og:title" content="Chapter 14 Making graphs | Foundation Skills for LEC Practical Exercises">
+<meta property="og:type" content="book">
+<meta property="og:description" content="We’ve answered our research questions with the table, but it would be nice to be able to make some plots to illustrate the numbers visually. Last week you used the ggplot() function to make a line...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 14 Making graphs | Foundation Skills for LEC Practical Exercises">
+<meta name="twitter:description" content="We’ve answered our research questions with the table, but it would be nice to be able to make some plots to illustrate the numbers visually. Last week you used the ggplot() function to make a line...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.12.0/transition.js"></script><script src="libs/bs3compat-0.12.0/tabs.js"></script><script src="libs/bs3compat-0.12.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Foundation Skills for LEC Practical Exercises</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">About</a></li>
+<li class="book-part">Week 1 - Census data for method of travel to work in Excel</li>
+<li><a class="" href="introduction-setup.html"><span class="header-section-number">1</span> Introduction &amp; setup</a></li>
+<li><a class="" href="region-level-calculations.html"><span class="header-section-number">2</span> Region-level calculations</a></li>
+<li><a class="" href="region-level-figures.html"><span class="header-section-number">3</span> Region-level figures</a></li>
+<li><a class="" href="utla-level-calculations-and-figures.html"><span class="header-section-number">4</span> UTLA-level calculations and figures</a></li>
+<li><a class="" href="format-your-graph.html"><span class="header-section-number">5</span> Format your graph</a></li>
+<li class="book-part">Week 2</li>
+<li><a class="" href="intro_wk2.html"><span class="header-section-number">6</span> Introduction</a></li>
+<li><a class="" href="working-with-r-and-rstudio.html"><span class="header-section-number">7</span> Working with R and RStudio</a></li>
+<li><a class="" href="working-with-data.html"><span class="header-section-number">8</span> Working with data</a></li>
+<li><a class="" href="plotting-a-line-graph-with-ggplot.html"><span class="header-section-number">9</span> Plotting a line graph with ggplot</a></li>
+<li><a class="" href="tidyup_wk2.html"><span class="header-section-number">10</span> Tidying up</a></li>
+<li class="book-part">Week 3</li>
+<li><a class="" href="intro_wk3.html"><span class="header-section-number">11</span> Introduction</a></li>
+<li><a class="" href="data-processing-and-exploration.html"><span class="header-section-number">12</span> Data processing and exploration</a></li>
+<li><a class="" href="summary-statistics-with-dplyr.html"><span class="header-section-number">13</span> Summary statistics with dplyr</a></li>
+<li><a class="active" href="making-graphs.html"><span class="header-section-number">14</span> Making graphs</a></li>
+<li><a class="" href="tidyup_wk3.html"><span class="header-section-number">15</span> Tidying up</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="making-graphs" class="section level1" number="14">
+<h1>
+<span class="header-section-number">14</span> Making graphs<a class="anchor" aria-label="anchor" href="#making-graphs"><i class="fas fa-link"></i></a>
+</h1>
+<p>We’ve answered our research questions with the table, but it would be nice to be able to make some plots to illustrate the numbers visually.</p>
+<p>Last week you used the <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code> function to make a line graph of the yield of three cereal crops over time.</p>
+<p>This week we’ll make two types of graphs - boxplots and column plots.</p>
+<ul>
+<li>Both types of graph will compare the Lancaster sites to the non-Lancaster sites.</li>
+</ul>
+<p>Let’s start with the counted spills variable.</p>
+<div id="a-ggplot-template" class="section level2" number="14.1">
+<h2>
+<span class="header-section-number">14.1</span> A <code>ggplot()</code> template<a class="anchor" aria-label="anchor" href="#a-ggplot-template"><i class="fas fa-link"></i></a>
+</h2>
+<p>Here is a template that you can use as a basic template to make graphs with <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code>.</p>
+<p>This is the same format of code that you used last week, except for the additional <code><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme()</a></code> function at the end to change the font size of the axis titles and tick mark text.</p>
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">my_fig</span> <span class="op">&lt;-</span> <span class="va">mydf</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">my_x_var</span>, y <span class="op">=</span> <span class="va">my_y_var</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_mygraphtype</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"X axis label (units) "</span>, y <span class="op">=</span> <span class="st">"Y axis label (units)"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>axis.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">14</span><span class="op">)</span>,</span>
+<span>        axis.text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">11</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">my_fig</span><span class="op">)</span></span></code></pre></div>
+<p>In order to adapt this code template, you will <em>need</em> to change, at minimum:</p>
+<ul>
+<li>the name of the data frame</li>
+<li>the name of the x and y variables in the <code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code>
+</li>
+<li>the geom_mygraphtype() function</li>
+</ul>
+<p>You will also want to change the axis labels so that they match the data (and probably want to change the name of the figure object too).</p>
+<p>The two <code>geom</code> functions that you will need for today’s graphs are:</p>
+<ul>
+<li><code><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot()</a></code></li>
+<li><code><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col()</a></code></li>
+</ul>
+<p>Start with the boxplot first. Then once you get it working, move on to the column plot.</p>
+<div class="rmdtip">
+<p><strong><em>Important!</em></strong></p>
+<p>The two different types of graph need different types of data:</p>
+<ul>
+<li>The <strong>boxplot</strong> will need the original data set that contains the values for all of the sites.</li>
+<li>The <strong>column plot</strong> will need medians from the summarised data.</li>
+</ul>
+<p>This means that that your data frame and your x and y variables will be different for each type of graph.</p>
+<p>You can always check the column names of your data frames by using <code><a href="https://rdrr.io/r/utils/head.html">head()</a></code> or <code><a href="https://rdrr.io/r/utils/str.html">str()</a></code> in the console, or by using the Environment pane.</p>
+</div>
+</div>
+<div id="adding-colours" class="section level2" number="14.2">
+<h2>
+<span class="header-section-number">14.2</span> Adding colours<a class="anchor" aria-label="anchor" href="#adding-colours"><i class="fas fa-link"></i></a>
+</h2>
+<p>Try to change the colours of your graphs.</p>
+<p>Choose a colour that you like either using <a href="https://derekogle.com/NCGraphing/resources/colors">named colours</a> or <a href="https://streamlinepublishing.com/inside-art/who-put-the-hex-on-color/">hexadecimal codes</a>.</p>
+<p>Then add your colour argument (e.g. <code>fill = "#66CCEE"</code> or <code>fill = "aquamarine3"</code>) to the <code><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot()</a></code> or <code><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col()</a></code> arguments.</p>
+</div>
+<div id="graphs-for-additional-variables" class="section level2" number="14.3">
+<h2>
+<span class="header-section-number">14.3</span> Graphs for additional variables<a class="anchor" aria-label="anchor" href="#graphs-for-additional-variables"><i class="fas fa-link"></i></a>
+</h2>
+<p>Depending on the time remaining, you should try to make boxplots and column plots for the other three variables as well:</p>
+<ul>
+<li>long-term spill average</li>
+<li>spill duration</li>
+<li>percent of time operational</li>
+</ul>
+<p>You will need to change the y variable and y-axis label.</p>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="summary-statistics-with-dplyr.html"><span class="header-section-number">13</span> Summary statistics with dplyr</a></div>
+<div class="next"><a href="tidyup_wk3.html"><span class="header-section-number">15</span> Tidying up</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#making-graphs"><span class="header-section-number">14</span> Making graphs</a></li>
+<li><a class="nav-link" href="#a-ggplot-template"><span class="header-section-number">14.1</span> A ggplot() template</a></li>
+<li><a class="nav-link" href="#adding-colours"><span class="header-section-number">14.2</span> Adding colours</a></li>
+<li><a class="nav-link" href="#graphs-for-additional-variables"><span class="header-section-number">14.3</span> Graphs for additional variables</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/03-week3.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/03-week3.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Foundation Skills for LEC Practical Exercises</strong>" was written by Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt. It was last built on 2026-10-20.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

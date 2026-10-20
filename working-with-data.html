@@ -51,11 +51,17 @@
 <li><a class="" href="utla-level-calculations-and-figures.html"><span class="header-section-number">4</span> UTLA-level calculations and figures</a></li>
 <li><a class="" href="format-your-graph.html"><span class="header-section-number">5</span> Format your graph</a></li>
 <li class="book-part">Week 2</li>
-<li><a class="" href="introduction.html"><span class="header-section-number">6</span> Introduction</a></li>
+<li><a class="" href="intro_wk2.html"><span class="header-section-number">6</span> Introduction</a></li>
 <li><a class="" href="working-with-r-and-rstudio.html"><span class="header-section-number">7</span> Working with R and RStudio</a></li>
 <li><a class="active" href="working-with-data.html"><span class="header-section-number">8</span> Working with data</a></li>
 <li><a class="" href="plotting-a-line-graph-with-ggplot.html"><span class="header-section-number">9</span> Plotting a line graph with ggplot</a></li>
-<li><a class="" href="tidyup.html"><span class="header-section-number">10</span> Tidying up</a></li>
+<li><a class="" href="tidyup_wk2.html"><span class="header-section-number">10</span> Tidying up</a></li>
+<li class="book-part">Week 3</li>
+<li><a class="" href="intro_wk3.html"><span class="header-section-number">11</span> Introduction</a></li>
+<li><a class="" href="data-processing-and-exploration.html"><span class="header-section-number">12</span> Data processing and exploration</a></li>
+<li><a class="" href="summary-statistics-with-dplyr.html"><span class="header-section-number">13</span> Summary statistics with dplyr</a></li>
+<li><a class="" href="making-graphs.html"><span class="header-section-number">14</span> Making graphs</a></li>
+<li><a class="" href="tidyup_wk3.html"><span class="header-section-number">15</span> Tidying up</a></li>
 </ul>
 
         <div class="book-extra">
@@ -95,7 +101,7 @@
 <p>This dataset contains UK <strong>crop yield data (in tonnes per hectare) for 3 different cereal crops (wheat, barley, and oats) from 1984-2025.</strong></p>
 <p>The data are part of a larger dataset published annually by the Defra (Department of Environment, Food, and Rural Affairs), a part of the UK government. The data are part of <em>Chapter 7: Crops of Agriculture in the United Kingdom</em>, which can be found <a href="https://www.gov.uk/government/statistics/agriculture-in-the-united-kingdom-2025/chapter-7-crops">here</a>. There is a link to download the full dataset under every table in the report.</p>
 <p>Upload the <code>.csv</code> file to the R server via the <code>Files</code> pane in the bottom-right quadrant.</p>
-<p>The upload button is the middle and has a golden circle with a white arrow pointing up.</p>
+<p>The upload button is in the middle and has a golden circle with a white arrow pointing up.</p>
 </div>
 <div id="reading-in-data" class="section level2" number="8.3">
 <h2>
@@ -175,56 +181,56 @@
 <tbody>
 <tr class="odd">
 <td align="left">Site 1</td>
-<td align="right">7</td>
-<td align="right">2</td>
-<td align="right">15</td>
+<td align="right">5</td>
+<td align="right">1</td>
+<td align="right">33</td>
 </tr>
 <tr class="even">
 <td align="left">Site 2</td>
-<td align="right">3</td>
-<td align="right">1</td>
-<td align="right">40</td>
+<td align="right">4</td>
+<td align="right">2</td>
+<td align="right">23</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 3</td>
-<td align="right">3</td>
+<td align="right">6</td>
 <td align="right">1</td>
-<td align="right">34</td>
+<td align="right">33</td>
 </tr>
 <tr class="even">
 <td align="left">Site 4</td>
-<td align="right">7</td>
-<td align="right">1</td>
-<td align="right">28</td>
+<td align="right">3</td>
+<td align="right">2</td>
+<td align="right">29</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 5</td>
-<td align="right">8</td>
-<td align="right">1</td>
-<td align="right">20</td>
+<td align="right">5</td>
+<td align="right">2</td>
+<td align="right">21</td>
 </tr>
 <tr class="even">
 <td align="left">Site 6</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="right">46</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">30</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 7</td>
 <td align="right">1</td>
-<td align="right">2</td>
-<td align="right">30</td>
+<td align="right">1</td>
+<td align="right">43</td>
 </tr>
 <tr class="even">
 <td align="left">Site 8</td>
-<td align="right">3</td>
-<td align="right">1</td>
-<td align="right">40</td>
+<td align="right">9</td>
+<td align="right">0</td>
+<td align="right">25</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 9</td>
-<td align="right">0</td>
-<td align="right">2</td>
+<td align="right">1</td>
+<td align="right">1</td>
 <td align="right">42</td>
 </tr>
 </tbody>
@@ -248,132 +254,132 @@
 <tr class="odd">
 <td align="left">Site 1</td>
 <td align="left">foxes</td>
-<td align="right">7</td>
+<td align="right">5</td>
 </tr>
 <tr class="even">
 <td align="left">Site 1</td>
 <td align="left">badgers</td>
-<td align="right">2</td>
+<td align="right">1</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 1</td>
 <td align="left">mice</td>
-<td align="right">15</td>
+<td align="right">33</td>
 </tr>
 <tr class="even">
 <td align="left">Site 2</td>
+<td align="left">foxes</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="left">Site 2</td>
+<td align="left">badgers</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="left">Site 2</td>
+<td align="left">mice</td>
+<td align="right">23</td>
+</tr>
+<tr class="odd">
+<td align="left">Site 3</td>
+<td align="left">foxes</td>
+<td align="right">6</td>
+</tr>
+<tr class="even">
+<td align="left">Site 3</td>
+<td align="left">badgers</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left">Site 3</td>
+<td align="left">mice</td>
+<td align="right">33</td>
+</tr>
+<tr class="even">
+<td align="left">Site 4</td>
 <td align="left">foxes</td>
 <td align="right">3</td>
 </tr>
 <tr class="odd">
-<td align="left">Site 2</td>
-<td align="left">badgers</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
-<td align="left">Site 2</td>
-<td align="left">mice</td>
-<td align="right">40</td>
-</tr>
-<tr class="odd">
-<td align="left">Site 3</td>
-<td align="left">foxes</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Site 3</td>
-<td align="left">badgers</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="left">Site 3</td>
-<td align="left">mice</td>
-<td align="right">34</td>
-</tr>
-<tr class="even">
-<td align="left">Site 4</td>
-<td align="left">foxes</td>
-<td align="right">7</td>
-</tr>
-<tr class="odd">
 <td align="left">Site 4</td>
 <td align="left">badgers</td>
-<td align="right">1</td>
+<td align="right">2</td>
 </tr>
 <tr class="even">
 <td align="left">Site 4</td>
 <td align="left">mice</td>
-<td align="right">28</td>
+<td align="right">29</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 5</td>
 <td align="left">foxes</td>
-<td align="right">8</td>
+<td align="right">5</td>
 </tr>
 <tr class="even">
 <td align="left">Site 5</td>
-<td align="left">badgers</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="left">Site 5</td>
-<td align="left">mice</td>
-<td align="right">20</td>
-</tr>
-<tr class="even">
-<td align="left">Site 6</td>
-<td align="left">foxes</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="left">Site 6</td>
-<td align="left">badgers</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
-<td align="left">Site 6</td>
-<td align="left">mice</td>
-<td align="right">46</td>
-</tr>
-<tr class="odd">
-<td align="left">Site 7</td>
-<td align="left">foxes</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
-<td align="left">Site 7</td>
 <td align="left">badgers</td>
 <td align="right">2</td>
 </tr>
 <tr class="odd">
-<td align="left">Site 7</td>
+<td align="left">Site 5</td>
 <td align="left">mice</td>
-<td align="right">30</td>
+<td align="right">21</td>
 </tr>
 <tr class="even">
-<td align="left">Site 8</td>
-<td align="left">foxes</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="left">Site 8</td>
-<td align="left">badgers</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
-<td align="left">Site 8</td>
-<td align="left">mice</td>
-<td align="right">40</td>
-</tr>
-<tr class="odd">
-<td align="left">Site 9</td>
+<td align="left">Site 6</td>
 <td align="left">foxes</td>
 <td align="right">0</td>
 </tr>
+<tr class="odd">
+<td align="left">Site 6</td>
+<td align="left">badgers</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td align="left">Site 6</td>
+<td align="left">mice</td>
+<td align="right">30</td>
+</tr>
+<tr class="odd">
+<td align="left">Site 7</td>
+<td align="left">foxes</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left">Site 7</td>
+<td align="left">badgers</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left">Site 7</td>
+<td align="left">mice</td>
+<td align="right">43</td>
+</tr>
+<tr class="even">
+<td align="left">Site 8</td>
+<td align="left">foxes</td>
+<td align="right">9</td>
+</tr>
+<tr class="odd">
+<td align="left">Site 8</td>
+<td align="left">badgers</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">Site 8</td>
+<td align="left">mice</td>
+<td align="right">25</td>
+</tr>
+<tr class="odd">
+<td align="left">Site 9</td>
+<td align="left">foxes</td>
+<td align="right">1</td>
+</tr>
 <tr class="even">
 <td align="left">Site 9</td>
 <td align="left">badgers</td>
-<td align="right">2</td>
+<td align="right">1</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 9</td>
@@ -473,7 +479,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Foundation Skills for LEC Practical Exercises</strong>" was written by Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt. It was last built on 2026-10-13.</p>
+    <p>"<strong>Foundation Skills for LEC Practical Exercises</strong>" was written by Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt. It was last built on 2026-10-20.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

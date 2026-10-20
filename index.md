@@ -1,7 +1,7 @@
 --- 
 title: "Foundation Skills for LEC Practical Exercises"
 author: "Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt"
-date: "2026-10-13"
+date: "2026-10-20"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
