@@ -47,6 +47,10 @@ The schedule for the practicals is provided below.
 |9|ArcGIS|English Lake District water quality|
 |10|ArcGIS|Africa malaria infections|
 
+The instructions for weeks 1-6 (Excel and R) will be provided in this online workbook.
+
+The instructions for weeks 7-10 (ArcGIS) will be provided on Moodle.
+
 ## Questions, cautions, warnings, and tips {-}
 
 Periodically the practical instructions will be interrupted by a blue question box like the one below. Please take a few minutes to consider the question inside, either on your own or by chatting with people around you.

@@ -1,4 +1,4 @@
-# (PART) Week 1 - Census data for method of travel to work in Excel {-}
+# (PART) Week 1 - Census data in Excel {-}
 
 # Introduction & setup
 

@@ -1,4 +1,4 @@
-# (PART) Week 2 {-}
+# (PART) Week 2 - Crop yield data in R{-}
 
 # Introduction {#intro_wk2}
 
