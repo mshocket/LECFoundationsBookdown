@@ -1,4 +1,4 @@
-# (PART) Week 3 {-}
+# (PART) Week 3 - EDM data in R {-}
 
 # Introduction {#intro_wk3}
 
@@ -8,11 +8,14 @@ Starting today, the first thing you'll do at the beginning of each R practical i
 
 1. Open a new R script.
 2. Save it under a sensible name (e.g. for today, something like `Week3Practical_Water`)
-3. Add in a header to explain what the script is
-4. Add in the code to load our three main packages/libraries
+3. Add in a commented header to explain what the script is
+4. Add in the code to load our three main packages/libraries (`dplyr`, `tidyr`, and `ggplot`)
 5. Run the code the load the libraries
 
+::: {.rmdtip}
+***Tip!***
 For points 3 and 4, the easiest thing is to open your script from last week, copy and paste the relevant content, and then change the information that needs to be updated (e.g. the date and the practical number/theme in the header).
+:::
 
 ::: {.rmdcaution}
 ***Caution!***
@@ -34,7 +37,7 @@ Starting today, **we will not help you with your code until it is properly space
 
 Speaking of spaces, it's a good idea to avoid putting spaces in file names.
 
-Try to get in the habit of using underscores or hyphens instead - like we do in the data files and example scripts.
+Try to get in the habit of using underscores instead - like we do in the data files and example scripts.
 :::
 
 ## The water data
@@ -46,7 +49,6 @@ Today's dataset is [Event Duration Monitoring - Storm Overflows - Annual Returns
 You can find live-updating maps of EDM data on websites hosted by [The Rivers Trust ](https://theriverstrust.org/sewage-map), [Surfers Against Sewage](https://www.sas.org.uk/sewage-map/), and [a researcher at UCL named Dr Alex Lipp](https://www.sewagemap.co.uk/). (Feel free to use these links and take a few minutes to check out the current sewage status of the Lune river in Lancaster or your own hometown.)
 
 Annual summaries of EDM data must be submitted to the [Environment Agency](https://www.gov.uk/government/organisations/environment-agency), the government agency in charge of protecting and enhancing the environment in England.
-
 
 ### Download and upload the data
 
@@ -112,7 +114,8 @@ We will explore the EDM dataset and use it to try to answer the following resear
 We will also compare column plots and boxplots and see which type of graph is most helpful for visualising the water data.
 
 
-# Data processing and exploration
+
+# Data processing and exploration {#dataprocessing_wk3}
 
 
 
@@ -351,7 +354,7 @@ There is a function in the `dplyr` package called `summarise()` that is very use
 
 <div style="text-align: center;">
 
-![&nbsp;](images/Normaldist.jpeg){width=100%}
+![&nbsp;](images/NormalDist.jpeg){width=100%}
 
 </div>
 

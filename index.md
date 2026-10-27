@@ -1,7 +1,7 @@
 --- 
 title: "Foundation Skills for LEC Practical Exercises"
 author: "Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt"
-date: "2026-10-20"
+date: "2026-10-27"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -46,6 +46,10 @@ The schedule for the practicals is provided below.
 |8|ArcGIS|UK wind energy|
 |9|ArcGIS|English Lake District water quality|
 |10|ArcGIS|Africa malaria infections|
+
+The instructions for weeks 1-6 (Excel and R) will be provided in this online workbook.
+
+The instructions for weeks 7-10 (ArcGIS) will be provided on Moodle.
 
 ## Questions, cautions, warnings, and tips {-}
 
