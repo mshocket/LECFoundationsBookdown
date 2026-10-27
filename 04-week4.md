@@ -394,13 +394,14 @@ The order in which you add your layers matters!
 You probably want to add your `geom_smooth()` layer after your `geom_point()` layer, so it will be on top of the points instead of underneath them.
 :::
 
-There are three automated methods that `geom_smooth()` can use for the trendline. (You can also give it your own formula, but we won't cover that in this module.)
+There are two main automated methods that `geom_smooth()` can use for the trendline. (You can also give it your own formula, but we won't cover that in this module.)
 
 - a linear trendline: `geom_smooth(method = "lm")`
 - a gam trendline: `geom_smooth(method = "gam")`
-- a loess trendline:`geom_smooth(method = "loess")`
 
-The latter two are two different ways to fit a smooth curve to data. (The specific math is _way_ beyond the scope of this module - we'll just be looking at both of them visually.)
+The latter method is a way to fit a smooth curve to data. (The specific math is _way_ beyond the scope of this module - we'll just be looking at both of them visually.)
+
+**Note:** There is also a third method, called "loess". This is another way to fit a smooth curve to data, however it can fall down on large datasets. As such we won't be using that here.
 
 Add a trendline to each of yours plots, and experiment to see which method of trendline appears to fit the data best. 
 
