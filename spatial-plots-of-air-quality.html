@@ -195,16 +195,21 @@
 <p>To manually control which shapes are used, add a layer with the <code><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_shape_manual()</a></code> function and give it the numbers we want as a vector for the <code>values =</code> argument.</p>
 <div class="inline-figure"><img src="05-week5_files/figure-html/unnamed-chunk-7-1.png" alt="" width="672"></div>
 <p>One more final change to make a professional quality figure - change formatting of the legend titles (Right now they are literally just the column names.)</p>
-<p>In order to so do, we can go in and change the value within the saved figure.</p>
-<p>Remember how we use <code>$</code> to refer to columns in a data frame?</p>
-<p>It turns out that the <code>$</code> is actually more general than that - it not only works for columns but also other types of elements within R objects, like <code>ggplot</code> figures.</p>
-<p>And it can go more than one level down!</p>
-<p>If you run the two lines of code below - after you make your figure, but before you print it - it will change the legend titles.</p>
-<div class="sourceCode" id="cb57"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">spatial_fig</span><span class="op">$</span><span class="va">labels</span><span class="op">$</span><span class="va">colour</span> <span class="op">&lt;-</span> <span class="st">"Mean Conc. PM2.5"</span></span>
-<span><span class="va">spatial_fig</span><span class="op">$</span><span class="va">labels</span><span class="op">$</span><span class="va">shape</span> <span class="op">&lt;-</span> <span class="st">"Site type"</span></span></code></pre></div>
+<p>Luckily the <code><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs()</a></code> function doesn’t just handle axis labels and titles, it also is used to manage the labels for pretty much anything on the plot. All you need to provide is the name of the aesthetic argument (e.g. <code>colour</code>) and then set that to a string.</p>
+<p>So <code>labs(shape = "Site Type")</code> will set the legend created showing the different shapes to the sensible name “Site Type”.</p>
+<p>So let’s do that by adding a <code><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs()</a></code> call to our ggplot figure:</p>
 <div class="inline-figure"><img src="05-week5_files/figure-html/unnamed-chunk-8-1.png" alt="" width="672"></div>
 <p>Voila!</p>
+<div class="rmdtip">
+<p><strong><em>TIP!</em></strong></p>
+<p>When you initially create a ggplot object, it’s not “baked” into a real figure until you print it. As such you can add layers and geoms later before you print and it works just fine! For example:</p>
+<div class="sourceCode" id="cb57"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">my_df</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">my_col1</span>, y <span class="op">=</span> <span class="va">my_col2</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">p</span> <span class="op">&lt;-</span> <span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">p</span> <span class="op">&lt;-</span> <span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Independent"</span>, y <span class="op">=</span> <span class="st">"Dependent"</span><span class="op">)</span></span>
+<span><span class="va">p</span> <span class="op">&lt;-</span> <span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">p</span><span class="op">)</span></span></code></pre></div>
+</div>
 </div>
 </div>
   <div class="chapter-nav">
