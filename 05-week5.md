@@ -23,21 +23,21 @@ Remember, for items 3 and 4 the easiest thing is to open your script from last w
 
 Today's dataset is made available by [Defra, the UK department for Environment, Food & Rural Affairs](https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs).
 
-The main data portal for UK air quality data can be found at the [UK AIR (Air Information Resource)](https://uk-air.defra.gov.uk/).
+The main data portal for UK air quality data can be found at [UK AIR ](https://uk-air.defra.gov.uk/) (the Air Information Resource).
 
 There is also an [R package called `openair`](https://cran.r-project.org/web/packages/openair/index.html) that makes it easy to download UK air quality data directly into R. The work to build and maintain the R package was led by a chemist at York University, [Prof. David Carslaw](https://www.york.ac.uk/chemistry/people/dcarslaw/). An [online book](https://openair-project.github.io/book/) explaining how the package works can be found here.
 
 Although you won't be using the `openair` R package directly (primarily because it's not installed on the LEC R server), this package is how I originally obtained the data that are posted on Moodle for you to download and use.  
 
-Specifically, we will be using is from the [AURN - Automatic urban and rural network](https://uk-air.defra.gov.uk/networks/network-info?view=aurn).
+Specifically, we will be using data from the [AURN - Automatic urban and rural network](https://uk-air.defra.gov.uk/networks/network-info?view=aurn).
 
 From the AURN website:
 
 > "The AURN is the UK's largest automatic monitoring network and is the main network used for compliance reporting against the Ambient Air Quality Directives. It includes automatic air quality monitoring stations measuring oxides of nitrogen (NOx), sulphur dioxide (SO2), ozone (O3), carbon monoxide (CO) and particles (PM10, PM2.5). These sites provide high resolution hourly information which is communicated rapidly to the public, using a wide range of electronic, media and web platforms."
 
-We will be focusing on **fine particulate matter, known as $PM_{2.5}$,** because it has a diameter of 2.5 microns or less.  It is measured in $µg/m^3$.
+We will be focusing on **fine particulate matter**, known as $PM_{2.5}$, because it has a diameter of 2.5 microns or less.  It is measured in $µg/m^3$.
 
-PM2.5 is the most dangerous size of particle for human health because it can penetrate more deeply into the lungs and even travel through the bloodstream to other organs. $PM_{2.5}$ typically comes from combustion, including motor vehicle exhaust, fossil fuel burning power plants, industrial activities, domestic cooking and heating, waste incineration, and wildfires. 
+$PM_{2.5}$ is the most dangerous size of particle for human health because it can penetrate more deeply into the lungs and even travel through the bloodstream to other organs. $PM_{2.5}$ typically comes from combustion, including motor vehicle exhaust, fossil fuel burning power plants, industrial activities, domestic cooking and heating, waste incineration, and wildfires. 
 
 AURN data are available with averages calculated at at hourly, daily, monthly, and annual time scales. The data you are working today are **hourly data**. 
 
@@ -114,6 +114,12 @@ Select an appropriate function from the `lubridate` package to change it to date
 Remember that `lubridate` has a large library of functions like `ymd()`, `mdy()`, `dmy()`, etc. for converting character data, depending on the order the year, month, and date are provided in the text.
 :::
 
+::: {.rmdwarning}
+***Warning!*** Because we are overwriting our newly formatted date column on top of our old one, be careful not to run that line of code more than once!
+
+If you do, it will replace the date values with `NA`, because the column is no longer in the same format. 
+:::
+
 ## Data exploration with facet wrap
 
 Hopefully you also noticed that there are data collected from many different sites around the UK.
@@ -134,12 +140,12 @@ myfig <- mydf |>
 print(myfig)
 ```
 
-Generate a facet plot of the air quality data.
+Generate a facet plot of the air quality data showing how fine particulate matter is changing over time at each site. (You can also make a facet plot for each type of site if you want to.)
 
 ::: {.rmdquestion}
 ***Questions:***
 
-What do you notice about the data? 
+What do you notice about the facet plot for site? 
 
 - Do all of the sites have the same amount of data? 
 - Does there seem to be a lot of variation in pm2.5 between sites?
@@ -147,24 +153,52 @@ What do you notice about the data?
 :::
 
 
-### Facet plots by site type
+### Facet plots filtered by site type
 
 It was helpful to see the data for each site separately, but right now it's hard to know what type each site is.
 
 We can make a copy the facet plot code and add a `filter()` function to make separate plots for each value of `site_type`.
 
+Remeber from week 3 that the `filter()` function uses logical comparisons to compare values in a specific column to a provided value.
+
+- `x == y` tests if x and y are equal
+- `x != y` tests if x and y are **not** equal
+- `x < y` tests if x is less than y
+- `x > y` tests if x is greater than y
+- `x <= y` tests if x is less than or equal to y
+- `x >= y` tests if x is greater than or equal to y
+
+Refresh your understanding of logical operators by typing out and running the code below, in your console (since we don't need to save or rerun this).
+
+Make sure that you understand how each line is working.
+
+```r
+1 == 2
+1 != 2
+1 < 2
+1 <= 2
+1 > 2
+1 >= 2
+```
+
 The `filter()` function will go between the first line with the data frame and `ggplot()`. 
+
+The filter function works as follows:
+
+```r
+filter(colname operator value)
+```
 
 ::: {.rmdtip}
 ***Tips!***
 
 A couple helpful reminders:
 
-1. If you are trying to match a specific text value, you will need to use the `==` operator and quotation marks. (See section 12.3 - _Logical comparisons in R section_ - from week 3.)
+1. If you are trying to match a specific _text_ value, you will need to use quotation marks. (For number values or named variables containing values of any type, you do not need quotation marks.)
 2. You will have to pipe the data down again so the filtered data gets passed to `ggplot()`!
 :::
 
-Copy the code to make a separate facet plot for each value of `site_type`.
+Once you get your filtered facet plot working, copy, paste, and modify the code to make a separate facet plot for each value of `site_type`.
 
 ::: {.rmdquestion}
 ***Questions:***
@@ -214,8 +248,8 @@ We want our function to make a nice plot of air quality over time for just one s
 Let's start by adding the code to make a plot, as described below.
 
 - Put your cursor in between the curly brackets and hit enter a few times to make some space.
-- Paste your previous code for making the filtered facet plots inside.
-- Delete the `facet_wrap()` layer.
+- Paste your previous code for making the filtered facet plots inside. (**NOTE: You don't need the `print()` command** - just the code to make and store the plot itself.)
+- Delete the `facet_wrap()` layer, since we are just plotting one site at a time.
 - Change the data frame at the top of the pipeline to match the first argument name we put in our function definition (`site_df`).
 - Change the argument for `filter()` from `site_type == <insert specific site type here>` to `site == site_name`, i.e. the second argument name we used in our function definition.
 
@@ -240,6 +274,12 @@ The function for this is, unsurprisingly, `return()`.
 
 Add a line of code to the function - after you make your figure but still inside the curly brackets - that says `return(myfig)` (or whatever you called your figure).
 
+::: {.rmdtip}
+Returning the figure with `return()` - instead of just printing it with `print()` inside the function - will make our function more flexible. 
+
+- We can still print the plot if we want, by just running the function (because returning the plot will make it print automatically if we don't do anything else with it).
+- However, if we want to store the plot as an object instead of printing it, that will now work as well.
+:::
 
 ## Loading and running the function
 

@@ -105,7 +105,7 @@
 <p>Write the following code into your R script.</p>
 <p>Here, our new function - <code>plot_AQ_site()</code> - takes two arguments, which we are calling <code>site_df</code> and <code>site_name</code>.</p>
 <p>Right now the function is empty and doesn’t do anything. (We’ll fill it in shortly.)</p>
-<div class="sourceCode" id="cb53"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb55"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Define a function to analyse Normality of a variable</span></span>
 <span><span class="va">plot_AQ_site</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">site_df</span>, <span class="va">site_name</span><span class="op">)</span><span class="op">{</span><span class="op">}</span></span></code></pre></div>
 </div>
@@ -117,8 +117,8 @@
 <p>Let’s start by adding the code to make a plot, as described below.</p>
 <ul>
 <li>Put your cursor in between the curly brackets and hit enter a few times to make some space.</li>
-<li>Paste your previous code for making the filtered facet plots inside.</li>
-<li>Delete the <code><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap()</a></code> layer.</li>
+<li>Paste your previous code for making the filtered facet plots inside. (<strong>NOTE: You don’t need the <code><a href="https://rdrr.io/r/base/print.html">print()</a></code> command</strong> - just the code to make and store the plot itself.)</li>
+<li>Delete the <code><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap()</a></code> layer, since we are just plotting one site at a time.</li>
 <li>Change the data frame at the top of the pipeline to match the first argument name we put in our function definition (<code>site_df</code>).</li>
 <li>Change the argument for <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> from <code>site_type == &lt;insert specific site type here&gt;</code> to <code>site == site_name</code>, i.e. the second argument name we used in our function definition.</li>
 </ul>
@@ -141,6 +141,13 @@
 <p>This means if we want to keep the output of our function, we’ll need to get the function to “return” it to us at the end.</p>
 <p>The function for this is, unsurprisingly, <code><a href="https://rdrr.io/r/base/function.html">return()</a></code>.</p>
 <p>Add a line of code to the function - after you make your figure but still inside the curly brackets - that says <code>return(myfig)</code> (or whatever you called your figure).</p>
+<div class="rmdtip">
+<p>Returning the figure with <code><a href="https://rdrr.io/r/base/function.html">return()</a></code> - instead of just printing it with <code><a href="https://rdrr.io/r/base/print.html">print()</a></code> inside the function - will make our function more flexible.</p>
+<ul>
+<li>We can still print the plot if we want, by just running the function (because returning the plot will make it print automatically if we don’t do anything else with it).</li>
+<li>However, if we want to store the plot as an object instead of printing it, that will now work as well.</li>
+</ul>
+</div>
 </div>
 </div>
 <div id="loading-and-running-the-function" class="section level2" number="23.3">
@@ -155,7 +162,7 @@
 </div>
 <p>Now we can actually use our function!</p>
 <p>Write the following code below the function definition in your R script, and run it.</p>
-<div class="sourceCode" id="cb54"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb56"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Make a plot of pm2.5 over time for one site</span></span>
 <span><span class="fu">plot_AQ_site</span><span class="op">(</span><span class="va">data_AQ</span>, site_name <span class="op">=</span> <span class="st">"Preston"</span><span class="op">)</span></span></code></pre></div>
 <p>You should see a figure with the pm2.5 values for Preston over time pop up in your Plots tab.</p>
@@ -177,7 +184,7 @@
 <li>Change the theme to <code><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic()</a></code> or <code><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw()</a></code>, or another theme, based on your preference</li>
 </ul>
 <p>You can also use the <code><a href="https://rdrr.io/r/base/paste.html">paste()</a></code> function to add a bespoke title to your plot within the <code><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs()</a></code> function. The code below will substitute the actual site name into the figure title.</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="writing-functions-in-r.html#cb55-1" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">paste</span>(<span class="st">"Annual mean air pollution in"</span>, site_name)) <span class="sc">+</span> </span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="writing-functions-in-r.html#cb57-1" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">paste</span>(<span class="st">"Annual mean air pollution in"</span>, site_name)) <span class="sc">+</span> </span></code></pre></div>
 <div class="rmdwarning">
 <p><strong><em>WARNING!</em></strong> Every time that you change the definition of your function, you will need to load it again before R can use the new version of it!</p>
 </div>

@@ -103,6 +103,10 @@
 <p><strong><em>Tip!</em></strong></p>
 <p>Remember that <code>lubridate</code> has a large library of functions like <code>ymd()</code>, <code>mdy()</code>, <code>dmy()</code>, etc. for converting character data, depending on the order the year, month, and date are provided in the text.</p>
 </div>
+<div class="rmdwarning">
+<p><strong><em>Warning!</em></strong> Because we are overwriting our newly formatted date column on top of our old one, be careful not to run that line of code more than once!</p>
+<p>If you do, it will replace the date values with <code>NA</code>, because the column is no longer in the same format.</p>
+</div>
 </div>
 <div id="data-exploration-with-facet-wrap" class="section level2" number="22.3">
 <h2>
@@ -119,32 +123,58 @@
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">facet_var</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">myfig</span><span class="op">)</span></span></code></pre></div>
-<p>Generate a facet plot of the air quality data.</p>
+<p>Generate a facet plot of the air quality data showing how fine particulate matter is changing over time at each site. (You can also make a facet plot for each type of site if you want to.)</p>
 <div class="rmdquestion">
 <p><strong><em>Questions:</em></strong></p>
-<p>What do you notice about the data?</p>
+<p>What do you notice about the facet plot for site?</p>
 <ul>
 <li>Do all of the sites have the same amount of data?</li>
 <li>Does there seem to be a lot of variation in pm2.5 between sites?</li>
 <li>Does there seem to be a lot of variation in pm2.5 over time within the same site?</li>
 </ul>
 </div>
-<div id="facet-plots-by-site-type" class="section level3" number="22.3.1">
+<div id="facet-plots-filtered-by-site-type" class="section level3" number="22.3.1">
 <h3>
-<span class="header-section-number">22.3.1</span> Facet plots by site type<a class="anchor" aria-label="anchor" href="#facet-plots-by-site-type"><i class="fas fa-link"></i></a>
+<span class="header-section-number">22.3.1</span> Facet plots filtered by site type<a class="anchor" aria-label="anchor" href="#facet-plots-filtered-by-site-type"><i class="fas fa-link"></i></a>
 </h3>
 <p>It was helpful to see the data for each site separately, but right now it’s hard to know what type each site is.</p>
 <p>We can make a copy the facet plot code and add a <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> function to make separate plots for each value of <code>site_type</code>.</p>
+<p>Remeber from week 3 that the <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> function uses logical comparisons to compare values in a specific column to a provided value.</p>
+<ul>
+<li>
+<code>x == y</code> tests if x and y are equal</li>
+<li>
+<code>x != y</code> tests if x and y are <strong>not</strong> equal</li>
+<li>
+<code>x &lt; y</code> tests if x is less than y</li>
+<li>
+<code>x &gt; y</code> tests if x is greater than y</li>
+<li>
+<code>x &lt;= y</code> tests if x is less than or equal to y</li>
+<li>
+<code>x &gt;= y</code> tests if x is greater than or equal to y</li>
+</ul>
+<p>Refresh your understanding of logical operators by typing out and running the code below, in your console (since we don’t need to save or rerun this).</p>
+<p>Make sure that you understand how each line is working.</p>
+<div class="sourceCode" id="cb53"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">1</span> <span class="op">==</span> <span class="fl">2</span></span>
+<span><span class="fl">1</span> <span class="op">!=</span> <span class="fl">2</span></span>
+<span><span class="fl">1</span> <span class="op">&lt;</span> <span class="fl">2</span></span>
+<span><span class="fl">1</span> <span class="op">&lt;=</span> <span class="fl">2</span></span>
+<span><span class="fl">1</span> <span class="op">&gt;</span> <span class="fl">2</span></span>
+<span><span class="fl">1</span> <span class="op">&gt;=</span> <span class="fl">2</span></span></code></pre></div>
 <p>The <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> function will go between the first line with the data frame and <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code>.</p>
+<p>The filter function works as follows:</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="data-processing-and-exploration.html#cb54-1" tabindex="-1"></a><span class="fu">filter</span>(colname operator value)</span></code></pre></div>
 <div class="rmdtip">
 <p><strong><em>Tips!</em></strong></p>
 <p>A couple helpful reminders:</p>
 <ol style="list-style-type: decimal">
-<li>If you are trying to match a specific text value, you will need to use the <code>==</code> operator and quotation marks. (See section 12.3 - <em>Logical comparisons in R section</em> - from week 3.)</li>
+<li>If you are trying to match a specific <em>text</em> value, you will need to use quotation marks. (For number values or named variables containing values of any type, you do not need quotation marks.)</li>
 <li>You will have to pipe the data down again so the filtered data gets passed to <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code>!</li>
 </ol>
 </div>
-<p>Copy the code to make a separate facet plot for each value of <code>site_type</code>.</p>
+<p>Once you get your filtered facet plot working, copy, paste, and modify the code to make a separate facet plot for each value of <code>site_type</code>.</p>
 <div class="rmdquestion">
 <p><strong><em>Questions:</em></strong></p>
 <p>What do you notice about the data now?</p>
@@ -166,7 +196,7 @@
 <li><a class="nav-link" href="#the-table-function"><span class="header-section-number">22.1</span> The table() function</a></li>
 <li><a class="nav-link" href="#formatting-the-date-column-as-date-type-data"><span class="header-section-number">22.2</span> Formatting the date column as date type data</a></li>
 <li>
-<a class="nav-link" href="#data-exploration-with-facet-wrap"><span class="header-section-number">22.3</span> Data exploration with facet wrap</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#facet-plots-by-site-type"><span class="header-section-number">22.3.1</span> Facet plots by site type</a></li></ul>
+<a class="nav-link" href="#data-exploration-with-facet-wrap"><span class="header-section-number">22.3</span> Data exploration with facet wrap</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#facet-plots-filtered-by-site-type"><span class="header-section-number">22.3.1</span> Facet plots filtered by site type</a></li></ul>
 </li>
 </ul>
 

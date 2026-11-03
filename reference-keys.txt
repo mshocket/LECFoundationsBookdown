@@ -137,7 +137,7 @@ data-processing-and-exploration
 the-table-function
 formatting-the-date-column-as-date-type-data
 data-exploration-with-facet-wrap
-facet-plots-by-site-type
+facet-plots-filtered-by-site-type
 writing-functions-in-r
 defining-a-new-function
 adding-commands

@@ -107,16 +107,16 @@ Remember, for items 3 and 4 the easiest thing is to open your script from last w
 <span class="header-section-number">21.2</span> The air quality data<a class="anchor" aria-label="anchor" href="#the-air-quality-data"><i class="fas fa-link"></i></a>
 </h2>
 <p>Today’s dataset is made available by <a href="https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs">Defra, the UK department for Environment, Food &amp; Rural Affairs</a>.</p>
-<p>The main data portal for UK air quality data can be found at the <a href="https://uk-air.defra.gov.uk/">UK AIR (Air Information Resource)</a>.</p>
+<p>The main data portal for UK air quality data can be found at <a href="https://uk-air.defra.gov.uk/">UK AIR</a> (the Air Information Resource).</p>
 <p>There is also an <a href="https://cran.r-project.org/web/packages/openair/index.html">R package called <code>openair</code></a> that makes it easy to download UK air quality data directly into R. The work to build and maintain the R package was led by a chemist at York University, <a href="https://www.york.ac.uk/chemistry/people/dcarslaw/">Prof. David Carslaw</a>. An <a href="https://openair-project.github.io/book/">online book</a> explaining how the package works can be found here.</p>
 <p>Although you won’t be using the <code>openair</code> R package directly (primarily because it’s not installed on the LEC R server), this package is how I originally obtained the data that are posted on Moodle for you to download and use.</p>
-<p>Specifically, we will be using is from the <a href="https://uk-air.defra.gov.uk/networks/network-info?view=aurn">AURN - Automatic urban and rural network</a>.</p>
+<p>Specifically, we will be using data from the <a href="https://uk-air.defra.gov.uk/networks/network-info?view=aurn">AURN - Automatic urban and rural network</a>.</p>
 <p>From the AURN website:</p>
 <blockquote>
 <p>“The AURN is the UK’s largest automatic monitoring network and is the main network used for compliance reporting against the Ambient Air Quality Directives. It includes automatic air quality monitoring stations measuring oxides of nitrogen (NOx), sulphur dioxide (SO2), ozone (O3), carbon monoxide (CO) and particles (PM10, PM2.5). These sites provide high resolution hourly information which is communicated rapidly to the public, using a wide range of electronic, media and web platforms.”</p>
 </blockquote>
-<p>We will be focusing on <strong>fine particulate matter, known as <span class="math inline">\(PM_{2.5}\)</span>,</strong> because it has a diameter of 2.5 microns or less. It is measured in <span class="math inline">\(µg/m^3\)</span>.</p>
-<p>PM2.5 is the most dangerous size of particle for human health because it can penetrate more deeply into the lungs and even travel through the bloodstream to other organs. <span class="math inline">\(PM_{2.5}\)</span> typically comes from combustion, including motor vehicle exhaust, fossil fuel burning power plants, industrial activities, domestic cooking and heating, waste incineration, and wildfires.</p>
+<p>We will be focusing on <strong>fine particulate matter</strong>, known as <span class="math inline">\(PM_{2.5}\)</span>, because it has a diameter of 2.5 microns or less. It is measured in <span class="math inline">\(µg/m^3\)</span>.</p>
+<p><span class="math inline">\(PM_{2.5}\)</span> is the most dangerous size of particle for human health because it can penetrate more deeply into the lungs and even travel through the bloodstream to other organs. <span class="math inline">\(PM_{2.5}\)</span> typically comes from combustion, including motor vehicle exhaust, fossil fuel burning power plants, industrial activities, domestic cooking and heating, waste incineration, and wildfires.</p>
 <p>AURN data are available with averages calculated at at hourly, daily, monthly, and annual time scales. The data you are working today are <strong>hourly data</strong>.</p>
 <div id="download-and-upload-the-data-and-metadata" class="section level3" number="21.2.1">
 <h3>
