@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 21 Introduction | Foundation Skills for LEC Practical Exercises</title>
+<meta name="author" content="Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt">
+<meta name="description" content="21.1 Prepare a new script As usual, you will want to start today’s practical with the following steps: Open a new R script. Save it under a sensible name (e.g. for today, something like...">
+<meta name="generator" content="bookdown 0.48 with bs4_book()">
+<meta property="og:title" content="Chapter 21 Introduction | Foundation Skills for LEC Practical Exercises">
+<meta property="og:type" content="book">
+<meta property="og:description" content="21.1 Prepare a new script As usual, you will want to start today’s practical with the following steps: Open a new R script. Save it under a sensible name (e.g. for today, something like...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 21 Introduction | Foundation Skills for LEC Practical Exercises">
+<meta name="twitter:description" content="21.1 Prepare a new script As usual, you will want to start today’s practical with the following steps: Open a new R script. Save it under a sensible name (e.g. for today, something like...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.12.0/transition.js"></script><script src="libs/bs3compat-0.12.0/tabs.js"></script><script src="libs/bs3compat-0.12.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Foundation Skills for LEC Practical Exercises</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">About</a></li>
+<li class="book-part">Week 1 - Census data in Excel</li>
+<li><a class="" href="introduction-setup.html"><span class="header-section-number">1</span> Introduction &amp; setup</a></li>
+<li><a class="" href="region-level-calculations.html"><span class="header-section-number">2</span> Region-level calculations</a></li>
+<li><a class="" href="region-level-figures.html"><span class="header-section-number">3</span> Region-level figures</a></li>
+<li><a class="" href="utla-level-calculations-and-figures.html"><span class="header-section-number">4</span> UTLA-level calculations and figures</a></li>
+<li><a class="" href="format-your-graph.html"><span class="header-section-number">5</span> Format your graph</a></li>
+<li class="book-part">Week 2 - Crop yield data in R</li>
+<li><a class="" href="intro_wk2.html"><span class="header-section-number">6</span> Introduction</a></li>
+<li><a class="" href="working-with-r-and-rstudio.html"><span class="header-section-number">7</span> Working with R and RStudio</a></li>
+<li><a class="" href="working-with-data.html"><span class="header-section-number">8</span> Working with data</a></li>
+<li><a class="" href="plotting-a-line-graph-with-ggplot.html"><span class="header-section-number">9</span> Plotting a line graph with ggplot</a></li>
+<li><a class="" href="tidyup_wk2.html"><span class="header-section-number">10</span> Tidying up</a></li>
+<li class="book-part">Week 3 - EDM data in R</li>
+<li><a class="" href="intro_wk3.html"><span class="header-section-number">11</span> Introduction</a></li>
+<li><a class="" href="dataprocessing_wk3.html"><span class="header-section-number">12</span> Data processing and exploration</a></li>
+<li><a class="" href="summary-statistics-with-dplyr.html"><span class="header-section-number">13</span> Summary statistics with dplyr</a></li>
+<li><a class="" href="making-graphs.html"><span class="header-section-number">14</span> Making graphs</a></li>
+<li><a class="" href="tidyup_wk3.html"><span class="header-section-number">15</span> Tidying up</a></li>
+<li class="book-part">Week 4 - Wind turbine data in R</li>
+<li><a class="" href="intro_wk4.html"><span class="header-section-number">16</span> Introduction</a></li>
+<li><a class="" href="dataprocessing_wk4.html"><span class="header-section-number">17</span> Data processing and exploration</a></li>
+<li><a class="" href="plots-of-the-raw-data.html"><span class="header-section-number">18</span> Plots of the raw data</a></li>
+<li><a class="" href="monthly-data-summaries-and-multipanel-figures-with-patchwork.html"><span class="header-section-number">19</span> Monthly data summaries and multipanel figures with patchwork</a></li>
+<li><a class="" href="tidyup_wk4.html"><span class="header-section-number">20</span> Tidying up</a></li>
+<li class="book-part">Week 5 - Air quality data in R</li>
+<li><a class="active" href="intro_wk5.html"><span class="header-section-number">21</span> Introduction</a></li>
+<li><a class="" href="data-processing-and-exploration.html"><span class="header-section-number">22</span> Data processing and exploration</a></li>
+<li><a class="" href="writing-functions-in-r.html"><span class="header-section-number">23</span> Writing functions in R</a></li>
+<li><a class="" href="spatial-plots-of-air-quality.html"><span class="header-section-number">24</span> Spatial plots of air quality</a></li>
+<li><a class="" href="tidyup_wk5.html"><span class="header-section-number">25</span> Tidying up</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="intro_wk5" class="section level1" number="21">
+<h1>
+<span class="header-section-number">21</span> Introduction<a class="anchor" aria-label="anchor" href="#intro_wk5"><i class="fas fa-link"></i></a>
+</h1>
+<div id="prepare-a-new-script-2" class="section level2" number="21.1">
+<h2>
+<span class="header-section-number">21.1</span> Prepare a new script<a class="anchor" aria-label="anchor" href="#prepare-a-new-script-2"><i class="fas fa-link"></i></a>
+</h2>
+<p>As usual, you will want to start today’s practical with the following steps:</p>
+<ol style="list-style-type: decimal">
+<li>Open a new R script.</li>
+<li>Save it under a sensible name (e.g. for today, something like <code>Week5Practical_Health</code>).</li>
+<li>Add in a commented header to explain what the script is.</li>
+<li>Add in the code to load our three main packages/libraries (<code>dplyr</code>, <code>tidyr</code>, and <code>ggplot</code>), as well as <code>lubridate</code>, which we will also use today.</li>
+<li>Run the code the load the libraries.</li>
+</ol>
+<div class="rmdtip">
+<p><strong><em>Tip!</em></strong>
+Remember, for items 3 and 4 the easiest thing is to open your script from last week, copy and paste the relevant content, and then change the information that needs to be updated (e.g. the date and the practical number/theme in the header).</p>
+</div>
+</div>
+<div id="the-air-quality-data" class="section level2" number="21.2">
+<h2>
+<span class="header-section-number">21.2</span> The air quality data<a class="anchor" aria-label="anchor" href="#the-air-quality-data"><i class="fas fa-link"></i></a>
+</h2>
+<p>Today’s dataset is made available by <a href="https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs">Defra, the UK department for Environment, Food &amp; Rural Affairs</a>.</p>
+<p>The main data portal for UK air quality data can be found at the <a href="https://uk-air.defra.gov.uk/">UK AIR (Air Information Resource)</a>.</p>
+<p>There is also an <a href="https://cran.r-project.org/web/packages/openair/index.html">R package called <code>openair</code></a> that makes it easy to download UK air quality data directly into R. The work to build and maintain the R package was led by a chemist at York University, <a href="https://www.york.ac.uk/chemistry/people/dcarslaw/">Prof. David Carslaw</a>. An <a href="https://openair-project.github.io/book/">online book</a> explaining how the package works can be found here.</p>
+<p>Although you won’t be using the <code>openair</code> R package directly (primarily because it’s not installed on the LEC R server), this package is how I originally obtained the data that are posted on Moodle for you to download and use.</p>
+<p>Specifically, we will be using is from the <a href="https://uk-air.defra.gov.uk/networks/network-info?view=aurn">AURN - Automatic urban and rural network</a>.</p>
+<p>From the AURN website:</p>
+<blockquote>
+<p>“The AURN is the UK’s largest automatic monitoring network and is the main network used for compliance reporting against the Ambient Air Quality Directives. It includes automatic air quality monitoring stations measuring oxides of nitrogen (NOx), sulphur dioxide (SO2), ozone (O3), carbon monoxide (CO) and particles (PM10, PM2.5). These sites provide high resolution hourly information which is communicated rapidly to the public, using a wide range of electronic, media and web platforms.”</p>
+</blockquote>
+<p>We will be focusing on <strong>fine particulate matter, known as <span class="math inline">\(PM_{2.5}\)</span>,</strong> because it has a diameter of 2.5 microns or less. It is measured in <span class="math inline">\(µg/m^3\)</span>.</p>
+<p>PM2.5 is the most dangerous size of particle for human health because it can penetrate more deeply into the lungs and even travel through the bloodstream to other organs. <span class="math inline">\(PM_{2.5}\)</span> typically comes from combustion, including motor vehicle exhaust, fossil fuel burning power plants, industrial activities, domestic cooking and heating, waste incineration, and wildfires.</p>
+<p>AURN data are available with averages calculated at at hourly, daily, monthly, and annual time scales. The data you are working today are <strong>hourly data</strong>.</p>
+<div id="download-and-upload-the-data-and-metadata" class="section level3" number="21.2.1">
+<h3>
+<span class="header-section-number">21.2.1</span> Download and upload the data and metadata<a class="anchor" aria-label="anchor" href="#download-and-upload-the-data-and-metadata"><i class="fas fa-link"></i></a>
+</h3>
+<p>Download today’s datasets from the week 5 Moodle pag:</p>
+<ul>
+<li>Our main dataset: <code>"AirQuality_data.csv"</code>
+</li>
+<li>The related metadata: <code>"AirQuality_metadata.csv"</code>
+</li>
+</ul>
+<p>Upload the files to the R server and move it into your data folder.</p>
+<div class="rmdtip">
+<p><strong><em>Information:</em></strong></p>
+<p><strong>Metadata</strong> is information that defines and describes the characteristics of a dataset.</p>
+<p>Metadata often includes more detailed information about sample collection methods, calculations, sample locations, units, etc.</p>
+</div>
+</div>
+<div id="read-in-the-data-2" class="section level3" number="21.2.2">
+<h3>
+<span class="header-section-number">21.2.2</span> Read in the data<a class="anchor" aria-label="anchor" href="#read-in-the-data-2"><i class="fas fa-link"></i></a>
+</h3>
+<p>Read in the data from the csv files.</p>
+<p>If you use the code from a previous week, you will need to change two things:</p>
+<ol style="list-style-type: decimal">
+<li>the names of the data frame you are using to store the data (I suggest something like <code>data_AQ</code> and <code>metadata_AQ</code>)</li>
+<li>the names of the csv files.</li>
+</ol>
+<p>Once you run the code, you should see the data frame in your Environment tab.</p>
+<p>Notice how many observations (rows) and variables (columns) the data and metadata have.</p>
+</div>
+<div id="examine-the-data" class="section level3" number="21.2.3">
+<h3>
+<span class="header-section-number">21.2.3</span> Examine the data<a class="anchor" aria-label="anchor" href="#examine-the-data"><i class="fas fa-link"></i></a>
+</h3>
+<p>Use one of the methods you’ve learned previously to examine the data frames of the data and metadata.</p>
+<p>Use the <code><a href="https://rdrr.io/r/base/unique.html">unique()</a></code> function to see what possible values there are for <code>site_type</code>.</p>
+<div class="rmdquestion">
+<p><strong><em>Questions:</em></strong></p>
+<p>Try to answer the following questions. (The information below may help.)</p>
+<ul>
+<li>What are all of the columns/variables?</li>
+<li>What data type is each column/variable?</li>
+<li>How many different types of sites are there? What are they?</li>
+<li>What additional information does the metadata provide?</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="tidyup_wk4.html"><span class="header-section-number">20</span> Tidying up</a></div>
+<div class="next"><a href="data-processing-and-exploration.html"><span class="header-section-number">22</span> Data processing and exploration</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#intro_wk5"><span class="header-section-number">21</span> Introduction</a></li>
+<li><a class="nav-link" href="#prepare-a-new-script-2"><span class="header-section-number">21.1</span> Prepare a new script</a></li>
+<li>
+<a class="nav-link" href="#the-air-quality-data"><span class="header-section-number">21.2</span> The air quality data</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#download-and-upload-the-data-and-metadata"><span class="header-section-number">21.2.1</span> Download and upload the data and metadata</a></li>
+<li><a class="nav-link" href="#read-in-the-data-2"><span class="header-section-number">21.2.2</span> Read in the data</a></li>
+<li><a class="nav-link" href="#examine-the-data"><span class="header-section-number">21.2.3</span> Examine the data</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/05-week5.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/05-week5.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Foundation Skills for LEC Practical Exercises</strong>" was written by Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt. It was last built on 2026-11-03.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

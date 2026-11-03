@@ -68,6 +68,12 @@
 <li><a class="" href="plots-of-the-raw-data.html"><span class="header-section-number">18</span> Plots of the raw data</a></li>
 <li><a class="" href="monthly-data-summaries-and-multipanel-figures-with-patchwork.html"><span class="header-section-number">19</span> Monthly data summaries and multipanel figures with patchwork</a></li>
 <li><a class="" href="tidyup_wk4.html"><span class="header-section-number">20</span> Tidying up</a></li>
+<li class="book-part">Week 5 - Air quality data in R</li>
+<li><a class="" href="intro_wk5.html"><span class="header-section-number">21</span> Introduction</a></li>
+<li><a class="" href="data-processing-and-exploration.html"><span class="header-section-number">22</span> Data processing and exploration</a></li>
+<li><a class="" href="writing-functions-in-r.html"><span class="header-section-number">23</span> Writing functions in R</a></li>
+<li><a class="" href="spatial-plots-of-air-quality.html"><span class="header-section-number">24</span> Spatial plots of air quality</a></li>
+<li><a class="" href="tidyup_wk5.html"><span class="header-section-number">25</span> Tidying up</a></li>
 </ul>
 
         <div class="book-extra">
@@ -187,57 +193,57 @@
 <tbody>
 <tr class="odd">
 <td align="left">Site 1</td>
+<td align="right">1</td>
 <td align="right">2</td>
-<td align="right">0</td>
-<td align="right">49</td>
+<td align="right">36</td>
 </tr>
 <tr class="even">
 <td align="left">Site 2</td>
-<td align="right">2</td>
-<td align="right">0</td>
-<td align="right">49</td>
+<td align="right">9</td>
+<td align="right">3</td>
+<td align="right">6</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 3</td>
 <td align="right">7</td>
-<td align="right">3</td>
-<td align="right">6</td>
+<td align="right">2</td>
+<td align="right">12</td>
 </tr>
 <tr class="even">
 <td align="left">Site 4</td>
-<td align="right">4</td>
+<td align="right">6</td>
 <td align="right">2</td>
-<td align="right">29</td>
+<td align="right">17</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 5</td>
 <td align="right">8</td>
 <td align="right">3</td>
-<td align="right">3</td>
+<td align="right">0</td>
 </tr>
 <tr class="even">
 <td align="left">Site 6</td>
-<td align="right">4</td>
-<td align="right">2</td>
-<td align="right">28</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">55</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 7</td>
-<td align="right">0</td>
+<td align="right">6</td>
 <td align="right">2</td>
-<td align="right">39</td>
+<td align="right">16</td>
 </tr>
 <tr class="even">
 <td align="left">Site 8</td>
-<td align="right">9</td>
+<td align="right">7</td>
 <td align="right">1</td>
-<td align="right">23</td>
+<td align="right">29</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 9</td>
-<td align="right">9</td>
-<td align="right">3</td>
+<td align="right">6</td>
 <td align="right">1</td>
+<td align="right">31</td>
 </tr>
 </tbody>
 </table></div>
@@ -260,32 +266,32 @@
 <tr class="odd">
 <td align="left">Site 1</td>
 <td align="left">foxes</td>
-<td align="right">2</td>
+<td align="right">1</td>
 </tr>
 <tr class="even">
 <td align="left">Site 1</td>
 <td align="left">badgers</td>
-<td align="right">0</td>
+<td align="right">2</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 1</td>
 <td align="left">mice</td>
-<td align="right">49</td>
+<td align="right">36</td>
 </tr>
 <tr class="even">
 <td align="left">Site 2</td>
 <td align="left">foxes</td>
-<td align="right">2</td>
+<td align="right">9</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 2</td>
 <td align="left">badgers</td>
-<td align="right">0</td>
+<td align="right">3</td>
 </tr>
 <tr class="even">
 <td align="left">Site 2</td>
 <td align="left">mice</td>
-<td align="right">49</td>
+<td align="right">6</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 3</td>
@@ -295,17 +301,17 @@
 <tr class="even">
 <td align="left">Site 3</td>
 <td align="left">badgers</td>
-<td align="right">3</td>
+<td align="right">2</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 3</td>
 <td align="left">mice</td>
-<td align="right">6</td>
+<td align="right">12</td>
 </tr>
 <tr class="even">
 <td align="left">Site 4</td>
 <td align="left">foxes</td>
-<td align="right">4</td>
+<td align="right">6</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 4</td>
@@ -315,7 +321,7 @@
 <tr class="even">
 <td align="left">Site 4</td>
 <td align="left">mice</td>
-<td align="right">29</td>
+<td align="right">17</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 5</td>
@@ -330,29 +336,29 @@
 <tr class="odd">
 <td align="left">Site 5</td>
 <td align="left">mice</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Site 6</td>
-<td align="left">foxes</td>
-<td align="right">4</td>
-</tr>
-<tr class="odd">
-<td align="left">Site 6</td>
-<td align="left">badgers</td>
-<td align="right">2</td>
-</tr>
-<tr class="even">
-<td align="left">Site 6</td>
-<td align="left">mice</td>
-<td align="right">28</td>
-</tr>
-<tr class="odd">
-<td align="left">Site 7</td>
-<td align="left">foxes</td>
 <td align="right">0</td>
 </tr>
 <tr class="even">
+<td align="left">Site 6</td>
+<td align="left">foxes</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Site 6</td>
+<td align="left">badgers</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">Site 6</td>
+<td align="left">mice</td>
+<td align="right">55</td>
+</tr>
+<tr class="odd">
+<td align="left">Site 7</td>
+<td align="left">foxes</td>
+<td align="right">6</td>
+</tr>
+<tr class="even">
 <td align="left">Site 7</td>
 <td align="left">badgers</td>
 <td align="right">2</td>
@@ -360,12 +366,12 @@
 <tr class="odd">
 <td align="left">Site 7</td>
 <td align="left">mice</td>
-<td align="right">39</td>
+<td align="right">16</td>
 </tr>
 <tr class="even">
 <td align="left">Site 8</td>
 <td align="left">foxes</td>
-<td align="right">9</td>
+<td align="right">7</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 8</td>
@@ -375,22 +381,22 @@
 <tr class="even">
 <td align="left">Site 8</td>
 <td align="left">mice</td>
-<td align="right">23</td>
+<td align="right">29</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 9</td>
 <td align="left">foxes</td>
-<td align="right">9</td>
+<td align="right">6</td>
 </tr>
 <tr class="even">
 <td align="left">Site 9</td>
 <td align="left">badgers</td>
-<td align="right">3</td>
+<td align="right">1</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 9</td>
 <td align="left">mice</td>
-<td align="right">1</td>
+<td align="right">31</td>
 </tr>
 </tbody>
 </table></div>
@@ -485,7 +491,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Foundation Skills for LEC Practical Exercises</strong>" was written by Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt. It was last built on 2026-10-27.</p>
+    <p>"<strong>Foundation Skills for LEC Practical Exercises</strong>" was written by Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt. It was last built on 2026-11-03.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

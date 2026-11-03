@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 24 Spatial plots of air quality | Foundation Skills for LEC Practical Exercises</title>
+<meta name="author" content="Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt">
+<meta name="description" content="Hopefully you noticed at the beginning that the metadata file contains the latitude and longitude for each site. This means we can make a spatial plot of the air quality data! NOTE: In weeks 7-10,...">
+<meta name="generator" content="bookdown 0.48 with bs4_book()">
+<meta property="og:title" content="Chapter 24 Spatial plots of air quality | Foundation Skills for LEC Practical Exercises">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Hopefully you noticed at the beginning that the metadata file contains the latitude and longitude for each site. This means we can make a spatial plot of the air quality data! NOTE: In weeks 7-10,...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 24 Spatial plots of air quality | Foundation Skills for LEC Practical Exercises">
+<meta name="twitter:description" content="Hopefully you noticed at the beginning that the metadata file contains the latitude and longitude for each site. This means we can make a spatial plot of the air quality data! NOTE: In weeks 7-10,...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.12.0/transition.js"></script><script src="libs/bs3compat-0.12.0/tabs.js"></script><script src="libs/bs3compat-0.12.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Foundation Skills for LEC Practical Exercises</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">About</a></li>
+<li class="book-part">Week 1 - Census data in Excel</li>
+<li><a class="" href="introduction-setup.html"><span class="header-section-number">1</span> Introduction &amp; setup</a></li>
+<li><a class="" href="region-level-calculations.html"><span class="header-section-number">2</span> Region-level calculations</a></li>
+<li><a class="" href="region-level-figures.html"><span class="header-section-number">3</span> Region-level figures</a></li>
+<li><a class="" href="utla-level-calculations-and-figures.html"><span class="header-section-number">4</span> UTLA-level calculations and figures</a></li>
+<li><a class="" href="format-your-graph.html"><span class="header-section-number">5</span> Format your graph</a></li>
+<li class="book-part">Week 2 - Crop yield data in R</li>
+<li><a class="" href="intro_wk2.html"><span class="header-section-number">6</span> Introduction</a></li>
+<li><a class="" href="working-with-r-and-rstudio.html"><span class="header-section-number">7</span> Working with R and RStudio</a></li>
+<li><a class="" href="working-with-data.html"><span class="header-section-number">8</span> Working with data</a></li>
+<li><a class="" href="plotting-a-line-graph-with-ggplot.html"><span class="header-section-number">9</span> Plotting a line graph with ggplot</a></li>
+<li><a class="" href="tidyup_wk2.html"><span class="header-section-number">10</span> Tidying up</a></li>
+<li class="book-part">Week 3 - EDM data in R</li>
+<li><a class="" href="intro_wk3.html"><span class="header-section-number">11</span> Introduction</a></li>
+<li><a class="" href="dataprocessing_wk3.html"><span class="header-section-number">12</span> Data processing and exploration</a></li>
+<li><a class="" href="summary-statistics-with-dplyr.html"><span class="header-section-number">13</span> Summary statistics with dplyr</a></li>
+<li><a class="" href="making-graphs.html"><span class="header-section-number">14</span> Making graphs</a></li>
+<li><a class="" href="tidyup_wk3.html"><span class="header-section-number">15</span> Tidying up</a></li>
+<li class="book-part">Week 4 - Wind turbine data in R</li>
+<li><a class="" href="intro_wk4.html"><span class="header-section-number">16</span> Introduction</a></li>
+<li><a class="" href="dataprocessing_wk4.html"><span class="header-section-number">17</span> Data processing and exploration</a></li>
+<li><a class="" href="plots-of-the-raw-data.html"><span class="header-section-number">18</span> Plots of the raw data</a></li>
+<li><a class="" href="monthly-data-summaries-and-multipanel-figures-with-patchwork.html"><span class="header-section-number">19</span> Monthly data summaries and multipanel figures with patchwork</a></li>
+<li><a class="" href="tidyup_wk4.html"><span class="header-section-number">20</span> Tidying up</a></li>
+<li class="book-part">Week 5 - Air quality data in R</li>
+<li><a class="" href="intro_wk5.html"><span class="header-section-number">21</span> Introduction</a></li>
+<li><a class="" href="data-processing-and-exploration.html"><span class="header-section-number">22</span> Data processing and exploration</a></li>
+<li><a class="" href="writing-functions-in-r.html"><span class="header-section-number">23</span> Writing functions in R</a></li>
+<li><a class="active" href="spatial-plots-of-air-quality.html"><span class="header-section-number">24</span> Spatial plots of air quality</a></li>
+<li><a class="" href="tidyup_wk5.html"><span class="header-section-number">25</span> Tidying up</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="spatial-plots-of-air-quality" class="section level1" number="24">
+<h1>
+<span class="header-section-number">24</span> Spatial plots of air quality<a class="anchor" aria-label="anchor" href="#spatial-plots-of-air-quality"><i class="fas fa-link"></i></a>
+</h1>
+<p>Hopefully you noticed at the beginning that the metadata file contains the latitude and longitude for each site.</p>
+<p>This means we can make a spatial plot of the air quality data!</p>
+<div class="rmdtip">
+<p><strong><em>NOTE:</em></strong> In weeks 7-10, you’ll learn more rigorous methods for making maps in ArcGIS, but for now we’ll simply plot the latitude and longitude as x and y coordinates in a standard scatter plot.</p>
+</div>
+<div id="summarising-the-data" class="section level2" number="24.1">
+<h2>
+<span class="header-section-number">24.1</span> Summarising the data<a class="anchor" aria-label="anchor" href="#summarising-the-data"><i class="fas fa-link"></i></a>
+</h2>
+<p>In order to make one plot of the data over space, we will probably want to summarise the data from multiple years into a single mean of air quality.</p>
+<p>Return to your original facet plots of the individual sites by site type. (You can either rerun the code to generate them again, or navigate to them using the back arrow in the Plots tab.)</p>
+<p>Note that some sites only started collecting data quite recently - particularly the rural sites.</p>
+<div class="rmdquestion">
+<p><strong><em>Questions:</em></strong></p>
+<ul>
+<li>Why is it a problem that certain sites only have more recent data, i.e. how might that bias the data?</li>
+<li>How might we be able to compensate for this?</li>
+</ul>
+</div>
+<p>If we took the mean of all data points for each site, the sites with older data would unfairly look like they had worse air quality, because air quality has generally improved over time.</p>
+<p>We can mostly compensate for this bias in the data by only using data from the last 5 years, regardless of if earlier data exists or not.</p>
+<p>Use the <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise()</a></code> to calculate the mean concentration of fine particulate matter from 2020-2025 for each site.</p>
+<p>Your pipeline should include:</p>
+<ul>
+<li>filtering the data by date</li>
+<li>grouping the data by site</li>
+<li>calculating the mean</li>
+</ul>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="spatial-plots-of-air-quality.html#cb56-1" tabindex="-1"></a><span class="co"># Summarise years 2020-2025 for all sites</span></span>
+<span id="cb56-2"><a href="spatial-plots-of-air-quality.html#cb56-2" tabindex="-1"></a>mydf_summary <span class="ot">&lt;-</span> mydf <span class="sc">|&gt;</span> </span>
+<span id="cb56-3"><a href="spatial-plots-of-air-quality.html#cb56-3" tabindex="-1"></a>  <span class="fu">filter</span>(var1 <span class="sc">&gt;=</span> <span class="st">"value"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb56-4"><a href="spatial-plots-of-air-quality.html#cb56-4" tabindex="-1"></a>  <span class="fu">group_by</span>(var2) <span class="sc">|&gt;</span></span>
+<span id="cb56-5"><a href="spatial-plots-of-air-quality.html#cb56-5" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">calc =</span> <span class="cf">function</span>(var3))</span></code></pre></div>
+</div>
+<div id="left-joining-with-the-metadata" class="section level2" number="24.2">
+<h2>
+<span class="header-section-number">24.2</span> Left joining with the metadata<a class="anchor" aria-label="anchor" href="#left-joining-with-the-metadata"><i class="fas fa-link"></i></a>
+</h2>
+<p>We need to add the latitude and longitude values for each site to our summarised data frame.</p>
+<p>The easiest way to do this in R is with a function called <code><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join()</a></code>, which</p>
+<ul>
+<li>takes every row in one data frame (<code>x</code>)</li>
+<li>matches it with a row in another data frame (<code>y</code>)</li>
+<li>based on a column that they have common (<code>by</code>)</li>
+</ul>
+<p>Search for <code><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join()</a></code> in the help tab or run the code <code><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">?left_join</a></code> and read the documentation.</p>
+<div class="rmdquestion">
+<p><strong><em>Questions:</em></strong></p>
+<ul>
+<li>How is <code><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join()</a></code> different to <code><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">right_join()</a></code> or <code><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">full_join()</a></code>?</li>
+<li>Why are we using the former as opposed to one of the latter two?</li>
+</ul>
+</div>
+<p>Use the documentation to write a line of code that uses <code><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join()</a></code> to add the location metadata to your summarised air quality data.</p>
+</div>
+<div id="make-the-spatial-plot" class="section level2" number="24.3">
+<h2>
+<span class="header-section-number">24.3</span> Make the spatial plot<a class="anchor" aria-label="anchor" href="#make-the-spatial-plot"><i class="fas fa-link"></i></a>
+</h2>
+<p>First, use ggplot() to make a basic plot of all of the sites based on their latitude and longitude.</p>
+<div class="inline-figure"><img src="05-week5_files/figure-html/unnamed-chunk-2-1.png" alt="" width="672"></div>
+<p>Hmmm. It’s hard to see the shape of the UK in there.</p>
+<p>But if we duplicate our figure-making code and add site labels to each point, we can see how it is indeed the UK, just distorted from what we are used to.</p>
+<p>To add site labels, you will need to:</p>
+<ul>
+<li>Add “label = var_x” to the the <code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code> within <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code>
+</li>
+<li>Add a <code><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text()</a></code> layer</li>
+</ul>
+<div class="inline-figure"><img src="05-week5_files/figure-html/unnamed-chunk-3-1.png" alt="" width="672"></div>
+<p>A bit ugly, but hopefully you’re convinced that these dots do indeed represent sites around the UK.</p>
+<p>Now we’ll go back to the original (text label-free) code and continue working to make it more informative and attractive.</p>
+<p>The main thing that we need to do is include the mean fine particulate matter data in our figure somehow.</p>
+<p>One of the easiest ways to do that is by increasing the size of the points and making their colour depend on the value of particulate matter.</p>
+<div class="rmdtip">
+<p><strong><em>TIP!</em></strong></p>
+<p>The correct place to add arguments that change attributes of your plot (e.g <code>colour =</code>, and <code>size =</code> for your points) will depend on your goal:</p>
+<ul>
+<li>If you want it to depend on the data values, add it to the <code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code> function in <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code>.</li>
+<li>If you want it to apply to all points equally, add it directly to <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code>
+</li>
+</ul>
+</div>
+<div class="inline-figure"><img src="05-week5_files/figure-html/unnamed-chunk-4-1.png" alt="" width="672"></div>
+<p>Now we can see there’s differences between the sites, but the default colour scale isn’t great for illustrating it.</p>
+<p>There’s a set of ggplot functions that use <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html">viridis colour scales</a> that are really nice.</p>
+<p>To switch to a viridis colour scale, add a layer with the <code><a href="https://ggplot2.tidyverse.org/reference/scale_viridis.html">scale_colour_viridis_c()</a></code> function. (The small c stands for “continuous” variable that can take any numeric value, as opposed to “d” for a discrete variable that comes in a limited number of categories.)</p>
+<p>Type <code><a href="https://ggplot2.tidyverse.org/reference/scale_viridis.html">?scale_colour_viridis_c</a></code> into your script and run it (or search in the help tab) so you can read the documentation.</p>
+<div class="rmdtip">
+<p><strong><em>TIP!</em></strong></p>
+<p>The <code>option =</code> argument for <code><a href="https://ggplot2.tidyverse.org/reference/scale_viridis.html">scale_colour_viridis_c()</a></code> has 8 different colour scales you can use, shown at the link above.</p>
+</div>
+<p>Try a few of the different colour scales before deciding on the one you like best.</p>
+<div class="inline-figure"><img src="05-week5_files/figure-html/unnamed-chunk-5-1.png" alt="" width="672"></div>
+<p>Now we can see the differences in air quality quite nicely.</p>
+<p>However, we can’t tell what the site type is.</p>
+<p>Add a <code>shape =</code> argument to the appropriate place to make the shape depend on the type of site.</p>
+<div class="inline-figure"><img src="05-week5_files/figure-html/unnamed-chunk-6-1.png" alt="" width="672"></div>
+<p>That looks almost really good, but the cross point doesn’t quite fit with the other three shapes, and is much harder to see.</p>
+<p>So let’s manually specify the different shape values that we want.</p>
+<p>Remember the different number codes from last week:</p>
+<div style="text-align: center;">
+<div class="float">
+<img src="images/ggplotshapes.svg" style="width:100.0%" alt=" "><div class="figcaption"> </div>
+</div>
+</div>
+<p>Let’s use shapes 15, 16, 17 and 18.</p>
+<p>To manually control which shapes are used, add a layer with the <code><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_shape_manual()</a></code> function and give it the numbers we want as a vector for the <code>values =</code> argument.</p>
+<div class="inline-figure"><img src="05-week5_files/figure-html/unnamed-chunk-7-1.png" alt="" width="672"></div>
+<p>One more final change to make a professional quality figure - change formatting of the legend titles (Right now they are literally just the column names.)</p>
+<p>In order to so do, we can go in and change the value within the saved figure.</p>
+<p>Remember how we use <code>$</code> to refer to columns in a data frame?</p>
+<p>It turns out that the <code>$</code> is actually more general than that - it not only works for columns but also other types of elements within R objects, like <code>ggplot</code> figures.</p>
+<p>And it can go more than one level down!</p>
+<p>If you run the two lines of code below - after you make your figure, but before you print it - it will change the legend titles.</p>
+<div class="sourceCode" id="cb57"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">spatial_fig</span><span class="op">$</span><span class="va">labels</span><span class="op">$</span><span class="va">colour</span> <span class="op">&lt;-</span> <span class="st">"Mean Conc. PM2.5"</span></span>
+<span><span class="va">spatial_fig</span><span class="op">$</span><span class="va">labels</span><span class="op">$</span><span class="va">shape</span> <span class="op">&lt;-</span> <span class="st">"Site type"</span></span></code></pre></div>
+<div class="inline-figure"><img src="05-week5_files/figure-html/unnamed-chunk-8-1.png" alt="" width="672"></div>
+<p>Voila!</p>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="writing-functions-in-r.html"><span class="header-section-number">23</span> Writing functions in R</a></div>
+<div class="next"><a href="tidyup_wk5.html"><span class="header-section-number">25</span> Tidying up</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#spatial-plots-of-air-quality"><span class="header-section-number">24</span> Spatial plots of air quality</a></li>
+<li><a class="nav-link" href="#summarising-the-data"><span class="header-section-number">24.1</span> Summarising the data</a></li>
+<li><a class="nav-link" href="#left-joining-with-the-metadata"><span class="header-section-number">24.2</span> Left joining with the metadata</a></li>
+<li><a class="nav-link" href="#make-the-spatial-plot"><span class="header-section-number">24.3</span> Make the spatial plot</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/05-week5.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/05-week5.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Foundation Skills for LEC Practical Exercises</strong>" was written by Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt. It was last built on 2026-11-03.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

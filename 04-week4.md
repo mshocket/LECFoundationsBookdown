@@ -239,7 +239,7 @@ However there are other types of data that sort of fall in between the two.
 
 Unlike numeric data, normal character data can't have any maths performed upon it. However the following makes complete sense:
 
-> 2026-10-27 + 4 days = 2026-10-31
+> 2026-11-03 + 4 days = 2026-11-07
 
 So there should probably be a specific form of data for holding dates. This is indeed the case!
 
