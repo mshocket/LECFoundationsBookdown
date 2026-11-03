@@ -519,20 +519,11 @@ print(spatial_fig)
 
 One more final change to make a professional quality figure - change formatting of the legend titles (Right now they are literally just the column names.)
 
-In order to so do, we can go in and change the value within the saved figure.
+Luckily the `labs()` function doesn't just handle axis labels and titles, it also is used to manage the labels for pretty much anything on the plot. All you need to provide is the name of the aesthetic argument (e.g. `colour`) and then set that to a string.
 
-Remember how we use `$` to refer to columns in a data frame? 
+So `labs(shape = "Site Type")` will set the legend created showing the different shapes to the sensible name "Site Type".
 
-It turns out that the `$` is actually more general than that - it not only works for columns but also other types of elements within R objects, like `ggplot` figures. 
-
-And it can go more than one level down!
-
-If you run the two lines of code below - after you make your figure, but before you print it - it will change the legend titles. 
-
-```r
-spatial_fig$labels$colour <- "Mean Conc. PM2.5"
-spatial_fig$labels$shape <- "Site type"
-```
+So let's do that by adding a `labs()` call to our ggplot figure:
 
 ```{r, echo=FALSE}
 # Spatial plot of mean AQ
@@ -541,10 +532,11 @@ spatial_fig <- AQ_data_summary_latlong |>
   geom_point(size = 5) +
   scale_colour_viridis_c(option = "D") + 
   scale_shape_manual(values = c(15, 16, 17, 18)) + 
+  labs(shape = "Site Type", colour = "Mean Conc. PM2.5") +
   theme_classic()
   
-spatial_fig$labels$colour <- "Mean Conc. PM2.5"
-spatial_fig$labels$shape <- "Site type"
+# spatial_fig$labels$colour <- "Mean Conc. PM2.5"
+# spatial_fig$labels$shape <- "Site type"
 
 print(spatial_fig)
 ```
@@ -552,7 +544,19 @@ print(spatial_fig)
 
 Voila! 
 
+:::{.rmdtip}
+***TIP!***
 
+When you initially create a ggplot object, it's not "baked" into a real figure until you print it. As such you can add layers and geoms later before you print and it works just fine! For example:
+
+```r
+p <- ggplot(my_df, aes(x = my_col1, y = my_col2))
+p <- p + geom_point()
+p <- p + labs(x = "Independent", y = "Dependent")
+p <- p + theme_classic()
+print(p)
+```
+:::
 
 # Tidying up {#tidyup_wk5}
 
