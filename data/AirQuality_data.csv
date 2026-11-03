@@ -1,0 +1,398 @@
+source,uka_code,code,site,date,pm2.5,site_type
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2000,25.605082,Urban Traffic
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2001,24.841978,Urban Traffic
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2002,21.501657,Urban Traffic
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2003,19.119094,Urban Traffic
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2004,19.338595,Urban Traffic
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2005,19.186139,Urban Traffic
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2006,2.817764,Rural Background
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2006,20.692685,Urban Traffic
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2007,4.050423,Rural Background
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2007,21.7858,Urban Traffic
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2008,3.318693,Rural Background
+aurn,UKA00217,CARD,Cardiff Centre,01/01/2008,13.169385,Urban Background
+aurn,UKA00420,GRAN,Grangemouth,01/01/2008,12.67377,Urban Industrial
+aurn,UKA00472,HRL,London Harlington,01/01/2008,10.508424,Urban Industrial
+aurn,UKA00253,KC1,London N. Kensington,01/01/2008,19.657971,Urban Background
+aurn,UKA00247,LVP,Liverpool Speke,01/01/2008,12.09481,Urban Industrial
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2008,20.355152,Urban Traffic
+aurn,UKA00213,NEWC,Newcastle Centre,01/01/2008,11.410526,Urban Background
+aurn,UKA00274,NOTT,Nottingham Centre,01/01/2008,19.879195,Urban Background
+aurn,UKA00518,OX8,Oxford St Ebbes,01/01/2008,18.534202,Urban Background
+aurn,UKA00235,SOUT,Southampton Centre,01/01/2008,15.793358,Urban Background
+aurn,UKA00337,STOK,Stoke-on-Trent Centre,01/01/2008,14.87047,Urban Background
+aurn,UKA00482,WIG5,Wigan Centre,01/01/2008,27.872154,Urban Background
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2009,3.36153,Rural Background
+aurn,UKA00217,CARD,Cardiff Centre,01/01/2009,12.531852,Urban Background
+aurn,UKA00420,GRAN,Grangemouth,01/01/2009,8.582913,Urban Industrial
+aurn,UKA00472,HRL,London Harlington,01/01/2009,10.286321,Urban Industrial
+aurn,UKA00253,KC1,London N. Kensington,01/01/2009,13.854513,Urban Background
+aurn,UKA00247,LVP,Liverpool Speke,01/01/2009,11.777693,Urban Industrial
+aurn,UKA00248,MAN3,Manchester Piccadilly,01/01/2009,11.621395,Urban Background
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2009,21.004219,Urban Traffic
+aurn,UKA00213,NEWC,Newcastle Centre,01/01/2009,10.953938,Urban Background
+aurn,UKA00274,NOTT,Nottingham Centre,01/01/2009,14.057347,Urban Background
+aurn,UKA00518,OX8,Oxford St Ebbes,01/01/2009,11.438197,Urban Background
+aurn,UKA00360,PLYM,Plymouth Centre,01/01/2009,10.487792,Urban Background
+aurn,UKA00408,PRES,Preston,01/01/2009,11.863084,Urban Background
+aurn,UKA00235,SOUT,Southampton Centre,01/01/2009,13.403928,Urban Background
+aurn,UKA00337,STOK,Stoke-on-Trent Centre,01/01/2009,14.813989,Urban Background
+aurn,UKA00482,WIG5,Wigan Centre,01/01/2009,14.399034,Urban Background
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2010,4.033274,Rural Background
+aurn,UKA00217,CARD,Cardiff Centre,01/01/2010,13.80035,Urban Background
+aurn,UKA00515,CHP,Chepstow A48,01/01/2010,18.87589,Urban Traffic
+aurn,UKA00420,GRAN,Grangemouth,01/01/2010,11.009104,Urban Industrial
+aurn,UKA00472,HRL,London Harlington,01/01/2010,13.450638,Urban Industrial
+aurn,UKA00253,KC1,London N. Kensington,01/01/2010,13.959458,Urban Background
+aurn,UKA00247,LVP,Liverpool Speke,01/01/2010,11.743691,Urban Industrial
+aurn,UKA00248,MAN3,Manchester Piccadilly,01/01/2010,17.899692,Urban Background
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2010,22.608116,Urban Traffic
+aurn,UKA00213,NEWC,Newcastle Centre,01/01/2010,10.391799,Urban Background
+aurn,UKA00274,NOTT,Nottingham Centre,01/01/2010,15.86058,Urban Background
+aurn,UKA00518,OX8,Oxford St Ebbes,01/01/2010,14.345999,Urban Background
+aurn,UKA00360,PLYM,Plymouth Centre,01/01/2010,11.021328,Urban Background
+aurn,UKA00408,PRES,Preston,01/01/2010,11.352386,Urban Background
+aurn,UKA00235,SOUT,Southampton Centre,01/01/2010,13.291736,Urban Background
+aurn,UKA00337,STOK,Stoke-on-Trent Centre,01/01/2010,16.519504,Urban Background
+aurn,UKA00482,WIG5,Wigan Centre,01/01/2010,19.762572,Urban Background
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2011,4.004623,Rural Background
+aurn,UKA00217,CARD,Cardiff Centre,01/01/2011,13.245811,Urban Background
+aurn,UKA00515,CHP,Chepstow A48,01/01/2011,17.377172,Urban Traffic
+aurn,UKA00420,GRAN,Grangemouth,01/01/2011,10.936294,Urban Industrial
+aurn,UKA00472,HRL,London Harlington,01/01/2011,15.746504,Urban Industrial
+aurn,UKA00253,KC1,London N. Kensington,01/01/2011,16.333043,Urban Background
+aurn,UKA00247,LVP,Liverpool Speke,01/01/2011,11.849161,Urban Industrial
+aurn,UKA00248,MAN3,Manchester Piccadilly,01/01/2011,13.733316,Urban Background
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2011,24.454535,Urban Traffic
+aurn,UKA00213,NEWC,Newcastle Centre,01/01/2011,11.810979,Urban Background
+aurn,UKA00274,NOTT,Nottingham Centre,01/01/2011,13.215012,Urban Background
+aurn,UKA00518,OX8,Oxford St Ebbes,01/01/2011,11.751181,Urban Background
+aurn,UKA00360,PLYM,Plymouth Centre,01/01/2011,10.590826,Urban Background
+aurn,UKA00408,PRES,Preston,01/01/2011,11.439106,Urban Background
+aurn,UKA00235,SOUT,Southampton Centre,01/01/2011,15.843362,Urban Background
+aurn,UKA00337,STOK,Stoke-on-Trent Centre,01/01/2011,16.43473,Urban Background
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2012,3.819389,Rural Background
+aurn,UKA00217,CARD,Cardiff Centre,01/01/2012,12.314749,Urban Background
+aurn,UKA00515,CHP,Chepstow A48,01/01/2012,12.323745,Urban Traffic
+aurn,UKA00420,GRAN,Grangemouth,01/01/2012,10.500759,Urban Industrial
+aurn,UKA00472,HRL,London Harlington,01/01/2012,13.411536,Urban Industrial
+aurn,UKA00253,KC1,London N. Kensington,01/01/2012,14.608103,Urban Background
+aurn,UKA00564,LEAR,Leamington Spa Rugby Road,01/01/2012,9.287715,Urban Traffic
+aurn,UKA00247,LVP,Liverpool Speke,01/01/2012,10.61907,Urban Industrial
+aurn,UKA00248,MAN3,Manchester Piccadilly,01/01/2012,14.079313,Urban Background
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2012,21.463535,Urban Traffic
+aurn,UKA00213,NEWC,Newcastle Centre,01/01/2012,9.938806,Urban Background
+aurn,UKA00274,NOTT,Nottingham Centre,01/01/2012,11.570507,Urban Background
+aurn,UKA00518,OX8,Oxford St Ebbes,01/01/2012,11.703479,Urban Background
+aurn,UKA00360,PLYM,Plymouth Centre,01/01/2012,12.010275,Urban Background
+aurn,UKA00408,PRES,Preston,01/01/2012,11.12403,Urban Background
+aurn,UKA00235,SOUT,Southampton Centre,01/01/2012,14.536018,Urban Background
+aurn,UKA00337,STOK,Stoke-on-Trent Centre,01/01/2012,14.507941,Urban Background
+aurn,UKA00482,WIG5,Wigan Centre,01/01/2012,9,Urban Background
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2013,4.405869,Rural Background
+aurn,UKA00217,CARD,Cardiff Centre,01/01/2013,13.510178,Urban Background
+aurn,UKA00515,CHP,Chepstow A48,01/01/2013,14.146645,Urban Traffic
+aurn,UKA00420,GRAN,Grangemouth,01/01/2013,9.165825,Urban Industrial
+aurn,UKA00472,HRL,London Harlington,01/01/2013,13.704613,Urban Industrial
+aurn,UKA00253,KC1,London N. Kensington,01/01/2013,14.688591,Urban Background
+aurn,UKA00564,LEAR,Leamington Spa Rugby Road,01/01/2013,12.060596,Urban Traffic
+aurn,UKA00247,LVP,Liverpool Speke,01/01/2013,11.622835,Urban Industrial
+aurn,UKA00248,MAN3,Manchester Piccadilly,01/01/2013,12.50101,Urban Background
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2013,20.074576,Urban Traffic
+aurn,UKA00213,NEWC,Newcastle Centre,01/01/2013,10.383353,Urban Background
+aurn,UKA00274,NOTT,Nottingham Centre,01/01/2013,12.234896,Urban Background
+aurn,UKA00518,OX8,Oxford St Ebbes,01/01/2013,13.743421,Urban Background
+aurn,UKA00360,PLYM,Plymouth Centre,01/01/2013,12.006743,Urban Background
+aurn,UKA00408,PRES,Preston,01/01/2013,11.625837,Urban Background
+aurn,UKA00235,SOUT,Southampton Centre,01/01/2013,15.010572,Urban Background
+aurn,UKA00337,STOK,Stoke-on-Trent Centre,01/01/2013,13.783928,Urban Background
+aurn,UKA00482,WIG5,Wigan Centre,01/01/2013,12.809295,Urban Background
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2014,7.085758,Rural Background
+aurn,UKA00217,CARD,Cardiff Centre,01/01/2014,11.648698,Urban Background
+aurn,UKA00515,CHP,Chepstow A48,01/01/2014,14.316667,Urban Traffic
+aurn,UKA00420,GRAN,Grangemouth,01/01/2014,7.959254,Urban Industrial
+aurn,UKA00472,HRL,London Harlington,01/01/2014,13.949551,Urban Industrial
+aurn,UKA00253,KC1,London N. Kensington,01/01/2014,15.879068,Urban Background
+aurn,UKA00564,LEAR,Leamington Spa Rugby Road,01/01/2014,11.15386,Urban Traffic
+aurn,UKA00247,LVP,Liverpool Speke,01/01/2014,10.812826,Urban Industrial
+aurn,UKA00248,MAN3,Manchester Piccadilly,01/01/2014,11.858055,Urban Background
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2014,18.19081,Urban Traffic
+aurn,UKA00213,NEWC,Newcastle Centre,01/01/2014,9.550979,Urban Background
+aurn,UKA00274,NOTT,Nottingham Centre,01/01/2014,12.211233,Urban Background
+aurn,UKA00518,OX8,Oxford St Ebbes,01/01/2014,9.608558,Urban Background
+aurn,UKA00360,PLYM,Plymouth Centre,01/01/2014,11.729782,Urban Background
+aurn,UKA00408,PRES,Preston,01/01/2014,12.12239,Urban Background
+aurn,UKA00235,SOUT,Southampton Centre,01/01/2014,14.672088,Urban Background
+aurn,UKA00337,STOK,Stoke-on-Trent Centre,01/01/2014,13.35422,Urban Background
+aurn,UKA00482,WIG5,Wigan Centre,01/01/2014,14.246632,Urban Background
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2015,2.956464,Rural Background
+aurn,UKA00217,CARD,Cardiff Centre,01/01/2015,9.5591,Urban Background
+aurn,UKA00515,CHP,Chepstow A48,01/01/2015,9.709776,Urban Traffic
+aurn,UKA00602,GHSR,Glasgow High Street,01/01/2015,8.499735,Urban Traffic
+aurn,UKA00420,GRAN,Grangemouth,01/01/2015,9.268244,Urban Industrial
+aurn,UKA00472,HRL,London Harlington,01/01/2015,10.439036,Urban Industrial
+aurn,UKA00253,KC1,London N. Kensington,01/01/2015,10.857808,Urban Background
+aurn,UKA00564,LEAR,Leamington Spa Rugby Road,01/01/2015,11.386733,Urban Traffic
+aurn,UKA00247,LVP,Liverpool Speke,01/01/2015,9.153961,Urban Industrial
+aurn,UKA00248,MAN3,Manchester Piccadilly,01/01/2015,10.47755,Urban Background
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2015,15.803653,Urban Traffic
+aurn,UKA00213,NEWC,Newcastle Centre,01/01/2015,10.501541,Urban Background
+aurn,UKA00274,NOTT,Nottingham Centre,01/01/2015,11.497954,Urban Background
+aurn,UKA00518,OX8,Oxford St Ebbes,01/01/2015,10.11053,Urban Background
+aurn,UKA00360,PLYM,Plymouth Centre,01/01/2015,11.331394,Urban Background
+aurn,UKA00408,PRES,Preston,01/01/2015,9.953742,Urban Background
+aurn,UKA00235,SOUT,Southampton Centre,01/01/2015,9.960425,Urban Background
+aurn,UKA00337,STOK,Stoke-on-Trent Centre,01/01/2015,11.691325,Urban Background
+aurn,UKA00482,WIG5,Wigan Centre,01/01/2015,10.764287,Urban Background
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2016,2.549784,Rural Background
+aurn,UKA00217,CARD,Cardiff Centre,01/01/2016,9.662198,Urban Background
+aurn,UKA00614,CHBO,Chilbolton Observatory,01/01/2016,9.446671,Rural Background
+aurn,UKA00515,CHP,Chepstow A48,01/01/2016,11.164109,Urban Traffic
+aurn,UKA00602,GHSR,Glasgow High Street,01/01/2016,8.040834,Urban Traffic
+aurn,UKA00420,GRAN,Grangemouth,01/01/2016,6.415599,Urban Industrial
+aurn,UKA00472,HRL,London Harlington,01/01/2016,9.644798,Urban Industrial
+aurn,UKA00253,KC1,London N. Kensington,01/01/2016,12.155217,Urban Background
+aurn,UKA00564,LEAR,Leamington Spa Rugby Road,01/01/2016,9.715086,Urban Traffic
+aurn,UKA00247,LVP,Liverpool Speke,01/01/2016,10.051067,Urban Industrial
+aurn,UKA00248,MAN3,Manchester Piccadilly,01/01/2016,10.205357,Urban Background
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2016,15.881201,Urban Traffic
+aurn,UKA00213,NEWC,Newcastle Centre,01/01/2016,8.925357,Urban Background
+aurn,UKA00274,NOTT,Nottingham Centre,01/01/2016,11.920363,Urban Background
+aurn,UKA00518,OX8,Oxford St Ebbes,01/01/2016,14.179688,Urban Background
+aurn,UKA00360,PLYM,Plymouth Centre,01/01/2016,10.703912,Urban Background
+aurn,UKA00408,PRES,Preston,01/01/2016,9.758182,Urban Background
+aurn,UKA00235,SOUT,Southampton Centre,01/01/2016,10.684368,Urban Background
+aurn,UKA00337,STOK,Stoke-on-Trent Centre,01/01/2016,11.666524,Urban Background
+aurn,UKA00482,WIG5,Wigan Centre,01/01/2016,10.588676,Urban Background
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2017,4.52565,Rural Background
+aurn,UKA00217,CARD,Cardiff Centre,01/01/2017,9.083644,Urban Background
+aurn,UKA00614,CHBO,Chilbolton Observatory,01/01/2017,7.379823,Rural Background
+aurn,UKA00515,CHP,Chepstow A48,01/01/2017,9.695459,Urban Traffic
+aurn,UKA00602,GHSR,Glasgow High Street,01/01/2017,7.031719,Urban Traffic
+aurn,UKA00420,GRAN,Grangemouth,01/01/2017,6.380388,Urban Industrial
+aurn,UKA00472,HRL,London Harlington,01/01/2017,9.293516,Urban Industrial
+aurn,UKA00253,KC1,London N. Kensington,01/01/2017,11.603574,Urban Background
+aurn,UKA00564,LEAR,Leamington Spa Rugby Road,01/01/2017,10.979675,Urban Traffic
+aurn,UKA00247,LVP,Liverpool Speke,01/01/2017,8.49402,Urban Industrial
+aurn,UKA00248,MAN3,Manchester Piccadilly,01/01/2017,8.372094,Urban Background
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2017,15.436232,Urban Traffic
+aurn,UKA00213,NEWC,Newcastle Centre,01/01/2017,6.994276,Urban Background
+aurn,UKA00274,NOTT,Nottingham Centre,01/01/2017,11.57338,Urban Background
+aurn,UKA00518,OX8,Oxford St Ebbes,01/01/2017,10.853067,Urban Background
+aurn,UKA00360,PLYM,Plymouth Centre,01/01/2017,9.160904,Urban Background
+aurn,UKA00408,PRES,Preston,01/01/2017,8.64757,Urban Background
+aurn,UKA00622,SHBR,Sheffield Barnsley Road,01/01/2017,13.178462,Urban Traffic
+aurn,UKA00235,SOUT,Southampton Centre,01/01/2017,11.152495,Urban Background
+aurn,UKA00337,STOK,Stoke-on-Trent Centre,01/01/2017,8.659044,Urban Background
+aurn,UKA00482,WIG5,Wigan Centre,01/01/2017,10.125212,Urban Background
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2018,4.97877,Rural Background
+aurn,UKA00217,CARD,Cardiff Centre,01/01/2018,10.155779,Urban Background
+aurn,UKA00614,CHBO,Chilbolton Observatory,01/01/2018,8.605768,Rural Background
+aurn,UKA00515,CHP,Chepstow A48,01/01/2018,10.158846,Urban Traffic
+aurn,UKA00602,GHSR,Glasgow High Street,01/01/2018,7.398404,Urban Traffic
+aurn,UKA00420,GRAN,Grangemouth,01/01/2018,7.212434,Urban Industrial
+aurn,UKA00472,HRL,London Harlington,01/01/2018,9.562222,Urban Industrial
+aurn,UKA00434,INV2,Inverness,01/01/2018,4.851869,Urban Traffic
+aurn,UKA00253,KC1,London N. Kensington,01/01/2018,9.162433,Urban Background
+aurn,UKA00564,LEAR,Leamington Spa Rugby Road,01/01/2018,11.741547,Urban Traffic
+aurn,UKA00247,LVP,Liverpool Speke,01/01/2018,8.785864,Urban Industrial
+aurn,UKA00248,MAN3,Manchester Piccadilly,01/01/2018,10.858612,Urban Background
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2018,15.799453,Urban Traffic
+aurn,UKA00213,NEWC,Newcastle Centre,01/01/2018,8.965378,Urban Background
+aurn,UKA00274,NOTT,Nottingham Centre,01/01/2018,9.987203,Urban Background
+aurn,UKA00518,OX8,Oxford St Ebbes,01/01/2018,9.664684,Urban Background
+aurn,UKA00323,PEMB,Narberth,01/01/2018,6.371179,Rural Background
+aurn,UKA00360,PLYM,Plymouth Centre,01/01/2018,9.915767,Urban Background
+aurn,UKA00408,PRES,Preston,01/01/2018,9.279396,Urban Background
+aurn,UKA00622,SHBR,Sheffield Barnsley Road,01/01/2018,13.907324,Urban Traffic
+aurn,UKA00235,SOUT,Southampton Centre,01/01/2018,11.87964,Urban Background
+aurn,UKA00337,STOK,Stoke-on-Trent Centre,01/01/2018,9.447002,Urban Background
+aurn,UKA00482,WIG5,Wigan Centre,01/01/2018,11.625856,Urban Background
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2019,4.362085,Rural Background
+aurn,UKA00217,CARD,Cardiff Centre,01/01/2019,11.794238,Urban Background
+aurn,UKA00614,CHBO,Chilbolton Observatory,01/01/2019,8.055879,Rural Background
+aurn,UKA00515,CHP,Chepstow A48,01/01/2019,12.552793,Urban Traffic
+aurn,UKA00602,GHSR,Glasgow High Street,01/01/2019,6.308395,Urban Traffic
+aurn,UKA00420,GRAN,Grangemouth,01/01/2019,7.813535,Urban Industrial
+aurn,UKA00472,HRL,London Harlington,01/01/2019,9.538188,Urban Industrial
+aurn,UKA00434,INV2,Inverness,01/01/2019,5.426331,Urban Traffic
+aurn,UKA00253,KC1,London N. Kensington,01/01/2019,9.579159,Urban Background
+aurn,UKA00564,LEAR,Leamington Spa Rugby Road,01/01/2019,9.186661,Urban Traffic
+aurn,UKA00247,LVP,Liverpool Speke,01/01/2019,9.090006,Urban Industrial
+aurn,UKA00248,MAN3,Manchester Piccadilly,01/01/2019,11.503023,Urban Background
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2019,14.347974,Urban Traffic
+aurn,UKA00213,NEWC,Newcastle Centre,01/01/2019,8.832763,Urban Background
+aurn,UKA00274,NOTT,Nottingham Centre,01/01/2019,10.833106,Urban Background
+aurn,UKA00518,OX8,Oxford St Ebbes,01/01/2019,8.935811,Urban Background
+aurn,UKA00323,PEMB,Narberth,01/01/2019,6.544535,Rural Background
+aurn,UKA00360,PLYM,Plymouth Centre,01/01/2019,11.12319,Urban Background
+aurn,UKA00408,PRES,Preston,01/01/2019,9.383055,Urban Background
+aurn,UKA00622,SHBR,Sheffield Barnsley Road,01/01/2019,14.548451,Urban Traffic
+aurn,UKA00235,SOUT,Southampton Centre,01/01/2019,9.627926,Urban Background
+aurn,UKA00337,STOK,Stoke-on-Trent Centre,01/01/2019,9.469844,Urban Background
+aurn,UKA00482,WIG5,Wigan Centre,01/01/2019,9.556294,Urban Background
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2020,3.330782,Rural Background
+aurn,UKA00217,CARD,Cardiff Centre,01/01/2020,7.447395,Urban Background
+aurn,UKA00614,CHBO,Chilbolton Observatory,01/01/2020,7.597327,Rural Background
+aurn,UKA00515,CHP,Chepstow A48,01/01/2020,9.382242,Urban Traffic
+aurn,UKA00602,GHSR,Glasgow High Street,01/01/2020,4.929019,Urban Traffic
+aurn,UKA00420,GRAN,Grangemouth,01/01/2020,6.091709,Urban Industrial
+aurn,UKA00472,HRL,London Harlington,01/01/2020,7.914139,Urban Industrial
+aurn,UKA00434,INV2,Inverness,01/01/2020,4.270558,Urban Traffic
+aurn,UKA00253,KC1,London N. Kensington,01/01/2020,8.051137,Urban Background
+aurn,UKA00564,LEAR,Leamington Spa Rugby Road,01/01/2020,7.100906,Urban Traffic
+aurn,UKA00247,LVP,Liverpool Speke,01/01/2020,6.896619,Urban Industrial
+aurn,UKA00248,MAN3,Manchester Piccadilly,01/01/2020,8.241587,Urban Background
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2020,8.995934,Urban Traffic
+aurn,UKA00213,NEWC,Newcastle Centre,01/01/2020,7.315766,Urban Background
+aurn,UKA00274,NOTT,Nottingham Centre,01/01/2020,8.699057,Urban Background
+aurn,UKA00518,OX8,Oxford St Ebbes,01/01/2020,6.721512,Urban Background
+aurn,UKA00323,PEMB,Narberth,01/01/2020,5.917764,Rural Background
+aurn,UKA00360,PLYM,Plymouth Centre,01/01/2020,9.216032,Urban Background
+aurn,UKA00408,PRES,Preston,01/01/2020,7.360041,Urban Background
+aurn,UKA00622,SHBR,Sheffield Barnsley Road,01/01/2020,9.415262,Urban Traffic
+aurn,UKA00235,SOUT,Southampton Centre,01/01/2020,8.992731,Urban Background
+aurn,UKA00337,STOK,Stoke-on-Trent Centre,01/01/2020,7.431509,Urban Background
+aurn,UKA00482,WIG5,Wigan Centre,01/01/2020,7.983501,Urban Background
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2021,3.472903,Rural Background
+aurn,UKA00217,CARD,Cardiff Centre,01/01/2021,8.541138,Urban Background
+aurn,UKA00614,CHBO,Chilbolton Observatory,01/01/2021,7.433733,Rural Background
+aurn,UKA00515,CHP,Chepstow A48,01/01/2021,8.186214,Urban Traffic
+aurn,UKA00602,GHSR,Glasgow High Street,01/01/2021,5.459354,Urban Traffic
+aurn,UKA00420,GRAN,Grangemouth,01/01/2021,5.407462,Urban Industrial
+aurn,UKA00472,HRL,London Harlington,01/01/2021,7.746794,Urban Industrial
+aurn,UKA00434,INV2,Inverness,01/01/2021,4.882607,Urban Traffic
+aurn,UKA00253,KC1,London N. Kensington,01/01/2021,8.649273,Urban Background
+aurn,UKA00564,LEAR,Leamington Spa Rugby Road,01/01/2021,6.675217,Urban Traffic
+aurn,UKA00247,LVP,Liverpool Speke,01/01/2021,6.495224,Urban Industrial
+aurn,UKA00248,MAN3,Manchester Piccadilly,01/01/2021,8.821386,Urban Background
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2021,10.567698,Urban Traffic
+aurn,UKA00213,NEWC,Newcastle Centre,01/01/2021,7.12352,Urban Background
+aurn,UKA00274,NOTT,Nottingham Centre,01/01/2021,8.392687,Urban Background
+aurn,UKA00518,OX8,Oxford St Ebbes,01/01/2021,7.12512,Urban Background
+aurn,UKA00323,PEMB,Narberth,01/01/2021,5.997964,Rural Background
+aurn,UKA00360,PLYM,Plymouth Centre,01/01/2021,8.03675,Urban Background
+aurn,UKA00408,PRES,Preston,01/01/2021,7.524234,Urban Background
+aurn,UKA00622,SHBR,Sheffield Barnsley Road,01/01/2021,7.971073,Urban Traffic
+aurn,UKA00235,SOUT,Southampton Centre,01/01/2021,9.072477,Urban Background
+aurn,UKA00337,STOK,Stoke-on-Trent Centre,01/01/2021,8.134175,Urban Background
+aurn,UKA00482,WIG5,Wigan Centre,01/01/2021,8.38,Urban Background
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2022,3.847239,Rural Background
+aurn,UKA00217,CARD,Cardiff Centre,01/01/2022,10.549959,Urban Background
+aurn,UKA00614,CHBO,Chilbolton Observatory,01/01/2022,7.537406,Rural Background
+aurn,UKA00515,CHP,Chepstow A48,01/01/2022,9.204896,Urban Traffic
+aurn,UKA00602,GHSR,Glasgow High Street,01/01/2022,5.863002,Urban Traffic
+aurn,UKA00420,GRAN,Grangemouth,01/01/2022,7.796785,Urban Industrial
+aurn,UKA00169,HM,High Muffles,01/01/2022,4.151478,Rural Background
+aurn,UKA00472,HRL,London Harlington,01/01/2022,7.903739,Urban Industrial
+aurn,UKA00434,INV2,Inverness,01/01/2022,4.700902,Urban Traffic
+aurn,UKA00253,KC1,London N. Kensington,01/01/2022,8.870433,Urban Background
+aurn,UKA00564,LEAR,Leamington Spa Rugby Road,01/01/2022,7.284684,Urban Traffic
+aurn,UKA00152,LH,Lullington Heath,01/01/2022,6.226164,Rural Background
+aurn,UKA00247,LVP,Liverpool Speke,01/01/2022,8.564559,Urban Industrial
+aurn,UKA00537,MACK,Charlton Mackrell,01/01/2022,5.760622,Rural Background
+aurn,UKA00248,MAN3,Manchester Piccadilly,01/01/2022,9.59007,Urban Background
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2022,11.14083,Urban Traffic
+aurn,UKA00213,NEWC,Newcastle Centre,01/01/2022,6.500939,Urban Background
+aurn,UKA00274,NOTT,Nottingham Centre,01/01/2022,10.430632,Urban Background
+aurn,UKA00445,OSY,St Osyth,01/01/2022,6.982061,Rural Background
+aurn,UKA00518,OX8,Oxford St Ebbes,01/01/2022,7.482916,Urban Background
+aurn,UKA00323,PEMB,Narberth,01/01/2022,6.390456,Rural Background
+aurn,UKA00360,PLYM,Plymouth Centre,01/01/2022,9.09694,Urban Background
+aurn,UKA00408,PRES,Preston,01/01/2022,7.863379,Urban Background
+aurn,UKA00622,SHBR,Sheffield Barnsley Road,01/01/2022,9.521379,Urban Traffic
+aurn,UKA00235,SOUT,Southampton Centre,01/01/2022,9.317045,Urban Background
+aurn,UKA00337,STOK,Stoke-on-Trent Centre,01/01/2022,8.56532,Urban Background
+aurn,UKA00433,WEYB,Weybourne,01/01/2022,3.841237,Rural Background
+aurn,UKA00482,WIG5,Wigan Centre,01/01/2022,9.10484,Urban Background
+aurn,UKA00168,YW,Yarner Wood,01/01/2022,5.03126,Rural Background
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2023,3.395227,Rural Background
+aurn,UKA00217,CARD,Cardiff Centre,01/01/2023,9.727418,Urban Background
+aurn,UKA00614,CHBO,Chilbolton Observatory,01/01/2023,6.433344,Rural Background
+aurn,UKA00515,CHP,Chepstow A48,01/01/2023,8.21045,Urban Traffic
+aurn,UKA00602,GHSR,Glasgow High Street,01/01/2023,5.128421,Urban Traffic
+aurn,UKA00420,GRAN,Grangemouth,01/01/2023,5.072037,Urban Industrial
+aurn,UKA00169,HM,High Muffles,01/01/2023,4.368932,Rural Background
+aurn,UKA00472,HRL,London Harlington,01/01/2023,7.135204,Urban Industrial
+aurn,UKA00434,INV2,Inverness,01/01/2023,4.547693,Urban Traffic
+aurn,UKA00253,KC1,London N. Kensington,01/01/2023,7.658072,Urban Background
+aurn,UKA00564,LEAR,Leamington Spa Rugby Road,01/01/2023,6.534524,Urban Traffic
+aurn,UKA00152,LH,Lullington Heath,01/01/2023,7.069111,Rural Background
+aurn,UKA00247,LVP,Liverpool Speke,01/01/2023,7.883747,Urban Industrial
+aurn,UKA00537,MACK,Charlton Mackrell,01/01/2023,6.270528,Rural Background
+aurn,UKA00248,MAN3,Manchester Piccadilly,01/01/2023,8.50459,Urban Background
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2023,11.632524,Urban Traffic
+aurn,UKA00213,NEWC,Newcastle Centre,01/01/2023,6.118193,Urban Background
+aurn,UKA00274,NOTT,Nottingham Centre,01/01/2023,10.473004,Urban Background
+aurn,UKA00445,OSY,St Osyth,01/01/2023,7.597041,Rural Background
+aurn,UKA00518,OX8,Oxford St Ebbes,01/01/2023,5.955102,Urban Background
+aurn,UKA00323,PEMB,Narberth,01/01/2023,5.634951,Rural Background
+aurn,UKA00360,PLYM,Plymouth Centre,01/01/2023,8.369286,Urban Background
+aurn,UKA00408,PRES,Preston,01/01/2023,6.859013,Urban Background
+aurn,UKA00622,SHBR,Sheffield Barnsley Road,01/01/2023,8.805963,Urban Traffic
+aurn,UKA00235,SOUT,Southampton Centre,01/01/2023,8.256727,Urban Background
+aurn,UKA00337,STOK,Stoke-on-Trent Centre,01/01/2023,7.698743,Urban Background
+aurn,UKA00433,WEYB,Weybourne,01/01/2023,6.530362,Rural Background
+aurn,UKA00482,WIG5,Wigan Centre,01/01/2023,7.537587,Urban Background
+aurn,UKA00168,YW,Yarner Wood,01/01/2023,4.984546,Rural Background
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2024,3.750537,Rural Background
+aurn,UKA00217,CARD,Cardiff Centre,01/01/2024,8.03568,Urban Background
+aurn,UKA00614,CHBO,Chilbolton Observatory,01/01/2024,6.483493,Rural Background
+aurn,UKA00515,CHP,Chepstow A48,01/01/2024,6.971412,Urban Traffic
+aurn,UKA00602,GHSR,Glasgow High Street,01/01/2024,5.688931,Urban Traffic
+aurn,UKA00420,GRAN,Grangemouth,01/01/2024,6.041226,Urban Industrial
+aurn,UKA00169,HM,High Muffles,01/01/2024,4.657955,Rural Background
+aurn,UKA00472,HRL,London Harlington,01/01/2024,6.559026,Urban Industrial
+aurn,UKA00434,INV2,Inverness,01/01/2024,4.311201,Urban Traffic
+aurn,UKA00253,KC1,London N. Kensington,01/01/2024,7.185569,Urban Background
+aurn,UKA01085,KIEW,Kielder Water,01/01/2024,2.299355,Rural Background
+aurn,UKA00171,LB,Ladybower,01/01/2024,5.196612,Rural Background
+aurn,UKA00564,LEAR,Leamington Spa Rugby Road,01/01/2024,6.46901,Urban Traffic
+aurn,UKA00152,LH,Lullington Heath,01/01/2024,6.409684,Rural Background
+aurn,UKA00247,LVP,Liverpool Speke,01/01/2024,8.379257,Urban Industrial
+aurn,UKA00537,MACK,Charlton Mackrell,01/01/2024,5.94646,Rural Background
+aurn,UKA00248,MAN3,Manchester Piccadilly,01/01/2024,8.535695,Urban Background
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2024,10.56708,Urban Traffic
+aurn,UKA00213,NEWC,Newcastle Centre,01/01/2024,6.948447,Urban Background
+aurn,UKA00274,NOTT,Nottingham Centre,01/01/2024,10.108269,Urban Background
+aurn,UKA00445,OSY,St Osyth,01/01/2024,7.01899,Rural Background
+aurn,UKA00518,OX8,Oxford St Ebbes,01/01/2024,5.562196,Urban Background
+aurn,UKA00323,PEMB,Narberth,01/01/2024,5.614844,Rural Background
+aurn,UKA00360,PLYM,Plymouth Centre,01/01/2024,7.975978,Urban Background
+aurn,UKA00408,PRES,Preston,01/01/2024,6.876174,Urban Background
+aurn,UKA00622,SHBR,Sheffield Barnsley Road,01/01/2024,8.375893,Urban Traffic
+aurn,UKA00235,SOUT,Southampton Centre,01/01/2024,6.93444,Urban Background
+aurn,UKA00337,STOK,Stoke-on-Trent Centre,01/01/2024,7.255556,Urban Background
+aurn,UKA00433,WEYB,Weybourne,01/01/2024,6.589711,Rural Background
+aurn,UKA00482,WIG5,Wigan Centre,01/01/2024,7.5035,Urban Background
+aurn,UKA00168,YW,Yarner Wood,01/01/2024,4.694939,Rural Background
+aurn,UKA00451,ACTH,Auchencorth Moss,01/01/2025,4.376976,Rural Background
+aurn,UKA00217,CARD,Cardiff Centre,01/01/2025,8.122836,Urban Background
+aurn,UKA00614,CHBO,Chilbolton Observatory,01/01/2025,7.470189,Rural Background
+aurn,UKA00515,CHP,Chepstow A48,01/01/2025,8.816901,Urban Traffic
+aurn,UKA00602,GHSR,Glasgow High Street,01/01/2025,5.984999,Urban Traffic
+aurn,UKA00420,GRAN,Grangemouth,01/01/2025,6.227788,Urban Industrial
+aurn,UKA00169,HM,High Muffles,01/01/2025,5.399557,Rural Background
+aurn,UKA00472,HRL,London Harlington,01/01/2025,8.537161,Urban Industrial
+aurn,UKA00434,INV2,Inverness,01/01/2025,4.866012,Urban Traffic
+aurn,UKA00253,KC1,London N. Kensington,01/01/2025,8.632779,Urban Background
+aurn,UKA01085,KIEW,Kielder Water,01/01/2025,4.58292,Rural Background
+aurn,UKA00171,LB,Ladybower,01/01/2025,6.160469,Rural Background
+aurn,UKA00564,LEAR,Leamington Spa Rugby Road,01/01/2025,7.704245,Urban Traffic
+aurn,UKA00152,LH,Lullington Heath,01/01/2025,7.686923,Rural Background
+aurn,UKA00247,LVP,Liverpool Speke,01/01/2025,8.882262,Urban Industrial
+aurn,UKA00537,MACK,Charlton Mackrell,01/01/2025,7.265149,Rural Background
+aurn,UKA00248,MAN3,Manchester Piccadilly,01/01/2025,9.573516,Urban Background
+aurn,UKA00315,MY1,London Marylebone Road,01/01/2025,10.985057,Urban Traffic
+aurn,UKA00213,NEWC,Newcastle Centre,01/01/2025,8.21104,Urban Background
+aurn,UKA00445,OSY,St Osyth,01/01/2025,8.405678,Rural Background
+aurn,UKA00518,OX8,Oxford St Ebbes,01/01/2025,6.67687,Urban Background
+aurn,UKA00323,PEMB,Narberth,01/01/2025,6.403211,Rural Background
+aurn,UKA00360,PLYM,Plymouth Centre,01/01/2025,8.632387,Urban Background
+aurn,UKA00408,PRES,Preston,01/01/2025,7.505562,Urban Background
+aurn,UKA00622,SHBR,Sheffield Barnsley Road,01/01/2025,9.110419,Urban Traffic
+aurn,UKA00235,SOUT,Southampton Centre,01/01/2025,9.029805,Urban Background
+aurn,UKA00337,STOK,Stoke-on-Trent Centre,01/01/2025,8.096183,Urban Background
+aurn,UKA00433,WEYB,Weybourne,01/01/2025,8.330951,Rural Background
+aurn,UKA00482,WIG5,Wigan Centre,01/01/2025,8.730352,Urban Background
+aurn,UKA00168,YW,Yarner Wood,01/01/2025,5.78693,Rural Background
