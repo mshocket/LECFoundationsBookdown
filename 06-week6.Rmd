@@ -46,7 +46,7 @@ We will be focusing on three species of bumblebee that are designated as "scarce
 
 <div style="text-align: center;">
 
-![&nbsp;](images/Bombus_soroeensis.jpg){width=100%}
+![&nbsp;](images/bombus_soroeensis.jpg){width=100%}
 
 </div>
 [Photo credit: Steven Falk](https://www.flickr.com/photos/63075200@N07/albums/72157631610322753/)
