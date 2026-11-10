@@ -9,3 +9,4 @@ _bookdown_files/
 LECFoundationsBookdown.rds
 examples/
 .positai
+data/GBIF_bumblebee_data.csv
