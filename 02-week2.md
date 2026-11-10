@@ -553,15 +553,15 @@ Table: (\#tab:unnamed-chunk-12)A hypothetical field study on mammal observations
 
 |site   | foxes| badgers| mice|
 |:------|-----:|-------:|----:|
-|Site 1 |     9|       0|   27|
-|Site 2 |     1|       3|   22|
-|Site 3 |     2|       1|   43|
-|Site 4 |     3|       2|   27|
-|Site 5 |     8|       0|   27|
-|Site 6 |     5|       1|   34|
-|Site 7 |     3|       0|   48|
-|Site 8 |     8|       2|   11|
-|Site 9 |     0|       3|   28|
+|Site 1 |     3|       1|   42|
+|Site 2 |     4|       1|   35|
+|Site 3 |     5|       3|   17|
+|Site 4 |     4|       2|   23|
+|Site 5 |     8|       1|   23|
+|Site 6 |     9|       3|    2|
+|Site 7 |     1|       2|   30|
+|Site 8 |     8|       1|   21|
+|Site 9 |     4|       3|   13|
 
 
 
@@ -577,33 +577,33 @@ Table: (\#tab:unnamed-chunk-13)A hypothetical field study on mammal observations
 
 |site   |animal  | count|
 |:------|:-------|-----:|
-|Site 1 |foxes   |     9|
-|Site 1 |badgers |     0|
-|Site 1 |mice    |    27|
-|Site 2 |foxes   |     1|
-|Site 2 |badgers |     3|
-|Site 2 |mice    |    22|
-|Site 3 |foxes   |     2|
-|Site 3 |badgers |     1|
-|Site 3 |mice    |    43|
-|Site 4 |foxes   |     3|
+|Site 1 |foxes   |     3|
+|Site 1 |badgers |     1|
+|Site 1 |mice    |    42|
+|Site 2 |foxes   |     4|
+|Site 2 |badgers |     1|
+|Site 2 |mice    |    35|
+|Site 3 |foxes   |     5|
+|Site 3 |badgers |     3|
+|Site 3 |mice    |    17|
+|Site 4 |foxes   |     4|
 |Site 4 |badgers |     2|
-|Site 4 |mice    |    27|
+|Site 4 |mice    |    23|
 |Site 5 |foxes   |     8|
-|Site 5 |badgers |     0|
-|Site 5 |mice    |    27|
-|Site 6 |foxes   |     5|
-|Site 6 |badgers |     1|
-|Site 6 |mice    |    34|
-|Site 7 |foxes   |     3|
-|Site 7 |badgers |     0|
-|Site 7 |mice    |    48|
+|Site 5 |badgers |     1|
+|Site 5 |mice    |    23|
+|Site 6 |foxes   |     9|
+|Site 6 |badgers |     3|
+|Site 6 |mice    |     2|
+|Site 7 |foxes   |     1|
+|Site 7 |badgers |     2|
+|Site 7 |mice    |    30|
 |Site 8 |foxes   |     8|
-|Site 8 |badgers |     2|
-|Site 8 |mice    |    11|
-|Site 9 |foxes   |     0|
+|Site 8 |badgers |     1|
+|Site 8 |mice    |    21|
+|Site 9 |foxes   |     4|
 |Site 9 |badgers |     3|
-|Site 9 |mice    |    28|
+|Site 9 |mice    |    13|
 
 
 

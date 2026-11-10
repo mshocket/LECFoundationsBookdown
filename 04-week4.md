@@ -426,7 +426,7 @@ We're now at the point where you can answer questions 1 & 2!
 :::
 
 
-# Monthly data summaries and multipanel figures with `patchwork`
+# Monthly data summaries and multipanel figures with `patchwork` {#patchwork}
 
 ## Summarising data by month
 

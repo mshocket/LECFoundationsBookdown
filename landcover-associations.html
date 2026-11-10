@@ -65,7 +65,7 @@
 <li><a class="" href="intro_wk4.html"><span class="header-section-number">16</span> Introduction</a></li>
 <li><a class="" href="dataprocessing_wk4.html"><span class="header-section-number">17</span> Data processing and exploration</a></li>
 <li><a class="" href="plots-of-the-raw-data.html"><span class="header-section-number">18</span> Plots of the raw data</a></li>
-<li><a class="" href="monthly-data-summaries-and-multipanel-figures-with-patchwork.html"><span class="header-section-number">19</span> Monthly data summaries and multipanel figures with patchwork</a></li>
+<li><a class="" href="patchwork.html"><span class="header-section-number">19</span> Monthly data summaries and multipanel figures with patchwork</a></li>
 <li><a class="" href="tidyup_wk4.html"><span class="header-section-number">20</span> Tidying up</a></li>
 <li class="book-part">Week 5 - Air quality data in R</li>
 <li><a class="" href="intro_wk5.html"><span class="header-section-number">21</span> Introduction</a></li>
@@ -143,6 +143,11 @@
 <p>The easiest way to fix that is to simply add a layer to your first geography plot that gets rid of one of the legends:</p>
 <div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="landcover-associations.html#cb73-1" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"None"</span>) <span class="sc">+</span> </span></code></pre></div>
 <div class="inline-figure"><img src="06-week6_files/figure-html/unnamed-chunk-16-1.png" alt="" width="672"></div>
+<p>Remember from <a href="patchwork.html#patchwork">Week 4</a> that you can also change the relative width and height of different rows and columns in your combined figure as shown below:</p>
+<div class="sourceCode" id="cb74"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fig1</span> <span class="op">|</span> <span class="va">fig2</span> <span class="op">+</span> <span class="fu">plot_layout</span><span class="op">(</span>widths <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span> <span class="op">(</span><span class="va">fig1</span> <span class="op">|</span> <span class="va">fig2</span><span class="op">)</span> <span class="op">/</span> <span class="va">fig3</span> <span class="op">+</span> <span class="fu">plot_layout</span><span class="op">(</span>heights <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
   <div class="chapter-nav">

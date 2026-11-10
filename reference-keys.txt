@@ -117,7 +117,7 @@ converting-character-data-to-dates-with-lubridate
 extract-the-month-into-a-new-column
 plots-of-the-raw-data
 adding-trendlines-with-ggplot
-monthly-data-summaries-and-multipanel-figures-with-patchwork
+patchwork
 summarising-data-by-month
 creating-column-plots
 changing-the-x-axis-tick-mark-labels
