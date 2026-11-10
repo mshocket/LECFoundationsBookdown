@@ -186,6 +186,8 @@ We will need to specify separate `data =`  and aesthetic (`aes()`) arguments sin
 
 The `label = ` argument tells R what variable with character values to print as text.
 
+The code below shows the correct format, but you will need to change the arguments to match your data frame and column names. 
+
 ```r
 geom_text(data = city_df, aes(x = long, y = lat, label = city), colour = "black") + 
 ```
@@ -595,6 +597,15 @@ The easiest way to fix that is to simply add a layer to your first geography plo
 (spatial_fig | (month_fig / lc_fig)) + plot_layout(guides = "collect") 
 ```
 
+Remember from [Week 4](#patchwork) that you can also change the relative width and height of different rows and columns in your combined figure as shown below:
+
+```r
+fig1 | fig2 + plot_layout(widths = c(1, 2))
+```
+
+```r
+ (fig1 | fig2) / fig3 + plot_layout(heights = c(1, 2))
+```
 
 
 # Tidying up {#tidyup_wk6}
