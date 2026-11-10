@@ -239,7 +239,7 @@ However there are other types of data that sort of fall in between the two.
 
 Unlike numeric data, normal character data can't have any maths performed upon it. However the following makes complete sense:
 
-> 2026-11-03 + 4 days = 2026-11-07
+> 2026-11-10 + 4 days = 2026-11-14
 
 So there should probably be a specific form of data for holding dates. This is indeed the case!
 
@@ -573,7 +573,7 @@ The easiest way to do this is as a [markdown](https://www.markdownguide.org/basi
 
 You can create a markdown file by going to: File > New File > Markdown (at the top of the 6th section down).
 
-Last week, I listed out all of the funtions that we used in the first two practicals, grouped by type and then in alphabetical order [here](https://mshocket.github.io/LECFoundationsBookdown/tidyup_wk3.html).
+Last week, I listed out all of the functions that we used in the first two practicals, grouped by type and then in alphabetical order [here](#tidyup_wk3).
 
 You can copy and paste this list into your markdown file, and then add your own annotations / descriptions that will help you remember how they work.
 

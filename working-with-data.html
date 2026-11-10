@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 8 Working with data | Foundation Skills for LEC Practical Exercises</title>
 <meta name="author" content="Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt">
@@ -74,6 +73,12 @@
 <li><a class="" href="writing-functions-in-r.html"><span class="header-section-number">23</span> Writing functions in R</a></li>
 <li><a class="" href="spatial-plots-of-air-quality.html"><span class="header-section-number">24</span> Spatial plots of air quality</a></li>
 <li><a class="" href="tidyup_wk5.html"><span class="header-section-number">25</span> Tidying up</a></li>
+<li class="book-part">Week 6 - Bumblebee data in R</li>
+<li><a class="" href="intro_wk6.html"><span class="header-section-number">26</span> Introduction</a></li>
+<li><a class="" href="geographic-patterns.html"><span class="header-section-number">27</span> Geographic patterns</a></li>
+<li><a class="" href="seasonal-timing.html"><span class="header-section-number">28</span> Seasonal timing</a></li>
+<li><a class="" href="landcover-associations.html"><span class="header-section-number">29</span> Landcover associations</a></li>
+<li><a class="" href="tidyup_wk6.html"><span class="header-section-number">30</span> Tidying up</a></li>
 </ul>
 
         <div class="book-extra">
@@ -193,57 +198,57 @@
 <tbody>
 <tr class="odd">
 <td align="left">Site 1</td>
-<td align="right">6</td>
+<td align="right">3</td>
 <td align="right">2</td>
-<td align="right">23</td>
+<td align="right">32</td>
 </tr>
 <tr class="even">
 <td align="left">Site 2</td>
-<td align="right">2</td>
-<td align="right">2</td>
-<td align="right">29</td>
+<td align="right">3</td>
+<td align="right">1</td>
+<td align="right">34</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 3</td>
-<td align="right">4</td>
-<td align="right">0</td>
-<td align="right">45</td>
+<td align="right">5</td>
+<td align="right">1</td>
+<td align="right">31</td>
 </tr>
 <tr class="even">
 <td align="left">Site 4</td>
-<td align="right">9</td>
-<td align="right">3</td>
-<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">38</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 5</td>
+<td align="right">5</td>
+<td align="right">3</td>
 <td align="right">9</td>
-<td align="right">1</td>
-<td align="right">23</td>
 </tr>
 <tr class="even">
 <td align="left">Site 6</td>
 <td align="right">5</td>
 <td align="right">0</td>
-<td align="right">44</td>
+<td align="right">45</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 7</td>
-<td align="right">9</td>
-<td align="right">3</td>
 <td align="right">4</td>
+<td align="right">0</td>
+<td align="right">42</td>
 </tr>
 <tr class="even">
 <td align="left">Site 8</td>
-<td align="right">5</td>
-<td align="right">0</td>
-<td align="right">41</td>
+<td align="right">3</td>
+<td align="right">2</td>
+<td align="right">24</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 9</td>
+<td align="right">7</td>
 <td align="right">0</td>
-<td align="right">1</td>
-<td align="right">44</td>
+<td align="right">39</td>
 </tr>
 </tbody>
 </table></div>
@@ -266,7 +271,7 @@
 <tr class="odd">
 <td align="left">Site 1</td>
 <td align="left">foxes</td>
-<td align="right">6</td>
+<td align="right">3</td>
 </tr>
 <tr class="even">
 <td align="left">Site 1</td>
@@ -276,127 +281,127 @@
 <tr class="odd">
 <td align="left">Site 1</td>
 <td align="left">mice</td>
-<td align="right">23</td>
+<td align="right">32</td>
 </tr>
 <tr class="even">
 <td align="left">Site 2</td>
 <td align="left">foxes</td>
-<td align="right">2</td>
+<td align="right">3</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 2</td>
 <td align="left">badgers</td>
-<td align="right">2</td>
+<td align="right">1</td>
 </tr>
 <tr class="even">
 <td align="left">Site 2</td>
 <td align="left">mice</td>
-<td align="right">29</td>
+<td align="right">34</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 3</td>
 <td align="left">foxes</td>
-<td align="right">4</td>
+<td align="right">5</td>
 </tr>
 <tr class="even">
 <td align="left">Site 3</td>
+<td align="left">badgers</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left">Site 3</td>
+<td align="left">mice</td>
+<td align="right">31</td>
+</tr>
+<tr class="even">
+<td align="left">Site 4</td>
+<td align="left">foxes</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left">Site 4</td>
+<td align="left">badgers</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="left">Site 4</td>
+<td align="left">mice</td>
+<td align="right">38</td>
+</tr>
+<tr class="odd">
+<td align="left">Site 5</td>
+<td align="left">foxes</td>
+<td align="right">5</td>
+</tr>
+<tr class="even">
+<td align="left">Site 5</td>
+<td align="left">badgers</td>
+<td align="right">3</td>
+</tr>
+<tr class="odd">
+<td align="left">Site 5</td>
+<td align="left">mice</td>
+<td align="right">9</td>
+</tr>
+<tr class="even">
+<td align="left">Site 6</td>
+<td align="left">foxes</td>
+<td align="right">5</td>
+</tr>
+<tr class="odd">
+<td align="left">Site 6</td>
 <td align="left">badgers</td>
 <td align="right">0</td>
 </tr>
-<tr class="odd">
-<td align="left">Site 3</td>
+<tr class="even">
+<td align="left">Site 6</td>
 <td align="left">mice</td>
 <td align="right">45</td>
 </tr>
-<tr class="even">
-<td align="left">Site 4</td>
-<td align="left">foxes</td>
-<td align="right">9</td>
-</tr>
-<tr class="odd">
-<td align="left">Site 4</td>
-<td align="left">badgers</td>
-<td align="right">3</td>
-</tr>
-<tr class="even">
-<td align="left">Site 4</td>
-<td align="left">mice</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="left">Site 5</td>
-<td align="left">foxes</td>
-<td align="right">9</td>
-</tr>
-<tr class="even">
-<td align="left">Site 5</td>
-<td align="left">badgers</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="left">Site 5</td>
-<td align="left">mice</td>
-<td align="right">23</td>
-</tr>
-<tr class="even">
-<td align="left">Site 6</td>
-<td align="left">foxes</td>
-<td align="right">5</td>
-</tr>
-<tr class="odd">
-<td align="left">Site 6</td>
-<td align="left">badgers</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">Site 6</td>
-<td align="left">mice</td>
-<td align="right">44</td>
-</tr>
 <tr class="odd">
 <td align="left">Site 7</td>
 <td align="left">foxes</td>
-<td align="right">9</td>
-</tr>
-<tr class="even">
-<td align="left">Site 7</td>
-<td align="left">badgers</td>
-<td align="right">3</td>
-</tr>
-<tr class="odd">
-<td align="left">Site 7</td>
-<td align="left">mice</td>
 <td align="right">4</td>
 </tr>
 <tr class="even">
+<td align="left">Site 7</td>
+<td align="left">badgers</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Site 7</td>
+<td align="left">mice</td>
+<td align="right">42</td>
+</tr>
+<tr class="even">
 <td align="left">Site 8</td>
 <td align="left">foxes</td>
-<td align="right">5</td>
+<td align="right">3</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 8</td>
 <td align="left">badgers</td>
-<td align="right">0</td>
+<td align="right">2</td>
 </tr>
 <tr class="even">
 <td align="left">Site 8</td>
 <td align="left">mice</td>
-<td align="right">41</td>
+<td align="right">24</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 9</td>
 <td align="left">foxes</td>
-<td align="right">0</td>
+<td align="right">7</td>
 </tr>
 <tr class="even">
 <td align="left">Site 9</td>
 <td align="left">badgers</td>
-<td align="right">1</td>
+<td align="right">0</td>
 </tr>
 <tr class="odd">
 <td align="left">Site 9</td>
 <td align="left">mice</td>
-<td align="right">44</td>
+<td align="right">39</td>
 </tr>
 </tbody>
 </table></div>
@@ -491,7 +496,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Foundation Skills for LEC Practical Exercises</strong>" was written by Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt. It was last built on 2026-11-03.</p>
+    <p>"<strong>Foundation Skills for LEC Practical Exercises</strong>" was written by Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt. It was last built on 2026-11-10.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

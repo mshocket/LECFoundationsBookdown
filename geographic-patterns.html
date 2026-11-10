@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 27 Geographic patterns | Foundation Skills for LEC Practical Exercises</title>
+<meta name="author" content="Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt">
+<meta name="description" content="We’ll start by looking at the large-scale geographic patterns.  27.0.1 A basic plot Start by making a basic scatter plot using ggplot(), with: longitude on the x-axis latitude on the y-axis the...">
+<meta name="generator" content="bookdown 0.48 with bs4_book()">
+<meta property="og:title" content="Chapter 27 Geographic patterns | Foundation Skills for LEC Practical Exercises">
+<meta property="og:type" content="book">
+<meta property="og:description" content="We’ll start by looking at the large-scale geographic patterns.  27.0.1 A basic plot Start by making a basic scatter plot using ggplot(), with: longitude on the x-axis latitude on the y-axis the...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 27 Geographic patterns | Foundation Skills for LEC Practical Exercises">
+<meta name="twitter:description" content="We’ll start by looking at the large-scale geographic patterns.  27.0.1 A basic plot Start by making a basic scatter plot using ggplot(), with: longitude on the x-axis latitude on the y-axis the...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.12.0/transition.js"></script><script src="libs/bs3compat-0.12.0/tabs.js"></script><script src="libs/bs3compat-0.12.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Foundation Skills for LEC Practical Exercises</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">About</a></li>
+<li class="book-part">Week 1 - Census data in Excel</li>
+<li><a class="" href="introduction-setup.html"><span class="header-section-number">1</span> Introduction &amp; setup</a></li>
+<li><a class="" href="region-level-calculations.html"><span class="header-section-number">2</span> Region-level calculations</a></li>
+<li><a class="" href="region-level-figures.html"><span class="header-section-number">3</span> Region-level figures</a></li>
+<li><a class="" href="utla-level-calculations-and-figures.html"><span class="header-section-number">4</span> UTLA-level calculations and figures</a></li>
+<li><a class="" href="format-your-graph.html"><span class="header-section-number">5</span> Format your graph</a></li>
+<li class="book-part">Week 2 - Crop yield data in R</li>
+<li><a class="" href="intro_wk2.html"><span class="header-section-number">6</span> Introduction</a></li>
+<li><a class="" href="working-with-r-and-rstudio.html"><span class="header-section-number">7</span> Working with R and RStudio</a></li>
+<li><a class="" href="working-with-data.html"><span class="header-section-number">8</span> Working with data</a></li>
+<li><a class="" href="plotting-a-line-graph-with-ggplot.html"><span class="header-section-number">9</span> Plotting a line graph with ggplot</a></li>
+<li><a class="" href="tidyup_wk2.html"><span class="header-section-number">10</span> Tidying up</a></li>
+<li class="book-part">Week 3 - EDM data in R</li>
+<li><a class="" href="intro_wk3.html"><span class="header-section-number">11</span> Introduction</a></li>
+<li><a class="" href="dataprocessing_wk3.html"><span class="header-section-number">12</span> Data processing and exploration</a></li>
+<li><a class="" href="summary-statistics-with-dplyr.html"><span class="header-section-number">13</span> Summary statistics with dplyr</a></li>
+<li><a class="" href="making-graphs.html"><span class="header-section-number">14</span> Making graphs</a></li>
+<li><a class="" href="tidyup_wk3.html"><span class="header-section-number">15</span> Tidying up</a></li>
+<li class="book-part">Week 4 - Wind turbine data in R</li>
+<li><a class="" href="intro_wk4.html"><span class="header-section-number">16</span> Introduction</a></li>
+<li><a class="" href="dataprocessing_wk4.html"><span class="header-section-number">17</span> Data processing and exploration</a></li>
+<li><a class="" href="plots-of-the-raw-data.html"><span class="header-section-number">18</span> Plots of the raw data</a></li>
+<li><a class="" href="monthly-data-summaries-and-multipanel-figures-with-patchwork.html"><span class="header-section-number">19</span> Monthly data summaries and multipanel figures with patchwork</a></li>
+<li><a class="" href="tidyup_wk4.html"><span class="header-section-number">20</span> Tidying up</a></li>
+<li class="book-part">Week 5 - Air quality data in R</li>
+<li><a class="" href="intro_wk5.html"><span class="header-section-number">21</span> Introduction</a></li>
+<li><a class="" href="data-processing-and-exploration.html"><span class="header-section-number">22</span> Data processing and exploration</a></li>
+<li><a class="" href="writing-functions-in-r.html"><span class="header-section-number">23</span> Writing functions in R</a></li>
+<li><a class="" href="spatial-plots-of-air-quality.html"><span class="header-section-number">24</span> Spatial plots of air quality</a></li>
+<li><a class="" href="tidyup_wk5.html"><span class="header-section-number">25</span> Tidying up</a></li>
+<li class="book-part">Week 6 - Bumblebee data in R</li>
+<li><a class="" href="intro_wk6.html"><span class="header-section-number">26</span> Introduction</a></li>
+<li><a class="active" href="geographic-patterns.html"><span class="header-section-number">27</span> Geographic patterns</a></li>
+<li><a class="" href="seasonal-timing.html"><span class="header-section-number">28</span> Seasonal timing</a></li>
+<li><a class="" href="landcover-associations.html"><span class="header-section-number">29</span> Landcover associations</a></li>
+<li><a class="" href="tidyup_wk6.html"><span class="header-section-number">30</span> Tidying up</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="geographic-patterns" class="section level1" number="27">
+<h1>
+<span class="header-section-number">27</span> Geographic patterns<a class="anchor" aria-label="anchor" href="#geographic-patterns"><i class="fas fa-link"></i></a>
+</h1>
+<p>We’ll start by looking at the large-scale geographic patterns.</p>
+<div id="a-basic-plot" class="section level3" number="27.0.1">
+<h3>
+<span class="header-section-number">27.0.1</span> A basic plot<a class="anchor" aria-label="anchor" href="#a-basic-plot"><i class="fas fa-link"></i></a>
+</h3>
+<p>Start by making a basic scatter plot using <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code>, with:</p>
+<ul>
+<li>longitude on the x-axis</li>
+<li>latitude on the y-axis</li>
+<li>the point colour indicating species</li>
+</ul>
+<div class="rmdtip">
+<p><strong><em>Tip!</em></strong> Remember that if colour is determined by a variable, the colour argument it has to go inside the <code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code> function!</p>
+</div>
+<p>You will probably want to make the size of the points larger with <code>size =</code> and the points somewhat transparent with <code>alpha =</code> (where <code>alpha = 0</code> is full transparent and <code>alpha = 1</code> is fully opaque).</p>
+<p>You can also add some nicer axis labels and a title.</p>
+<div class="inline-figure"><img src="06-week6_files/figure-html/unnamed-chunk-2-1.png" alt="" width="672"></div>
+</div>
+<div id="create-your-own-data-frame-manually" class="section level3" number="27.0.2">
+<h3>
+<span class="header-section-number">27.0.2</span> Create your own data frame manually<a class="anchor" aria-label="anchor" href="#create-your-own-data-frame-manually"><i class="fas fa-link"></i></a>
+</h3>
+<p>It would be nice to get a better sense of where a few locations are to orient us, particularly since we don’t have an outline of the UK.</p>
+<p>We can do that by creating our own data frame with latitude and longitude coordinates.</p>
+<p>To create your own data frame by hand, you use the <code><a href="https://rdrr.io/r/base/data.frame.html">data.frame()</a></code> function. Inside</p>
+<ul>
+<li>Each column is its own argument (e.g. <code>col_name = ...</code>)</li>
+<li>The values for each column are provided inside a vector (e.g. <code>c(x, y, z, ...)</code>)</li>
+</ul>
+<p>The code below provides coordinates for Lancaster, London, Edinburgh, and Shetland. (I recommend typing out the overall structure to help yourself learn, but copying and pasting the coordinates.)</p>
+<div class="sourceCode" id="cb60"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">landmarks_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>location <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Lancaster"</span>, <span class="st">"London"</span>, <span class="st">"Edinburgh"</span>, <span class="st">"Shetland"</span><span class="op">)</span>,</span>
+<span>                      lat <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">54.048622</span>, <span class="fl">51.510756</span>, <span class="fl">55.951889</span>, <span class="fl">60.339666</span><span class="op">)</span>,</span>
+<span>                      long <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">2.800306</span>, <span class="op">-</span><span class="fl">0.122915</span>, <span class="op">-</span><span class="fl">3.198884</span>, <span class="op">-</span><span class="fl">1.224915</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p>Now we can add a <code><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text()</a></code> layer to our <code>ggplot</code> figure.</p>
+<p>We will need to specify separate <code>data =</code> and aesthetic (<code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code>) arguments since this layer is using a different data frame and different x and y variables than the rest of the figure.</p>
+<p>The <code>label =</code> argument tells R what variable with character values to print as text.</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="geographic-patterns.html#cb61-1" tabindex="-1"></a><span class="fu">geom_text</span>(<span class="at">data =</span> city_df, <span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat, <span class="at">label =</span> city), <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span> </span></code></pre></div>
+<div class="inline-figure"><img src="06-week6_files/figure-html/unnamed-chunk-4-1.png" alt="" width="672"></div>
+</div>
+<div id="update-colours" class="section level3" number="27.0.3">
+<h3>
+<span class="header-section-number">27.0.3</span> Update colours<a class="anchor" aria-label="anchor" href="#update-colours"><i class="fas fa-link"></i></a>
+</h3>
+<p>Change the colours to a colour palette that you like better.</p>
+<p>You will need to add another layer with the <code><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_colour_manual()</a></code> function.</p>
+<p>The <code><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_colour_manual()</a></code> function needs an argument (<code>values =</code>) with the colours provided as a vector.</p>
+<p>Inside the function, you need to create a vector with three different colours, either specified by <a href="https://derekogle.com/NCGraphing/resources/colors">name</a> or by <a href="https://streamlinepublishing.com/inside-art/who-put-the-hex-on-color/">hexidecimal code</a>. You can also look at <a href="https://coolors.co/palettes/trending">existing colour palettes</a>.</p>
+<div class="inline-figure"><img src="06-week6_files/figure-html/unnamed-chunk-5-1.png" alt="" width="672"></div>
+</div>
+<div id="add-common-names" class="section level3" number="27.0.4">
+<h3>
+<span class="header-section-number">27.0.4</span> Add common names<a class="anchor" aria-label="anchor" href="#add-common-names"><i class="fas fa-link"></i></a>
+</h3>
+<p>It would also be nice if we could put the common name in the legend instead of the scientific name.</p>
+<p>We can add a new column - <code>common_name</code> - with the <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> function.</p>
+<p>The code below uses <code><a href="https://dplyr.tidyverse.org/reference/case_match.html">case_match()</a></code> to create new values for a <code>common_name</code> column based on the existing values in the <code>species</code> column.</p>
+<div class="sourceCode" id="cb62"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">mydf</span> <span class="op">&lt;-</span> <span class="va">mydf</span> <span class="op">|&gt;</span></span>
+<span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>common_name <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_match.html">case_match</a></span><span class="op">(</span></span>
+<span>    <span class="va">species</span>, </span>
+<span>    <span class="st">"Bombus monticola"</span> <span class="op">~</span> <span class="st">"Bilberry bumblebee"</span>, </span>
+<span>    <span class="st">"Bombus soroeensis"</span> <span class="op">~</span> <span class="st">"Broken-belted bumblebee"</span>, </span>
+<span>    <span class="st">"Bombus muscorum"</span> <span class="op">~</span> <span class="st">"Moss carder bumblebee"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p>Change your figure to use the common names variable instead.</p>
+<div class="rmdtip">
+<p><strong><em>Tip!</em></strong></p>
+<p>When you change the colour-determining variable from <code>species</code> to <code>common_name</code>, you will also want to change the legend label to something that is properly formatted.</p>
+<p>You do this by adding <code>colour = "Whatever text label you want"</code> to the <code><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs()</a></code> function.</p>
+</div>
+<div class="inline-figure"><img src="06-week6_files/figure-html/unnamed-chunk-6-1.png" alt="" width="672"></div>
+<div class="rmdquestion">
+<p><strong><em>Question:</em></strong></p>
+<p>Which geographic areas are each species of bee most commonly found in?</p>
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="intro_wk6.html"><span class="header-section-number">26</span> Introduction</a></div>
+<div class="next"><a href="seasonal-timing.html"><span class="header-section-number">28</span> Seasonal timing</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li>
+<a class="nav-link" href="#geographic-patterns"><span class="header-section-number">27</span> Geographic patterns</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#a-basic-plot"><span class="header-section-number">27.0.1</span> A basic plot</a></li>
+<li><a class="nav-link" href="#create-your-own-data-frame-manually"><span class="header-section-number">27.0.2</span> Create your own data frame manually</a></li>
+<li><a class="nav-link" href="#update-colours"><span class="header-section-number">27.0.3</span> Update colours</a></li>
+<li><a class="nav-link" href="#add-common-names"><span class="header-section-number">27.0.4</span> Add common names</a></li>
+</ul>
+</li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/06-week6.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/06-week6.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Foundation Skills for LEC Practical Exercises</strong>" was written by Marta Shocket, Alex Bush, Kirsty Ross, and Duncan Whyatt. It was last built on 2026-11-10.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

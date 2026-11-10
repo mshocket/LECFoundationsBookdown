@@ -43,7 +43,7 @@ AURN data are available with averages calculated at at hourly, daily, monthly, a
 
 ### Download and upload the data and metadata
 
-Download today's datasets from the week 5 Moodle pag:
+Download today's datasets from the week 5 Moodle page:
 
 - Our main dataset: `"AirQuality_data.csv"`
 - The related metadata: `"AirQuality_metadata.csv"`
@@ -526,13 +526,13 @@ As always, you will want to:
 
 ## Creating your own R cheatsheet
 
-If you didn't get this far last week, I **strongly** recommend creating a set of notes where you keep track of all the bits and bobs of R that you've learned.
+If you haven't done so yet, I **strongly** recommend creating a set of notes where you keep track of all the bits and bobs of R that you've learned.
 
 The easiest way to do this is as a [markdown](https://www.markdownguide.org/basic-syntax/) (i.e. text) file - this will allow you to edit it and view it in RStudio, and make it more effective coding tool.
 
 You can create a markdown file by going to: File > New File > Markdown (at the top of the 6th section down).
 
-Last week, I listed out all of the funtions that we used in the first two practicals, grouped by type and then in alphabetical order [here](https://mshocket.github.io/LECFoundationsBookdown/tidyup_wk3.html).
+In weeks [3](#tidyup_wk3) and [4](#tidyup_wk4), I listed out all of the functions that we used in the first four practicals, grouped by type and then in alphabetical order.
 
 You can copy and paste this list into your markdown file, and then add your own annotations / descriptions that will help you remember how they work.
 
